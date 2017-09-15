@@ -1,0 +1,28 @@
+post:
+  tags:
+    - Telco
+  summary: "Activate a sim"
+  consumes:
+    - application/json
+  produces:
+    - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+    - name: msisdn
+      in: path
+      description: Msisdn of the sim to activate.
+      required: true
+      type: string
+    - name: Activation request
+      in: body
+      description: "activate a sim"
+      required: true
+      schema:
+        $ref: '#/definitions/SimActivate'
+  responses:
+    204:
+      description: Sim activating
+    403:
+      description: unauthorized
+      schema:
+        $ref: '#/definitions/Status'

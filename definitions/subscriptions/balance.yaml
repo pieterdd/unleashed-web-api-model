@@ -1,0 +1,68 @@
+type: object
+title: Balance
+required:
+  - credit
+  - bundles
+properties:
+  credit:
+    description: >
+      Credit user has to make calls, order extra bundles, ...
+    type: number
+    format: double
+  bundles:
+    description: >
+      List of all active bundles of the customer's subscription.
+      It contains meta-data like the date of purchase (or activation), the validity date and
+      the consumed amount to be opposed to the product rates.
+    type: array
+    items:
+      type: object
+      required:
+        - valid_from
+        - valid_until
+        - total
+        - remaining
+        - used
+        - type
+      properties:
+        product:
+          $ref: '#/definitions/Product'
+        valid_from:
+          description: >
+            Either the purchase date or the date the product is activated.
+          type: string
+          format: date
+        valid_until:
+          type: string
+          format: date
+        total:
+          type: number
+          format: double
+        remaining:
+          description: >
+            This is the amount left in your bundle.
+          type: number
+          format: double
+        used:
+          description: >
+            This is the amount of your bundle that is used.
+          type: number
+          format: double
+        type:
+          type: string
+          enum:
+            - voice_on_net
+            - voice_off_net
+            - sms
+            - data
+            - data_roaming
+        flags:
+          description: |
+            Indicates special properties of this bundle e.g. 'unlimited' for an unlimited bundle or 'promo' for a promo
+            bundle. Multiple flags can be used.
+          type: array
+          items:
+            type: string
+            enum:
+              - unlimited
+

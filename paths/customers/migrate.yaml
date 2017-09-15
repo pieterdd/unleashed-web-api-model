@@ -1,0 +1,28 @@
+put:
+  tags:
+    - Customers
+  summary: "Migrate a customer from Gigya to SBSS"
+  consumes:
+  - application/json
+  produces:
+  - application/json
+  parameters:
+    - name: Customer object
+      in: body
+      description: "Contains the customer data to be updated"
+      required: true
+      schema:
+        $ref: '#/definitions/MigrateCustomer'
+  responses:
+    200:
+      description: Successfully updated customer
+      schema:
+        $ref: '#/definitions/Customer'
+    403:
+      description: Unauthorized
+      schema:
+        $ref: '#/definitions/Status'
+    400:
+      description: Invalid request
+      schema:
+        $ref: '#/definitions/Status'

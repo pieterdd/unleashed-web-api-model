@@ -1,0 +1,56 @@
+get:
+  tags:
+    - Customers
+  summary: "Get subscription notification settings"
+  consumes:
+    - application/json
+  produces:
+    - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+    - name: id
+      in: path
+      type: string
+      description: "The subscription to get the information about"
+      required: true
+  responses:
+    200:
+      description: Returns the notification settings
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/Notification'
+    403:
+      description: unauthorized
+      schema:
+        $ref: '#/definitions/Status'
+put:
+  tags:
+    - Customers
+  summary: "Set notification settings. An omitted value leaves the current setting unchanged."
+  consumes:
+    - application/json
+  produces:
+    - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+    - name: id
+      in: path
+      type: string
+      description: "The subscription to get the information about"
+      required: true
+    - name: Notification settings object
+      in: body
+      description: "Contains the notification settings"
+      required: true
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/Notification'
+  responses:
+    204:
+      description: "Setting notifications successful"
+    403:
+      description: unauthorized
+      schema:
+        $ref: '#/definitions/Status'

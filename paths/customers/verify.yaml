@@ -1,0 +1,24 @@
+post:
+  tags:
+    - Customers
+  summary: "Request verification"
+  consumes:
+    - application/json
+  produces:
+    - application/json
+  parameters:
+    - name: verification data
+      in: body
+      description: "Contains data to be verified"
+      required: true
+      schema:
+        $ref: '#/definitions/VerifyCustomer'
+  responses:
+    200:
+      description: Returns the status
+      schema:
+        $ref: '#/definitions/Status'
+    429:
+      description: throttled
+      schema:
+        $ref: '#/definitions/Status'

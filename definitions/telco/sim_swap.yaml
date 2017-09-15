@@ -1,0 +1,25 @@
+type: object
+title: SIM swap
+required:
+  - reason
+  - shipping_info
+  - status
+properties:
+  reason:
+    type: string
+    enum:
+      - theft
+      - loss
+      - other
+  status:
+    type: string
+    enum:
+      - payment_pending
+      - to_be_sent
+      - sent
+      - activated
+  shipping_info:
+    $ref: '#/definitions/ShippingInfo'
+  payment_url:
+    type: string
+    description: if the new sim needs to be paid for, this contains the payment url to do so

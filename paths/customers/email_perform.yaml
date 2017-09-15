@@ -1,0 +1,30 @@
+post:
+  tags:
+    - Email
+  summary: "Perform update email address"
+  x-operationName: Perform
+  consumes:
+    - application/json
+  produces:
+    - application/json
+  parameters:
+    - name: Authorization
+      in: header
+      description: "Contains the authentication data"
+      required: true
+      type: string
+    - name: update request
+      in: body
+      schema:
+        $ref: '#/definitions/EmailUpdatePerform'
+  responses:
+    204:
+      description: Email changed
+    400:
+      description: Bad request, see body for details.
+      schema:
+        $ref: '#/definitions/Status'
+    403:
+      description: unauthorized
+      schema:
+        $ref: '#/definitions/Status'

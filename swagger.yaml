@@ -1,0 +1,33 @@
+swagger: "2.0"
+info:
+  title: "Unleashed Web Api"
+  description: "This is an API for our frontends and users to interact with Unleashed"
+  version: "1.0"
+host: "api.unleashed.be"
+tags:
+  - name: Authorization
+    description: Authenticate
+  - name: Customers
+    description: Customers
+  - name: Password
+    description: Passwords
+  - name: Email
+    description: Email
+  - name: Products
+    description: Products
+  - name: Subscriptions
+    description: Subscriptions
+  - name: Orders
+    description: Orders
+  - name: Apps
+    description: App
+  - name: Point of sale
+    description: Partners
+schemes:
+  - https
+paths:
+  $ref: ./paths/index.yaml
+definitions:
+  $ref: ./definitions/index.yaml
+parameters:
+  $ref: ./parameters/index.yaml

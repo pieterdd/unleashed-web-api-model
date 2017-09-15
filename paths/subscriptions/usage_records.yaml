@@ -1,0 +1,33 @@
+get:
+  tags:
+    - Subscriptions
+  summary: "Get subscription's call, sms's, ... history"
+  produces:
+    - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+    - name: id
+      in: path
+      description: id of subscription to fetch the balance for
+      required: true
+      type: string
+    - name: type
+      in: query
+      description: filter by type (call, sms's)
+      required: false
+      type: string
+    - $ref: "#/parameters/page"
+    - $ref: "#/parameters/per_page"
+    - $ref: "#/parameters/from_date"
+    - $ref: "#/parameters/until_date"
+  responses:
+      200:
+        description: Returns the subscription's history
+        schema:
+          type: array
+          items:
+            $ref: '#/definitions/UsageRecord'
+      403:
+        description: unauthorized
+        schema:
+          $ref: '#/definitions/Status'

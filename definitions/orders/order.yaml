@@ -1,0 +1,39 @@
+type: object
+title: Order
+required:
+  - id
+  - amount
+  - product_id
+  - status
+  - date_created
+properties:
+  id:
+    type: string
+  amount:
+    type: number
+    format: double
+  allowed_payment_methods:
+    type: array
+    description: Allowed methods to use
+    items:
+      $ref: '#/definitions/PaymentMethod'
+  status:
+    type: string
+    enum:
+      - payment_pending
+      - processing
+      - complete
+      - could_not_process
+  date_created:
+    type: string
+    format: date
+    description: datetime that the customer created this order
+  date_updated:
+    type: string
+    format: date
+    description: latest datetime that the customer updated this order
+  product_id:
+    type: string
+    description: ID of the product that was ordered.
+  payment_details:
+    $ref: '#/definitions/PaymentDetails'

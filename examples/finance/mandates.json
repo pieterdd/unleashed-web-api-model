@@ -1,0 +1,40 @@
+[
+  {
+    "id": "mollie:a6546fdw",
+    "mandate_name": "holler",
+    "label": "VISA xxxx xxxx xxxx 1111",
+    "method": "VISA",
+    "payment_provider": "mollie",
+    "provider_details": {
+      "mandate_id": "a6546fdw",
+      "payment_method": "creditcard",
+      "card_label": "VISA",
+      "card_number": "1111"
+    }
+  },
+  {
+    "id": "mollie:894dcw1",
+    "mandate_name": "holler",
+    "label": "MasterCard xxxx xxxx xxxx 4877",
+    "method": "MasterCard",
+    "payment_provider": "mollie",
+    "provider_details": {
+      "mandate_id": "894dcw1",
+      "payment_method": "creditcard",
+      "card_label": "MasterCard",
+      "card_number": "4877"
+    }
+  },
+  {
+    "id": "doccle:20170101-IDW",
+    "mandate_name": "holler",
+    "label": "DE89 3704 0044 0532 0130 00",
+    "method": "bank mandate",
+    "payment_provider": "doccle",
+    "provider_details": {
+      "mandate_id": "20170101-IDW",
+      "iban": "DE89 3704 0044 0532 0130 00",
+      "bic": "12344321"
+    }
+  }
+]

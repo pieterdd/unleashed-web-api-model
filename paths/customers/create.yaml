@@ -1,0 +1,31 @@
+post:
+  tags:
+    - Customers
+  summary: "Create a new customer"
+  x-operationName: Create
+  consumes:
+  - application/json
+  produces:
+  - application/json
+  parameters:
+    - name: Customer object
+      in: body
+      description: "Contains the customer data"
+      required: true
+      schema:
+        $ref: '#/definitions/CreateCustomer'
+  responses:
+    201:
+      description: Successfully created customer
+      schema:
+        $ref: '#/definitions/Customer'
+    400:
+      description: Bad request
+      schema:
+        $ref: '#/definitions/Status'
+    403:
+      description: Unauthorized
+      schema:
+        $ref: '#/definitions/Status'
+  x-stoplight:
+    afterScript: "function (ctx, requestresponse) { var body = request.body.get()if (body == 1) { var response request.hijack(400, 'application/json''PLease enter info'}); } }"

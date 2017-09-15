@@ -1,0 +1,25 @@
+get:
+  tags:
+    - Finance
+  summary: "Get customer's mandates"
+  produces:
+    - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+  responses:
+    200:
+      description: "Returns the customer's mandates"
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/Mandate'
+      examples:
+        application/json:
+          $ref: ./../../examples/finance/mandates.json
+    403:
+      description: unauthorized
+      schema:
+        $ref: '#/definitions/Status'
+  x-stoplight:
+    mock:
+      enabled: false

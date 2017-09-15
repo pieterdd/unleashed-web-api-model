@@ -1,0 +1,25 @@
+post:
+  tags:
+    - Finance
+  summary: "Request a new mandate"
+  consumes:
+    - application/json
+  produces:
+    - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+    - name: creation request
+      in: body
+      description: request mandate creation
+      required: true
+      schema:
+        $ref: '#/definitions/RequestMandate'
+  responses:
+    200:
+      description: "Mandate creation response"
+      schema:
+        $ref: '#/definitions/RequestMandateResponse'
+    403:
+      description: unauthorized
+      schema:
+        $ref: '#/definitions/Status'

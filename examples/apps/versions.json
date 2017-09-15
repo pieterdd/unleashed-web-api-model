@@ -1,0 +1,24 @@
+[
+    {
+        "minimum": "2.1.9",
+        "recommended": "2.3.5",
+        "releasenotes": [
+            "Lorem ipsum",
+            "dolor sit amet",
+            "consectetur adipiscing elit",
+            "sed do eiusmod"
+        ],
+        "platform": "IOS"
+    },
+    {
+        "minimum": "2.2.0",
+        "recommended": "2.4.9",
+        "releasenotes": [
+            "Lorem ipsum",
+            "dolor sit amet",
+            "consectetur adipiscing elit",
+            "sed do eiusmod"
+        ],
+        "platform": "ANDROID"
+    }
+]

@@ -1,0 +1,54 @@
+type: object
+title: Create a customer using the following fields
+required:
+  - password
+  - email
+  - first_name
+  - last_name
+  - gender
+  - language
+  - date_of_birth
+  - address
+  - recaptcha
+properties:
+  email:
+    type: string
+  password:
+    type: string
+    minLength: 8
+  first_name:
+    type: string
+  last_name:
+    type: string
+  gender:
+    type: string
+    enum:
+    - M
+    - F
+    - X
+  language:
+    type: string
+    enum:
+    - nl
+    - fr
+    - en
+  phone_number:
+    type: string
+    #TO-DO: add format
+  date_of_birth:
+    type: string
+    format: date
+  place_of_birth:
+    type: string
+  address:
+    $ref: '#/definitions/Address'
+  company:
+    $ref: '#/definitions/Company'
+  recaptcha:
+    type: string
+    description: response for google recaptcha
+  marketing_notifications:
+    type: boolean
+    description: enable marketing notifications
+    default: true
+  #TO-DO: add social info, check with CARE

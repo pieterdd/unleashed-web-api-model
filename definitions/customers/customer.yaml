@@ -1,0 +1,44 @@
+type: object
+title: Information about a customer
+required:
+  - id
+  - language
+  - gender
+  - first_name
+  - last_name
+  - email
+  - address
+properties:
+  id:
+    type: string
+  language:
+    type: string
+    enum:
+    - nl
+    - fr
+    - en
+  gender:
+    type: string
+    enum:
+    - M
+    - F
+  email:
+    type: string
+  first_name:
+    type: string
+  last_name:
+    type: string
+  phone_number:
+    type: string
+  date_of_birth:
+    type: string
+    format: date
+  place_of_birth:
+    type: string
+  company:
+    $ref: '#/definitions/Company'
+  address:
+    $ref: '#/definitions/Address'
+  prepaid_registration:
+    description: This information will only be available for the mobile brands where applicable.
+    $ref: '#/definitions/PrepaidRegistration'

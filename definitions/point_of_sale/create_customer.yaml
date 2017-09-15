@@ -1,0 +1,20 @@
+type: object
+title: Create customer for point of sale
+required:
+  - id_card_number
+  - national_security_number
+  - iccid
+  - language
+properties:
+  id_card_number:
+    type: string
+  national_security_number:
+    type: string
+  iccid:
+    type: string
+  language:
+    type: string
+    enum:
+    - nl
+    - fr
+    - en

@@ -1,0 +1,12 @@
+type: object
+title: Payment Detail information
+description: the details of a done payment
+required:
+ - payment_method
+ - amount
+properties:
+  payment_method:
+    $ref: '#/definitions/PaymentMethod'
+  amount:
+    type: number
+    format: double

@@ -1,0 +1,13 @@
+type: object
+title: Shipping address
+required:
+  - address
+properties:
+  first_name:
+    type: string
+  last_name:
+    type: string
+  company:
+    type: string
+  address:
+    $ref: '#/definitions/Address'

@@ -1,0 +1,25 @@
+post:
+  tags:
+    - Password
+  summary: "Request a password reset code"
+  description: |
+    Request to reset a password.  Make a request here with the credentials of a user to generate a reset code which
+    will be delivered out of band.  After that, have the user enter the code somewhere, and make a second request to
+    reset/perform.
+  x-operationName: Request
+  consumes:
+    - application/json
+  parameters:
+    - name: Reset Body
+      in: body
+      description: "Contains the reset information"
+      required: true
+      schema:
+        $ref: '#/definitions/PasswordResetRequest'
+  responses:
+    204:
+      description: Reset code sent
+    403:
+      description: unauthorized
+      schema:
+        $ref: '#/definitions/Status'

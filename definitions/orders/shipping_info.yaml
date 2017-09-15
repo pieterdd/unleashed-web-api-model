@@ -1,0 +1,12 @@
+type: object
+title: Shipping info
+required:
+  - address
+properties:
+  address:
+    $ref: '#/definitions/ShippingAddress'
+  state:
+    type: string
+    enum:
+     - PENDING
+     - SHIPPED

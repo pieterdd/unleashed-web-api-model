@@ -1,0 +1,19 @@
+get:
+  tags:
+    - Apps
+  summary: "To assist or force an app update the end-user, we need to be able to send back information the versions we support."
+  produces:
+    - application/json
+  responses:
+    200:
+      description: "Returns the current supported versions for all platforms"
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/Version'
+      examples:
+        application/json:
+          $ref: ./../../examples/apps/versions.json
+  x-stoplight:
+    mock:
+      enabled: false

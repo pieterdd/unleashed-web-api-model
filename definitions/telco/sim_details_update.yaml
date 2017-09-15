@@ -1,0 +1,13 @@
+type: object
+title: Update SIM details
+properties:
+  state:
+    type: string
+    enum:
+      - user_blocked
+      - active
+  alias:
+    type: string
+    description: >
+      Customers can give an alias to a subscription, so that e.g. instead for seeing a mobile phone number,
+      you can write "my ipad".

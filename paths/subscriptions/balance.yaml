@@ -1,0 +1,22 @@
+get:
+  tags:
+    - Subscriptions
+  summary: "Get subscription's balance (credit, sms's, call minutes, ...)"
+  produces:
+    - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+    - name: id
+      in: path
+      description: id of subscription to fetch the balance for
+      required: true
+      type: string
+  responses:
+    200:
+      description: Returns the subscription's balance
+      schema:
+        $ref: '#/definitions/SubscriptionBalance'
+    403:
+      description: unauthorized
+      schema:
+        $ref: '#/definitions/Status'

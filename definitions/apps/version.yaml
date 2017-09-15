@@ -1,0 +1,23 @@
+type: object
+title: Supported version information for Unleashed apps 
+required:
+  - minimum
+  - recommended
+  - releasenotes
+  - platform
+properties:
+  minimum:
+    description: 'Minumum supported version of the app, everyone on a lower version will be blocked from using that version and asked to update to continue'
+    type: string
+  recommended:
+    description: 'The app version we would love everyone to have, you will get a non-required request to update'
+    type: string
+  releasenotes:
+    type: array
+    items:
+      type: string
+  platform:
+    type: string
+    enum:
+     - ANDROID
+     - IOS

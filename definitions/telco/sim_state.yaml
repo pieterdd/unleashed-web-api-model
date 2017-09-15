@@ -1,0 +1,16 @@
+description: Current state of the sim
+type: string
+enum:
+  - created
+  - deleted
+  - delivered
+  - disabled
+  - enabled
+  - frozen
+  - locked
+  - on_stock
+  - ordered
+  - partially_deleted
+  - pending
+  - productive
+  - suspended

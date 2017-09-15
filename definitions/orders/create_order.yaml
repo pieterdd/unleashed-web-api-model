@@ -1,0 +1,12 @@
+type: object
+title: Create order
+required:
+  - product_id
+  - subscription_id
+properties:
+  product_id:
+    type: string
+    description: ID of the product to order
+  subscription_id:
+    type: string
+    description: ID of the subscription that this order is for

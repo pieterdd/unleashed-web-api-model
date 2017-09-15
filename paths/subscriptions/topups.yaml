@@ -1,0 +1,29 @@
+get:
+  tags:
+    - Subscriptions
+    - Finance
+  summary: "Get subscription's topup history"
+  produces:
+    - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+    - name: id
+      in: path
+      description: id of subscription to fetch the topups for
+      required: true
+      type: string
+    - $ref: "#/parameters/page"
+    - $ref: "#/parameters/per_page"
+    - $ref: "#/parameters/from_date"
+    - $ref: "#/parameters/until_date"
+  responses:
+    200:
+      description: Returns the subscription's topups
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/Topup'
+    403:
+      description: unauthorized
+      schema:
+        $ref: '#/definitions/Status'

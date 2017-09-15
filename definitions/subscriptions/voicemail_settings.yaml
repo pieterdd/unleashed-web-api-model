@@ -1,0 +1,10 @@
+type: object
+title: Voicemail settings
+properties:
+  # there is only the langauge so far.
+  language:
+    type: string
+    enum:
+      - fr
+      - nl
+      - en

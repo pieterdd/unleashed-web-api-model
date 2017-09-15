@@ -1,0 +1,5 @@
+type: object
+properties:
+  iccid:
+    type: string
+    description: Full iccid of the sim to activate

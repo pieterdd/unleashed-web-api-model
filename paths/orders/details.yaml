@@ -1,0 +1,23 @@
+get:
+  tags:
+    - Orders
+  summary: "Get details of an existing order"
+  produces:
+  - application/json
+  parameters:
+    - name: id
+      in: path
+      description: id of order to fetch the details for
+      required: true
+      type: string
+  responses:
+    200:
+      description: OK
+      schema:
+        $ref: '#/definitions/Order'
+    403:
+      description: Unauthorized
+      schema:
+        $ref: '#/definitions/Status'
+    404:
+      description: No such order

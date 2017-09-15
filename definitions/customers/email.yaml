@@ -1,0 +1,11 @@
+type: object
+title: Request a new email
+required:
+- email
+properties:
+  email:
+    type: string
+    description: "New email"
+  password:
+    type: string
+    description: "Password"

@@ -1,0 +1,46 @@
+post:
+  tags:
+    - Orders
+  summary: "Order one or more products"
+  consumes:
+  - application/json
+  produces:
+  - application/json
+  parameters:
+    - name: Order object
+      in: body
+      description: "Details on what is ordered"
+      required: true
+      schema:
+        $ref: '#/definitions/OrderRequest'
+  responses:
+    201:
+      description: Successfully created order
+      schema:
+        $ref: '#/definitions/Order'
+    403:
+      description: Unauthorized
+      schema:
+        $ref: '#/definitions/Status'
+get:
+  tags:
+    - Orders
+  summary: "retrieve listing of orders from user doing request"
+  produces:
+  - application/json
+  parameters:
+    - name: status
+      in: query
+      description: Only show orders with this status
+      type: string
+  responses:
+    200:
+      description: Order listing
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/Order'
+    403:
+      description: Unauthorized
+      schema:
+        $ref: '#/definitions/Status'

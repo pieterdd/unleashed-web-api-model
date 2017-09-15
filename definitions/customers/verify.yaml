@@ -1,0 +1,19 @@
+type: object
+title: Verify customer
+required:
+  - type
+  - value
+  - recaptcha
+properties:
+  type:
+    type: string
+    enum:
+    - sms
+    - email
+  value:
+    type: string
+    description: |
+      Either the email address or phone number to verify.
+      If a phone number, it should be expressed in prefixed international format (e.g. +321234567)
+  recaptcha:
+    type: string

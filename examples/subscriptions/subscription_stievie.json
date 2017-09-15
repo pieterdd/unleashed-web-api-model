@@ -1,0 +1,14 @@
+[
+    {
+        "id": "106",
+        "mandate_id": "mollie:a6546fdw",
+        "type": "POSTPAID",
+        "valid_from": "2017-09-09",
+        "state": "OSC_ENABLED",
+        "product": {
+            "id": "233445-1-1",
+            "price": 9.99,
+            "type": "subscription/postpaid"
+        }
+    }
+]

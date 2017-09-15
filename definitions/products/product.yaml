@@ -1,0 +1,63 @@
+type: object
+title: Product
+required:
+  - id
+  - price
+  - type
+  - descriptions
+properties:
+  id:
+   $ref: '#/definitions/ProductId'
+  descriptions:
+    type: object
+    required:
+      - title
+      - description
+    properties:
+      title:
+        type: string
+      description:
+        type: string
+  price:
+    description: >
+      price of the item, expressed as a decimal number of Euros or Vikingpoints.  For free items, the value 0 must be
+      present.
+    type: number
+  product_definitions:
+    description: >
+      The definition of the different values that make up the product. It is up the the client to interpret the keys.
+    type: object
+    properties:
+      rates:
+        description: >
+          The charging rates of different services in the product. These are expressed as decimals, with the
+          unit being euros. Probable keys are voice, sms, data, mms, voice_super_on_net, sms_super_on_net.
+        type: object
+      bundles:
+        description: >
+          The amount of units in the different bundles of the product. These are expressed as integers, with the unit
+          depending on the service of the bundle. Probable keys are voice, sms, data, mms, voice_super_on_net,
+          sms_super_on_net.
+        type: object
+      bundle_prices:
+        description: >
+          The prices for bundles in the product. These are expressed as decimals, with the unit being euros.
+        type: object
+  payment_providers:
+    description: >
+      Ids for the payment providers that may be used to pay for this product.  For free products, this property may be
+      omitted. See the #listPaymentProviders call to see which values can be returned.
+    type: array
+    items:
+      type: string
+  type:
+    description: >
+      Type of the product represented as a hierarchical (slash-separated) string (e.g. topup, subscription/postpaid,
+      hardware/handset).  This can be used to filter on certain types, or to group products.
+    type: string
+  order_parameters:
+    type: object
+    description: >
+      Any parameters that may be specified for the product when it is ordered.  Keys in the object are the parameter
+      names, the values are the allowed type from the following list: number, string, date, datetime, Address (street,
+      number, box, postcode, city, country), ShippingAddress (first_name, last_name, company, address)

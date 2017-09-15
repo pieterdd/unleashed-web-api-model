@@ -1,0 +1,61 @@
+language:
+      name: Accept-Language
+      in: header
+      description: "Contains the language so values under descriptions contains the right translation"
+      required: true
+      type: string
+page:
+      name: page
+      in: query
+      description: result set page
+      required: false
+      type: integer
+      format: int32
+per_page:
+      name: per_page
+      in: query
+      description: amount of results per page
+      required: false
+      type: integer
+      format: int32
+authorization:
+      name: Authorization
+      in: header
+      description: "Contains the authentication data"
+      required: true
+      type: string
+expand_products:
+      name: expand_products
+      in: query
+      type: boolean
+      description: Set this parameter to fully expand all product details. If not, only ids will be returned.
+expand_subscriptions:
+      name: expand_subscriptions
+      in: query
+      description: When true, embed the entire related subscription object into the response.  Else, only return the id.
+      type: boolean
+recaptcha:
+      name: recaptcha
+      in: query
+      description: For unauthenticated requests, the response for google recaptcha
+      type: string
+from_date:
+      name: from_date
+      in: query
+      description: from which date to fetch the history
+      required: false
+      type: string
+      format: date
+until_date:
+      name: until_date
+      in: query
+      description: to which date to fetch the history
+      required: false
+      type: string
+      format: date
+x-pos-agent:
+      name: x-pos-agent
+      in: header
+      description: the agent handling the request from the end user
+      required: true
+      type: string

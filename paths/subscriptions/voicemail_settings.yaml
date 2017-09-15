@@ -1,0 +1,51 @@
+get:
+  tags:
+    - Subscriptions
+  summary: "Gets voicemail settings"
+  produces:
+    - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+    - name: id
+      in: path
+      description: id of subscription the voicemail depends on
+      required: true
+      type: string
+  responses:
+    200:
+      description: Returns voicemail settings
+      schema:
+        $ref: '#/definitions/VoicemailSettings'
+    403:
+      description: unauthorized
+      schema:
+        $ref: '#/definitions/Status'
+put:
+  tags:
+    - Subscriptions
+  summary: "Sets voicemail settings"
+  consumes:
+    - application/json
+  produces:
+    - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+    - name: id
+      in: path
+      description: id of subscription the voicemail depends on
+      required: true
+      type: string
+    - name: Voicemail settings object
+      in: body
+      description: "Contains the voicemail settings"
+      required: true
+      schema:
+        $ref: '#/definitions/VoicemailSettings'
+  responses:
+      204:
+        description: Voicemail settings has been changed successfully.
+      403:
+        description: unauthorized
+        schema:
+          $ref: '#/definitions/Status'
+

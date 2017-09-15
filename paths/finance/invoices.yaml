@@ -1,0 +1,26 @@
+get:
+  tags:
+    - Finance
+  summary: "Get subscription's invoices"
+  produces:
+    - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+    - name: status
+      in: query
+      description: filter in the status
+      required: false
+      type: string
+    - $ref: "#/parameters/page"
+    - $ref: "#/parameters/per_page"
+  responses:
+    200:
+      description: Returns the subscription's invoices
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/Invoice'
+    403:
+      description: unauthorized
+      schema:
+        $ref: '#/definitions/Status'

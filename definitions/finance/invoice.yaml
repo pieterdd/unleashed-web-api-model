@@ -1,0 +1,26 @@
+type: object
+title: Invoice
+required:
+  - id
+  - number
+  - date
+  - amount
+  - status
+properties:
+  id:
+    type: string
+  number:
+    type: string
+  date:
+    type: string
+    format: date
+  amount:
+    type: number
+    format: double
+  status:
+    type: string
+    enum:
+    - PAID
+    - UNPAID
+  reference_number:
+    type: string

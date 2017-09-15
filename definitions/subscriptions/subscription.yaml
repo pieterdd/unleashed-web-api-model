@@ -1,0 +1,33 @@
+type: object
+title: Subscriptions
+required:
+  - id
+  - valid_from
+  - type
+  - product
+  - state
+properties:
+  id:
+    type: string
+  valid_from:
+    type: string
+    format: date
+    description: the datetime when this subscription was activated
+  valid_until:
+    type: string
+    format: date
+    description: the datetime till when this subscription is active
+  type:
+    type: string
+    enum:
+    - POSTPAID
+    - PREPAID
+  msisdn:
+    type: string
+  product:
+    $ref: '#/definitions/ProductLight'
+  state:
+    type: string
+    description: state of subscription e.g. (de)activated, waiting ...
+  sim:
+    $ref: '#/definitions/SimDetails'

@@ -1,0 +1,32 @@
+get:
+  tags:
+    - Events
+  summary: "Retrieve overview of ongoing and upcoming events"
+  produces:
+  - application/json
+  parameters:
+    - name: status
+      in: query
+      type: string
+      description: "Filter on status of event"
+      required: false
+    - $ref: "#/parameters/language"
+    - name: start
+      in: query
+      type: string
+      format: date-time
+      description: "Start filter on date. Events have both a start and end date. The start parameter here gives the start of the range that needs overlap with the start / end range of the involved event."
+      required: false
+    - name: end
+      in: query
+      type: string
+      format: date-time
+      description: "End filter on date. Events have both a start and end date. The end parameter here gives the end of the range that needs overlap with the start / end range of the involved event."
+      required: false
+  responses:
+    200:
+      description: "Event listing"
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/Event'

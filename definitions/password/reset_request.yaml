@@ -1,0 +1,17 @@
+type: object
+title: Password reset request
+required:
+- credentials
+- recaptcha
+properties:
+  credentials:
+    type: string
+    description: Credentials (email address or msisdn) of the user to reset the password for
+  method:
+    type: string
+    enum:
+    - SMS
+    - MAIL
+    description: Method of sending the reset code. If omitted, the server can decide which method is appropriate.  
+  recaptcha:
+    type: string

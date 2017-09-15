@@ -1,0 +1,31 @@
+type: object
+title: Mandate information
+required:
+  - id
+  - method
+  - payment_provider
+  - mandate_name
+  - label
+properties:
+  id:
+    type: string
+    description: provider-agnostic identifier of the mandate
+  account_id:
+    type: string
+    description: the id of the linked account
+  label:
+    type: string
+    description: human-readable representation of this mandate
+  method:
+    type: string
+    description: method used for the payment. This is provider-specific.
+  payment_provider:
+    type: string
+    description: payment provider handling this mandate (see payment_providers)
+  mandate_name:
+    type: string
+    description: the provider-specific ID of the mandate
+  label:
+    type: string
+    description: |
+     Information on the payment method. This is method-specific. e.g. for visa, it could be the last four card digits

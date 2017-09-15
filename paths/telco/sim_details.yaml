@@ -1,0 +1,47 @@
+get:
+  tags:
+    - Telco
+  summary: "Get the status of a sim."
+  produces:
+    - application/json
+  parameters:
+    - name: msisdn
+      in: path
+      description: Msisdn of the sim to retrieve info about.
+      required: true
+      type: string
+  responses:
+    200:
+      description: Sim info
+      schema:
+        $ref: '#/definitions/SimStatus'
+    403:
+      description: unauthorized
+      schema:
+        $ref: '#/definitions/Status'
+put:
+  tags:
+    - Telco
+  summary: "block/unblock a sim and/or update alias"
+  produces:
+    - application/json
+  consumes:
+    - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+    - name: msisdn
+      in: path
+      description: Msisdn of the sim to update.
+      required: true
+      type: string
+    - name: sim_update
+      in: body
+      schema:
+        $ref: "#/definitions/SimDetailsUpdate"
+  responses:
+    204:
+      description: Sim updated
+    403:
+      description: unauthorized
+      schema:
+        $ref: '#/definitions/Status'

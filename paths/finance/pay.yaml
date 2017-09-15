@@ -1,0 +1,28 @@
+post:
+  tags:
+    - Finance
+  summary: "Pay an invoice or order"
+  consumes:
+    - application/json
+  produces:
+    - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+    - name: payment
+      in: body
+      required: true
+      schema:
+        $ref: '#/definitions/PaymentRequest'
+  responses:
+    200:
+      description: The payment information
+      schema:
+        type: object
+        properties:
+          payment_url:
+            type: string
+            description: url to go to to finalize the payment
+    403:
+      description: unauthorized
+      schema:
+        $ref: '#/definitions/Status'

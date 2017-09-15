@@ -1,0 +1,28 @@
+type: object
+title: SIM details
+required:
+  - pin1
+  - pin2
+  - puk1
+  - puk2
+  - iccid
+  - state
+properties:
+  alias:
+    type: string
+    description: >
+      Customers can give an alias to a sim, so that e.g. instead for seeing a mobile phone number,
+      you can write "my ipad".
+  iccid:
+    type: string
+    description: "Integrated Circuit Card IDentifier (ICCID), the unique physical number"
+  pin1:
+    type: string
+  pin2:
+    type: string
+  puk1:
+    type: string
+  puk2:
+    type: string
+  state:
+    $ref: '#/definitions/SimState'

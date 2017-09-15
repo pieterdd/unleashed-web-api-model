@@ -1,0 +1,19 @@
+type: object
+title: Product light
+required:
+  - id
+  - price
+  - type
+properties:
+  id:
+   $ref: '#/definitions/ProductId'
+  price:
+    description: >
+      price of the item, expressed as a decimal number of Euros or Vikingpoints.  For free items, the value 0 must be
+      present.
+    type: number
+  type:
+    description: >
+      Type of the product represented as a hierarchical (slash-separated) string (e.g. topup, subscription/postpaid,
+      hardware/handset).  This can be used to filter on certain types, or to group products.
+    type: string

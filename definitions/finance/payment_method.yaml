@@ -1,0 +1,14 @@
+type: string
+title: Available payment methods
+enum:
+ - Bancontact
+ - VISA
+ - Mastercard
+ - Belfius Payment Button
+ - KBC/CBC Payment Button
+ - Manual
+ - Bitcoin
+ - SEPA
+ - Mandate
+ - Vouchers
+ - Paypal

@@ -1,0 +1,10 @@
+type: object
+title: Company information for a customer
+required:
+  - vat_number
+  - company_name
+properties:
+  vat_number:
+    type: string
+  company_name:
+    type: string

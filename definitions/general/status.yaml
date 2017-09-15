@@ -1,0 +1,61 @@
+type: object
+description: A status object given back for bad requests (http 400) explaining the cause for the issue
+title: Status object
+required:
+  - code
+  - message
+properties:
+  code:
+    type: array
+    description: any global validation errors for the request made
+    items:
+      type: string
+      enum:
+      - invalid_recaptcha_response
+      - invalid_credentials
+      - invalid_phone_verification_code
+      - login_by_email_impossible
+      - invalid_fields
+      - not_enough_balance
+      - email_already_in_use
+      - invalid_customer
+      - invalid_token
+      - mandate_cannot_be_set
+  message:
+    type: string
+  incorrect_fields:
+    type: array
+    description: any field-specific validation errors for the request made
+    items:
+      type: object
+      properties:
+        field:
+          type: string
+          description: name of the field to which the issue pertains
+        errors:
+          type: array
+          items:
+            type: object
+            properties:
+              code:
+                type: string
+                enum:
+                - invalid_format
+                - invalid_value
+                - email_address_already_in_use
+                - phone_number_not_belgian
+                - invalid_phone_verification_code
+                - expired_phone_verification_code
+                - invalid_email_verification_code
+                - password_too_common
+                - password_too_similar_to_personal_details
+                - password_entirely_numeric
+                - password_too_similar
+                - password_too_short
+                - unknown_error
+                - required
+                - too_short
+                - too_long
+              message:
+                type: string
+                description: An english full-text message explaining the error

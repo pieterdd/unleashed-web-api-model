@@ -1,0 +1,16 @@
+ type: object
+ title: Password reset perform
+ required:
+ - code
+ - password
+ properties:
+  code:
+    type: string
+    description: Reset code for the password, as received by sms or email.
+  msisdn:
+    type: string
+    description: Required when code was sent via sms
+  password:
+    type: string
+    minLength: 8
+    description: the new password to set

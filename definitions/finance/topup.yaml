@@ -1,0 +1,17 @@
+type: object
+title: Topup
+required:
+  - id
+  - executed_on
+  - amount
+properties:
+  id:
+    type: string
+  executed_on:
+    type: string
+    format: date
+  amount:
+    type: number
+    format: double
+  product:
+    $ref: '#/definitions/Product'

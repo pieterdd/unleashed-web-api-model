@@ -1,0 +1,80 @@
+/oauth2/token:
+  $ref: ./authorization/token.yaml
+/customers:
+  $ref: ./customers/create.yaml
+/customers/verify:
+  $ref: ./customers/verify.yaml
+/customers/me:
+  $ref: ./customers/me.yaml
+/migrate:
+  $ref: ./customers/migrate.yaml
+/email/update:
+  $ref: ./customers/email.yaml
+/email/update/perform:
+  $ref: ./customers/email_perform.yaml
+/notification-settings:
+  $ref: ./notifications/general_notification_settings.yaml
+/password/update:
+  $ref: ./password/update.yaml
+/invoices:
+  $ref: ./finance/invoices.yaml
+/payments:
+  $ref: ./finance/payments.yaml
+/subscriptions:
+  $ref: ./subscriptions/subscriptions.yaml
+/mandates:
+  $ref: ./finance/mandate_list.yaml
+/mandates/{id}:
+  $ref: ./finance/mandate_delete.yaml
+/mandates/request:
+  $ref: ./finance/mandate_request.yaml
+/password/reset/request:
+  $ref: ./password/reset_request.yaml
+/password/reset/perform:
+  $ref: ./password/reset_perform.yaml
+/products:
+  $ref: ./products/list.yaml
+/products/{id}:
+  $ref: ./products/details.yaml
+/orders:
+  $ref: ./orders/create_and_list.yaml
+/orders/{id}:
+  $ref: ./orders/details.yaml
+/subscriptions/{id}:
+  $ref: ./subscriptions/subscription.yaml
+/subscriptions/{id}/topups:
+  $ref: ./subscriptions/topups.yaml
+/subscriptions/{id}/balance:
+  $ref: ./subscriptions/balance.yaml
+/subscriptions/{id}/voicemail-settings:
+  $ref: ./subscriptions/voicemail_settings.yaml
+/subscriptions/{id}/notification-settings:
+  $ref: ./notifications/subscription_notification_settings.yaml
+/subscriptions/{id}/sim/swap:
+  $ref: ./telco/sim_swap.yaml
+/subscriptions/{id}/records:
+  $ref: ./subscriptions/usage_records.yaml
+/subscriptions/{id}/invoices:
+  $ref: ./finance/subscription_invoices.yaml
+/subscriptions/{id}/payment-settings:
+  $ref: ./subscriptions/payment_settings.yaml
+/subscriptions/{id}/invoicing-settings:
+  $ref: ./subscriptions/invoicing_settings.yaml
+/apps/versions:
+  $ref: ./apps/versions.yaml
+/invoices/{id}/pdf:
+  $ref: ./finance/invoice_pdf.yaml
+/pay:
+  $ref: ./finance/pay.yaml
+/sims:
+  $ref: ./telco/sim.yaml
+/sims/{msisdn}:
+  $ref: ./telco/sim_details.yaml
+/sims/{msisdn}/activate:
+  $ref: ./telco/sim_activate.yaml
+/pos/customers/:
+  $ref: ./point_of_sale/customers.yaml
+/events:
+  $ref: ./events/list.yaml
+/events/{id}:
+  $ref: ./events/details.yaml

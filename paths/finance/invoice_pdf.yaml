@@ -1,0 +1,25 @@
+get:
+  tags:
+    - Finance
+  summary: "Get an invoice as pdf"
+  produces:
+    - application/pdf
+    - application/json #only used in case of errors
+  parameters:
+    - name: auth_token
+      in: query
+      description: authentication token
+      type: string
+      required: true
+    - name: id
+      in: path
+      description: id of invoice to fetch
+      required: true
+      type: string
+  responses:
+    200:
+      description: The invoice as pdf
+    403:
+      description: unauthorized
+      schema:
+        $ref: '#/definitions/Status'

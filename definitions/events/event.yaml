@@ -1,0 +1,83 @@
+type: object
+title: Event information
+required:
+  - id
+  - slug
+  - title
+  - start_date
+  - end_date
+  - status
+  - location
+properties:
+  id:
+    type: integer
+  slug:
+    type: string
+    description: "Unique slug for identifying an event"
+    example: "viking-area-2017"
+  title:
+    type: string
+    description: "Title describing the event"
+    example: "Viking Area 2017"
+  description:
+    type: string
+    description: "Text to describe the event"
+    example: "Come check us out at the viking area!"
+  start_date:
+    type: string
+    format: date-time
+    description: "Begin time of the event"
+    example: "2017-08-16T08:00:00.000Z"
+  end_date:
+    type: string
+    format: date-time
+    description: "End time of the event"
+    example: "2017-08-19T00:00:00.000Z"
+  status:
+    type: string
+    description: "Current state the event is in, affects the visibility"
+    default: "draft"
+    enum:
+      - "draft"
+      - "published"
+      - "cancelled"
+  location:
+    type: object
+    description: "Where the event takes place"
+    required:
+      - name
+    properties:
+      name:
+        type: string
+        description: "Human readable name of the event location"
+        example: "Pukkelpop"
+      description:
+        type: string
+        description: "Text to describe to event location"
+        example: "Site next to the Pukkelpop area"
+      latitude:
+        type: number
+        format: float
+        description: "Latitudinal part of the location coordinates"
+        example: "50.961069"
+      longitude:
+        type: number
+        format: float
+        description: "Longitudinal part of the location coordinates"
+        example: "5.3533674"
+  picture:
+    type: string
+    description: "URI to image"
+    example: "https://static.mobilevikings.de/static/img/vikingco/vikingco-facebook-og.8be2feaa5dfe.jpg"
+  event_redirect:
+    type: string
+    description: "Optional external URL to redirect to, e.g. an eventbrite or facebook page"
+  tags:
+    type: array
+    items:
+      type: string
+      example: [
+        "pukkelpop",
+        "viking area",
+        "mobile vikings"
+      ]

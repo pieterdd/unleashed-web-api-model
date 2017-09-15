@@ -1,0 +1,27 @@
+post:
+  tags:
+    - Password
+  summary: "Reset password to new one"
+  description: |
+    Perform a password reset using a code.  The code can be requested using the **reset/request** operation.
+  x-operationName: Reset
+  consumes:
+    - application/json
+  parameters:
+    - name: Reset Request Body
+      in: body
+      description: "Contains the reset"
+      required: true
+      schema:
+        $ref: '#/definitions/PasswordResetPerform'
+  responses:
+    204:
+      description: Password reset
+      schema:
+        $ref: '#/definitions/PasswordUpdate'
+    401:
+      description: Authentication required (reset code invalid)
+    403:
+      description: Unauthorized
+      schema:
+        $ref: '#/definitions/Status'

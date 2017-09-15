@@ -1,0 +1,13 @@
+type: object
+title: Update password
+required:
+- old
+- new
+properties:
+  old:
+    type: string
+    description: "Old password"
+  new:
+    type: string
+    minLength: 8
+    description: "New password"

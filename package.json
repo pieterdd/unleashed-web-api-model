@@ -1,0 +1,13 @@
+{
+    "name": "uwa-api-model",
+    "version": "1.0.0",
+    "description": "Unleashed Web API Model",
+    "dependencies": {
+        "json-refs": "^2.1.6",
+        "yaml-js": "^0.1.4",
+        "swagger-parser": "^3.4.1"
+    },
+    "scripts": {
+        "test": "node build.js"
+    }
+}

@@ -1,0 +1,21 @@
+type: object
+title: Update customer
+properties:
+  language:
+    type: string
+    enum:
+    - nl
+    - fr
+    - en
+  gender:
+    type: string
+    enum:
+    - M
+    - F
+    - X
+  first_name:
+    type: string
+  last_name:
+    type: string
+  address:
+    $ref: '#/definitions/Address'

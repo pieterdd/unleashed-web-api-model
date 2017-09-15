@@ -1,0 +1,44 @@
+get:
+  tags:
+    - Subscriptions
+  summary: "Get one specific subscription, if a SIM is linked, also these details are returned"
+  produces:
+    - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+    - name: id
+      in: path
+      type: string
+      description: "The subscription to get the information about"
+      required: true
+  responses:
+    200:
+      description: "Returns details of the requested subscription"
+      schema:
+        $ref: '#/definitions/Subscription'
+    403:
+      description: unauthorized
+      schema:
+        $ref: '#/definitions/Status'
+delete:
+  tags:
+    - Subscriptions
+  summary: "Cancels a specific subscription"
+  produces:
+    - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+    - name: id
+      in: path
+      type: string
+      description: "The subscription to cancel."
+      required: true
+  responses:
+    204:
+      description: "Doesn't return anything except a 204 to indicate no content"
+      schema:
+        $ref: '#/definitions/Status'
+    403:
+      description: unauthorized
+      schema:
+        $ref: '#/definitions/Status'

@@ -1,0 +1,22 @@
+delete:
+  tags:
+    - Finance
+  summary: "Delete a specific mandate"
+  produces:
+    - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+    - name: id
+      in: path
+      description: The id of the mandate to remove
+      required: true
+      type: string
+  responses:
+    204:
+      description: The mandate has been deleted
+    403:
+      description: unauthorized
+      schema:
+        $ref: '#/definitions/Status'
+    404:
+      description: the requested mandate was not found

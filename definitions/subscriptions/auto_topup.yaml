@@ -1,0 +1,20 @@
+type: object
+title: Auto topup settings
+description: properties for auto-topup.  This is only relevant for prepaid subscriptions.
+properties:
+  topup_product_id:
+    type: string
+    description: ID of the product to automatically order when topping up automatically
+  on_amount_threshold:
+    type: boolean
+    description: whether to trigger auto-topup when credit is below a given amount
+  amount_threshold:
+    type: number
+    format: double
+    description: amount to be below to trigger an auto-topup (if on_amount_threshold is true)
+  on_bundle_expiry:
+    type: boolean
+    description: whether to trigger auto-topup when the bundle is about to expire
+  on_low_data:
+    type: boolean
+    description: whether to trigger auto-topup when data is low

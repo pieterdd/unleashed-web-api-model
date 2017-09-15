@@ -1,0 +1,16 @@
+type: object
+title: Payment request
+required:
+  - redirect_url
+properties:
+  redirect_url:
+    type: string
+    description: url to redirect to after paying
+  reference_number:
+    type: string
+    description: reference number of the payment or invoice to pay.  Pass either this or order_id.
+  order_id:
+    type: string
+    description: ID of the order to pay.  Pass either this or reference_number.
+  payment_method:
+    $ref: '#/definitions/PaymentMethod'

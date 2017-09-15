@@ -1,0 +1,49 @@
+get:
+  tags:
+    - Subscriptions
+    - Finance
+  summary: "Get subscription's invoicing settings."
+  produces:
+    - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+    - name: id
+      in: path
+      description: id of subscription to fetch the settings for
+      required: true
+      type: string
+  responses:
+    200:
+      description: Returns invoicing settings
+      schema:
+        $ref: '#/definitions/InvoicingSettings'
+    403:
+      description: unauthorized
+      schema:
+        $ref: '#/definitions/Status'
+put:
+  tags:
+    - Subscriptions
+    - Finance
+  summary: "Update a subscription's invoicing settings."
+  consumes:
+    - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+    - name: id
+      in: path
+      description: id of subscription to update the settings for
+      required: true
+      type: string
+    - name: settings
+      in: body
+      description: settings to use. To set no mandate, leave the mandate_id out.
+      schema:
+        $ref: '#/definitions/InvoicingSettings'
+  responses:
+    204:
+      description: Invoicing settings updated
+    403:
+      description: unauthorized
+      schema:
+        $ref: '#/definitions/Status'

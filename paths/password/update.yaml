@@ -1,0 +1,22 @@
+post:
+  tags:
+    - Password
+  summary: "Update password"
+  x-operationName: Update
+  consumes:
+    - application/json
+  produces:
+    - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+    - name: update request
+      in: body
+      schema:
+        $ref: '#/definitions/PasswordUpdate'
+  responses:
+    204:
+      description: Password changed
+    403:
+      description: unauthorized
+      schema:
+        $ref: '#/definitions/Status'

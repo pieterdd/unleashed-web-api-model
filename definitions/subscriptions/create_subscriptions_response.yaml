@@ -1,0 +1,14 @@
+type: object
+title: Create subscription response
+required:
+ - order_id
+ - allowed_payment_methods
+properties:
+  order_id:
+    type: string
+    description: If applicable, returns the order_id
+  allowed_payment_methods:
+    type: array
+    description: Allowed methods to pay for subscription
+    items:
+      $ref: '#/definitions/PaymentMethod'

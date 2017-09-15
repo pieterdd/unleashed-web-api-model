@@ -1,0 +1,12 @@
+type: object
+title: Adjust the email address of a user
+required:
+- email
+- code
+properties:
+  email:
+    type: string
+    description: "New email"
+  code:
+    type: string
+    description: "Confirmation code"

@@ -1,0 +1,36 @@
+type: object
+title: Request mandate
+required:
+  - subscription_id
+  - method
+properties:
+  subscription_id:
+    type: string
+    description: ID on which to set the mandate as a payment method (if any)
+  method:
+    type: string
+    enum:
+    - 'creditcard'
+    - 'sepa'
+    description: |
+      We have a different payment provider for SEPA mandates (Doccle) and creditcard mandates (Mollie). So in the
+      frontend you should choose between both. So you are redirected to the correct interface to setup your
+      mandate.
+  mandate_name:
+    type: string
+    description: |
+      The unique name you want the mandate to have.  If not given, UWA will generate a mandate name.
+  redirect_url:
+    type: string
+    description: |
+      URL to redirect to after the financial info has been input at the payment provider end. This is required when
+      the method is creditcard
+  iban:
+    type: string
+    description: |
+      The iban number of the debtor (the customer). This is required for sepa mandates
+  bic:
+    type: string
+    description: |
+      The bic of the debtor (the customer). This is required for sepa mandates
+

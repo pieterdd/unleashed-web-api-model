@@ -1,0 +1,22 @@
+type: object
+title: Notifications
+required:
+  - name
+  - channels
+properties:
+  name:
+    description: The name of notification.
+    type: string
+  channels:
+    description: |
+      The channels on which to receive the notification. Not all channels might
+      be available for a particular subscription. Valid options can be
+      retrieved through the GET call.
+    type: object
+    properties:
+      sms:
+        type: boolean
+      mail:
+        type: boolean
+      push:
+        type: boolean

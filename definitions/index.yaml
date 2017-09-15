@@ -1,0 +1,104 @@
+Status:
+  $ref: ./general/status.yaml
+Token:
+  $ref: ./authorization/token.yaml
+Auth:
+  $ref: ./authorization/auth.yaml
+Address:
+  $ref: ./customers/address.yaml
+Company:
+  $ref: ./customers/company.yaml
+CreateCustomer:
+  $ref: ./customers/create_customer.yaml
+Customer:
+  $ref: ./customers/customer.yaml
+MigrateCustomer:
+  $ref: ./customers/migrate_customer.yaml
+VerifyCustomer:
+  $ref: ./customers/verify.yaml
+EmailUpdate:
+  $ref: ./customers/email.yaml
+EmailUpdatePerform:
+  $ref: ./customers/email_perform.yaml
+Notification:
+  $ref: ./notifications/notification.yaml
+PasswordUpdate:
+  $ref: ./password/update.yaml
+PasswordResetRequest:
+  $ref: ./password/reset_request.yaml
+PasswordResetPerform:
+  $ref: ./password/reset_perform.yaml
+PrepaidRegistration:
+  $ref: ./customers/prepaid_registration.yaml
+Product:
+  $ref: ./products/product.yaml
+ProductLight:
+  $ref: ./products/product_light.yaml
+ProductId:
+  $ref: ./products/product_id.yaml
+OrderRequest:
+  $ref: ./orders/create_order.yaml
+Order:
+  $ref: ./orders/order.yaml
+ShippingAddress:
+  $ref: ./orders/shipping_address.yaml
+ShippingInfo:
+  $ref: ./orders/shipping_info.yaml
+Subscription:
+  $ref: ./subscriptions/subscription.yaml
+CreateSubscription:
+  $ref: ./subscriptions/create_subscription.yaml
+CreateSubscriptionResponse:
+  $ref: ./subscriptions/create_subscriptions_response.yaml
+SubscriptionBalance:
+  $ref: ./subscriptions/balance.yaml
+SimState:
+  $ref: ./telco/sim_state.yaml
+SimStatus:
+  $ref: ./telco/sim_status.yaml
+SimDetails:
+  $ref: ./telco/sim_details.yaml
+SimDetailsUpdate:
+  $ref: ./telco/sim_details_update.yaml
+SimActivate:
+  $ref: ./telco/sim_activate.yaml
+SimSwap:
+  $ref: ./telco/sim_swap.yaml
+SimSwapRequest:
+  $ref: ./telco/sim_swap_request.yaml
+PaymentRequest:
+  $ref: ./finance/payment_request.yaml
+PaymentSettings:
+  $ref: ./subscriptions/payment_settings.yaml
+InvoicingSettings:
+  $ref: ./subscriptions/invoicing_settings.yaml
+PaymentSettingsUpdate:
+  $ref: ./subscriptions/update_payment_settings.yaml
+VoicemailSettings:
+  $ref: ./subscriptions/voicemail_settings.yaml
+UsageRecord:
+  $ref: ./subscriptions/usage_record.yaml
+Invoice:
+  $ref: ./finance/invoice.yaml
+Mandate:
+  $ref: ./finance/mandate.yaml
+RequestMandate:
+  $ref: ./finance/request_mandate.yaml
+RequestMandateResponse:
+  $ref: ./finance/request_mandate_response.yaml
+Payment:
+  $ref: ./finance/payment.yaml
+PaymentMethod:
+  $ref: ./finance/payment_method.yaml
+PaymentDetails:
+  $ref: ./finance/payment_details.yaml
+Version:
+  $ref: ./apps/version.yaml
+Topup:
+  $ref: ./finance/topup.yaml
+AutoTopup:
+  $ref: ./subscriptions/auto_topup.yaml
+CreatePosCustomer:
+  $ref: ./point_of_sale/create_customer.yaml
+Event:
+  $ref: ./events/event.yaml

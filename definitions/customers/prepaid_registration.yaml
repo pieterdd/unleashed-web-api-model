@@ -1,0 +1,19 @@
+type: object
+title: Prepaid registration
+description: |
+  It is called prepaid registration but actually it is about identifying the owner of a sim.
+  This can be done via his eid in a shop or via a payment.
+  If a payment is done the bank will provide this identity but this method has an expiry date.
+  Every so many months you should make a payment via a bank transfer of a Belgian bank
+required:
+  - verification_state
+properties:
+  verification_state:
+    type: string
+    enum:
+      - forever
+      - temporarily
+  verified_until:
+    description: It represents how long the current state will still be valid if temporary.
+    type: string
+    format: date

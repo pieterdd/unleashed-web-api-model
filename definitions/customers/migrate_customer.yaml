@@ -1,0 +1,45 @@
+type: object
+title: Adjust customer information and complete the transition to SBSS
+required:
+  - first_name
+  - last_name
+  - gender
+  - language
+  - phone_number
+  - verification_code
+  - date_of_birth
+  - place_of_birth
+  - address
+properties:
+  first_name:
+    type: string
+  last_name:
+    type: string
+  gender:
+    type: string
+    enum:
+    - M
+    - F
+    - X
+  language:
+    type: string
+    enum:
+    - nl
+    - fr
+    - en
+  phone_number:
+    type: string
+    #TO-DO: add format
+  verification_code:
+    type: string
+    description: |
+      Code received by text to prove the number is owned by the invoker.  See /customers/verify on how
+      to request a code.
+  date_of_birth:
+    type: string
+    format: date
+  place_of_birth:
+    type: string
+  address:
+    $ref: '#/definitions/Address'
+  #TO-DO: add social info, check with CARE

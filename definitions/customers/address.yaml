@@ -1,0 +1,22 @@
+type: object
+title: Customer address information
+required:
+  - street
+  - postcode
+  - city
+  - country
+properties:
+  street:
+    type: string
+  number:
+    type: string
+  box:
+    type: string
+  postcode:
+    type: string
+  city:
+    type: string
+  country:
+    type: string
+    description: ISO2 country code
+    pattern: ^[a-z]{2}$

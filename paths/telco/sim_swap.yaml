@@ -1,0 +1,56 @@
+get:
+  tags:
+    - Telco
+  summary: "Get current sim swap status"
+  consumes:
+    - application/json
+  produces:
+    - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+    - name: id
+      in: path
+      description: Id of the subscription to ask a new sim for.
+      required: true
+      type: string
+  responses:
+    200:
+      description: Swap request created
+      schema:
+        $ref: '#/definitions/SimSwap'
+    403:
+      description: unauthorized
+      schema:
+        $ref: '#/definitions/Status'
+    404:
+      description: no current sim swap
+post:
+  tags:
+    - Telco
+  summary: "Request a sim swap"
+  consumes:
+    - application/json
+  produces:
+    - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+    - name: id
+      in: path
+      description: Id of the subscription to ask a new sim for.
+      required: true
+      type: string
+    - name: Swap request
+      in: body
+      description: "request a new sim"
+      required: true
+      schema:
+        $ref: '#/definitions/SimSwapRequest'
+  responses:
+    201:
+      description: Swap request created
+      schema:
+        $ref: '#/definitions/SimSwap'
+    403:
+      description: unauthorized
+      schema:
+        $ref: '#/definitions/Status'

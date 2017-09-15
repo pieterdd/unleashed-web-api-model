@@ -1,0 +1,4 @@
+type: string
+title: Product ID
+description: The id of a product, is a compound key of offeringId-offeringVersion-offeringVariant
+pattern: .+-.+-.+

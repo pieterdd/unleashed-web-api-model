@@ -1,0 +1,21 @@
+get:
+  tags:
+    - Finance
+  summary: "Get customer's payments"
+  produces:
+    - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+    - $ref: "#/parameters/page"
+    - $ref: "#/parameters/per_page"
+  responses:
+    200:
+      description: Returns the payments
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/Payment'
+    403:
+      description: unauthorized
+      schema:
+        $ref: '#/definitions/Status'
