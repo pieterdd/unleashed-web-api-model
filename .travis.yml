@@ -1,7 +1,14 @@
 language: node_js
 node_js:
-  - '8'
-install:
-  - yarn install
+- '8'
+install: yarn install
 script:
-  - yarn test
+- yarn test
+- "./dapperdox.sh"
+deploy:
+  provider: heroku
+  api_key:
+    secure: XPj4Xy8jF5Di3TELrewrslbf6tCF75VAZfUhnbil55QHyaZQt2j8HvPb3/xk1LXnT7iJLNq0W2ZGGo5ob5f0pCqGPuZRhJQYJfdwpZgBztC3I/+PIM1c8mv0TX8gewYgPjcwC7FqunSqK/0OZjbBuQAExdOUCXn+UOvNp/Mlfz8aPp3zriIOWGR/j4uGG1SZWJWZT0pbtTekd5UiNiLvN4K1E2O2BHNAW8fvTnKRCITZcbWEJ0cycC/vg3e1IynsT1bwLUQl7q8BkIZYhG/H9kVOf8I0KDcnCIwTaK3AwBsvVqQ3P0CF5nqP6PxHPAxVw05qHSdJfjR6/eXcIf3bxXQCbcFgyW9nM1GKxpKogftrcKEK+ewriuUZ5aeRiqXNW0xsd3TIpXYnRS6t9LdfjXAYitR3DOAaddECHQa951egaeQ3CXRZvC0hBXYCWKcb9FLQ/zCbeXu8SNlGZLdzOGH6gC9tvWHcftNN6CM10PqfWjySceAgU9yrWFM8iXQh/MgmQoMagKyb0j9CAEVORHKhdp8hDtsQCSh/xSL9us0yCab0yj/1SO2IXywwOAkcGKCFp19oz2x4ArL2BmYZhk1UY7ysHH4mZgX8++cY2kDFX10N1SAZqBst5TZPKM8nALYA/kQewGxif4sVF6cOpZKX1CgajMVM9ORqJyfWcYU=
+  app: uwa-model
+  skip_cleanup: true
+  on: master

@@ -8,6 +8,7 @@
         "swagger-parser": "^3.4.1"
     },
     "scripts": {
-        "test": "node build.js"
+        "test": "node build.js",
+        "start": "cd bin && ./dapperdox -bind-addr=0.0.0.0:$PORT -spec-dir=../output -assets-dir=../assets"
     }
 }
