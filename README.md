@@ -1,5 +1,7 @@
 # Unleashed Web API Model
 
+[![Build status][build-status-badge]][build-status]
+
 This repository contains the model used by the [Unleashed Web API][uwa] and serves as a guide to expand or work on the existing functionality and endpoints.
 
 ## Installation and usage
@@ -40,6 +42,8 @@ Since we have gone live with Stievie and part of the Mobile Viking's pages in pr
 
 Therefor use the word `DEPRECATED` in the description if a call becomes deprecated and make sure there is a clean up task for UWA, that removes the deprecated code once all web components have done the needed changes.
 
+[build-status-badge]: https://travis-ci.org/vikingco/unleashed-web-api-model.svg?branch=master
+[build-status]: https://travis-ci.org/vikingco/unleashed-web-api-model
 [uwa]: https://api.unleashed.be
 [docker]: https://www.docker.com/
 [compose]: https://docs.docker.com/compose/install/
