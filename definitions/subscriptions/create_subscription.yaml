@@ -28,8 +28,12 @@ properties:
         type: object
         description: info needed when a MNP
         required:
+          - operator
           - iccid
         properties:
+          operator:
+            type: string
+            description: name of donor operator
           msisdn:
             type: string
             description: Number of the subscription if applicable
