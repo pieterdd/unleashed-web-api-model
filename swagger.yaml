@@ -17,6 +17,8 @@ tags:
     description: Products
   - name: Subscriptions
     description: Subscriptions
+  - name: Finance
+    description: Finance
   - name: Orders
     description: Orders
   - name: Apps

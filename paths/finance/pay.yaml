@@ -18,6 +18,7 @@ post:
       description: The payment information
       schema:
         type: object
+        title: Payment information
         properties:
           payment_url:
             type: string
