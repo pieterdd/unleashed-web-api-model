@@ -20,10 +20,18 @@ properties:
   status:
     type: string
     enum:
-      - payment_pending
+      - waiting_for_port_in
+      - waiting_for_sim
+      - waiting_for_sim_activation_request
+      - waiting_for_sim_matching
+      - waiting_for_payment
+      - waiting_for_customer_verification
+      - created
       - processing
-      - complete
-      - could_not_process
+      - review_needed
+      - cancelled
+      - enabled
+      - unknown
   date_created:
     type: string
     format: date
