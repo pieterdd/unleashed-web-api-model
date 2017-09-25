@@ -1,0 +1,31 @@
+.navbar {
+    background: #e6332a;
+}
+
+.navbar a.navbar-brand {
+    background: url(/img/logo-unleashed.svg) no-repeat 0 5px;
+    padding: 15px 90px;
+    height: 68px;
+}
+
+pre,
+code,
+pre code,
+.attribute {
+    color: #81251b;
+}
+
+.footer {
+    background-color: #333;
+    height: 80px;
+}
+
+.nav-toggle.open {
+    color: #333;
+}
+
+.brands {
+    height: 64px;
+    width: 325px;
+    padding-bottom: 7px;
+}
