@@ -4,14 +4,29 @@ required:
   - id
   - executed_on
   - amount
+  - status
+  - product
 properties:
   id:
     type: string
+    description: The id the topup has.
   executed_on:
     type: string
     format: date
+    description: The date on which the topup was executed.
   amount:
     type: number
     format: double
+    description: The cost of the topup
+  status:
+    type: string
+    enum:
+      - payment_pending
+      - processing
+      - complete
+      - could_not_process
+    description: The state the topup is in.
   product:
     $ref: '#/definitions/Product'
+  payment_details:
+    $ref: '#/definitions/PaymentDetails'

@@ -10,3 +10,4 @@ properties:
   amount:
     type: number
     format: double
+    description: The amount that was payed.
