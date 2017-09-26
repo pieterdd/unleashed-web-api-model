@@ -26,6 +26,7 @@ properties:
       - waiting_for_sim_matching
       - waiting_for_payment
       - waiting_for_customer_verification
+      - waiting_for_switch_accept
       - created
       - processing
       - review_needed
