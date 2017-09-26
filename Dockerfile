@@ -3,7 +3,7 @@ MAINTAINER Unleashed <technology@unleashed.com>
 
 WORKDIR /dapperdox
 
-RUN apk --update add wget \
+RUN apk --update add wget tar \
     && wget https://github.com/DapperDox/dapperdox/releases/download/v1.1.1/dapperdox-1.1.1.linux-amd64.tgz --no-check-certificate \
     && tar -zxf dapperdox-*.tgz --strip-components=1
 
