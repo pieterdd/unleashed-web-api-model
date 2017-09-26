@@ -5,6 +5,11 @@ required:
 properties:
   product_id:
     $ref: '#/definitions/ProductId'
+  child_product_ids:
+    type: array
+    description: Other related products you want to order like, new simcard or topup (required for prepaid)
+    items:
+      $ref: '#/definitions/ProductId'
   billing_address:
     $ref: '#/definitions/Address'
   billing_channel:
