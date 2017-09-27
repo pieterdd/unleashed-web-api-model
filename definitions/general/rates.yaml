@@ -1,0 +1,21 @@
+type: array
+title: Rates
+items:
+  type: object
+  title: Rate
+  required:
+  - type
+  - rate
+  properties:
+    type:
+      type: string
+      enum:
+      - VOICE
+      - SMS
+      - DATA
+      - MMS
+    rate:
+      type: number
+      format: float
+      description: >
+        This indicates the used rate for this type in Euro.

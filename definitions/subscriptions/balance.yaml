@@ -1,14 +1,41 @@
 type: object
 title: Balance
 required:
+  - product
   - credit
   - bundles
+  - billing_rates
+  - valid_from
+  - valid_until
 properties:
+  product:
+    $ref: '#/definitions/ProductLight'
   credit:
     description: >
       Credit user has to make calls, order extra bundles, ...
     type: number
     format: double
+  billing_rates:
+    $ref: '#/definitions/Rates'
+    description: >
+      The rates for usage out of bundle. For unlimited items this will contain a rate of 0 Euro.
+      You won't find a bundle of that type within the bundles array.
+  total_out_of_bundle_cost:
+    type: number
+    format: float
+  valid_from:
+    description: >
+      For prepaid, this value contains the purchased timestamp of the last topup.
+      Purchased implies when it was added to the OCS, and not necessarily when it was paid.
+      For postpaid, this is the start of the current billing cycle.
+    type: string
+    format: date-time
+  valid_until:
+    description: >
+      For prepaid, this value contains the expiration timestamp of the last topup.
+      For postpaid, this is the end of the current billing cycle.
+    type: string
+    format: date-time
   bundles:
     description: >
       List of all active bundles of the customer's subscription.
@@ -18,36 +45,38 @@ properties:
     items:
       type: object
       required:
+        - descriptions
         - valid_from
         - valid_until
         - total
         - remaining
         - used
         - type
+        - rates
       properties:
-        product:
-          $ref: '#/definitions/Product'
+        descriptions:
+          $ref: '#/definitions/Descriptions'
         valid_from:
           description: >
-            Either the purchase date or the date the product is activated.
+            Either the purchase date or the date the bundle is activated.
           type: string
-          format: date
+          format: date-time
         valid_until:
           type: string
-          format: date
+          format: date-time
         total:
           type: number
-          format: double
+          format: float
         remaining:
           description: >
             This is the amount left in your bundle.
           type: number
-          format: double
+          format: float
         used:
           description: >
             This is the amount of your bundle that is used.
           type: number
-          format: double
+          format: float
         type:
           type: string
           enum:
@@ -56,13 +85,17 @@ properties:
             - sms
             - data
             - data_roaming
+            - value
+            - out_of_bundle
+        rates:
+          $ref: '#/definitions/Rates'
         flags:
           description: |
-            Indicates special properties of this bundle e.g. 'unlimited' for an unlimited bundle or 'promo' for a promo
+            Indicates special properties of this bundle e.g. 'promo' for a promo
             bundle. Multiple flags can be used.
           type: array
           items:
             type: string
             enum:
-              - unlimited
+              - promo
 

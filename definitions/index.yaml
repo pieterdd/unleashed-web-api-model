@@ -1,5 +1,9 @@
 Status:
   $ref: ./general/status.yaml
+Descriptions:
+  $ref: ./general/descriptions.yaml
+Rates:
+  $ref: ./general/rates.yaml
 Token:
   $ref: ./authorization/token.yaml
 Auth:

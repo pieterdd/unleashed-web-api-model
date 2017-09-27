@@ -1,0 +1,10 @@
+type: object
+title: Descriptions
+required:
+  - title
+  - description
+properties:
+  title:
+    type: string
+  description:
+    type: string

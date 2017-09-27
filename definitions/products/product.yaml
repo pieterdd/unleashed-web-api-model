@@ -7,17 +7,9 @@ required:
   - descriptions
 properties:
   id:
-   $ref: '#/definitions/ProductId'
+    $ref: '#/definitions/ProductId'
   descriptions:
-    type: object
-    required:
-      - title
-      - description
-    properties:
-      title:
-        type: string
-      description:
-        type: string
+    $ref: '#/definitions/Descriptions'
   price:
     description: >
       price of the item, expressed as a decimal number of Euros or Vikingpoints.  For free items, the value 0 must be
