@@ -26,6 +26,8 @@ get:
 post:
   tags:
     - Subscriptions
+  consumes:
+    - application/json
   summary: Create subscription
   produces:
     - application/json
