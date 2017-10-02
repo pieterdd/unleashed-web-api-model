@@ -33,6 +33,9 @@ properties:
   date_of_birth:
     type: string
     format: date
+  date_joined:
+    type: string
+    format: date
   place_of_birth:
     type: string
   company:
