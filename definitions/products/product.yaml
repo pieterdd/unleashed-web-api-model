@@ -35,21 +35,8 @@ properties:
         description: >
           The prices for bundles in the product. These are expressed as decimals, with the unit being euros.
         type: object
-  payment_providers:
-    description: >
-      Ids for the payment providers that may be used to pay for this product.  For free products, this property may be
-      omitted. See the #listPaymentProviders call to see which values can be returned.
-    type: array
-    items:
-      type: string
   type:
     description: >
       Type of the product represented as a hierarchical (slash-separated) string (e.g. topup, subscription/postpaid,
       hardware/handset).  This can be used to filter on certain types, or to group products.
     type: string
-  order_parameters:
-    type: object
-    description: >
-      Any parameters that may be specified for the product when it is ordered.  Keys in the object are the parameter
-      names, the values are the allowed type from the following list: number, string, date, datetime, Address (street,
-      number, box, postcode, city, country), ShippingAddress (first_name, last_name, company, address)
