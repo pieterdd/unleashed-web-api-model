@@ -22,8 +22,6 @@ properties:
     enum:
     - POSTPAID
     - PREPAID
-  msisdn:
-    type: string
   product:
     $ref: '#/definitions/ProductLight'
   state:

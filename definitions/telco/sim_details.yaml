@@ -1,6 +1,7 @@
 type: object
 title: SIM details
 required:
+  - msisdn
   - pin1
   - pin2
   - puk1
@@ -8,6 +9,9 @@ required:
   - iccid
   - state
 properties:
+  msisdn:
+    type: string
+    pattern: 324\d{8}
   alias:
     type: string
     description: >
