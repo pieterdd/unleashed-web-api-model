@@ -21,6 +21,7 @@ properties:
       - invalid_customer
       - invalid_token
       - mandate_cannot_be_set
+      - not_payable
   message:
     type: string
   incorrect_fields:
