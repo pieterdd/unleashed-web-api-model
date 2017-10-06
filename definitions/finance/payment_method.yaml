@@ -12,3 +12,4 @@ enum:
  - Mandate
  - Vouchers
  - Paypal
+ - Unknown
