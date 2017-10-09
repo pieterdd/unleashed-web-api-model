@@ -8,8 +8,7 @@ get:
     - name: iccid
       in: query
       description: |
-        ICC-ID of the sim to retrieve info for. For unauthenticated users, this needs to be the full length ICC-ID.
-        For authenticated users, the last four digits will suffice and UWA will return the full length ICC-ID.
+        Full ICC-ID of the sim to retrieve info for.
       required: true
       type: string
   responses:
