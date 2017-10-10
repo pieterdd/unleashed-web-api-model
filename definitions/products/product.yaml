@@ -36,7 +36,12 @@ properties:
           The prices for bundles in the product. These are expressed as decimals, with the unit being euros.
         type: object
   type:
-    description: >
-      Type of the product represented as a hierarchical (slash-separated) string (e.g. topup, subscription/postpaid,
-      hardware/handset).  This can be used to filter on certain types, or to group products.
     type: string
+    enum:
+    - postpaid
+    - prepaid
+    - prepaid/topup
+    - prepaid/package
+    - postpaid/package
+    - sim/swap/free
+    - sim/swap/paid
