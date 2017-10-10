@@ -26,6 +26,10 @@ properties:
     $ref: '#/definitions/ProductLight'
   state:
     type: string
-    description: state of subscription e.g. (de)activated, waiting ...
+    enum:
+      - enabled
+      - disabled
+      - deleted
+      - locked
   sim:
     $ref: '#/definitions/SimDetails'
