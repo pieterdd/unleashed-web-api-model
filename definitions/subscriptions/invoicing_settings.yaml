@@ -2,7 +2,6 @@ type: object
 title: Invoice settings
 required:
   - billing_preference
-  - invoicing_address
 properties:
   billing_preference:
     type: string

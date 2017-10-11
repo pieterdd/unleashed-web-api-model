@@ -37,7 +37,7 @@ put:
       type: string
     - name: settings
       in: body
-      description: settings to use. To set no mandate, leave the mandate_id out.
+      description: settings to use. 
       schema:
         $ref: '#/definitions/InvoicingSettings'
   responses:
