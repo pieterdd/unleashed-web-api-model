@@ -5,22 +5,14 @@ get:
   produces:
   - application/json
   parameters:
-    - name: subscription
-      in: query
-      type: string
-      description: ID of the subscription to restrict products for, if required
-      required: false
     - name: type
       in: query
       type: string
       description: >
-        Pass an optional filter on type. E.g. `type=subscription` would give all the products that are a subscription,
-        `type=subscription\postpaid` would give all products that are postpaid subscriptions. You should always give the
-        full-type, so `type=postpaid` will not work.
-        Note you can define multiple types and then the union will be returned.
+        Pass an optional filter on type. E.g. `type=prepaid` would give all the products that are for
+        a prepaid subscription, `type=prepaid/topup` would give all products that are prepaid top-ups.
       required: false
     - $ref: "#/parameters/language"
-
   responses:
     200:
       description: Product listing
