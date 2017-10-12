@@ -1,5 +1,8 @@
 type: object
 title: Invoice settings
+description: |
+    If there is no contact information (invoicing_address) defined, no invoicing_address will be returned and
+    the system will use the address of the customer.
 required:
   - billing_preference
 properties:

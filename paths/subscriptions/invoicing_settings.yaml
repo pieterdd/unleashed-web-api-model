@@ -25,7 +25,7 @@ put:
   tags:
     - Subscriptions
     - Finance
-  summary: Update invoicing settings
+  summary: Update invoicing settings. If no invoicing_address given, it will be deleted.
   consumes:
     - application/json
   parameters:
