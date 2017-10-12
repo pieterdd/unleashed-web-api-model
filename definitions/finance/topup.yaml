@@ -29,4 +29,7 @@ properties:
   product:
     $ref: '#/definitions/Product'
   payment_details:
-    $ref: '#/definitions/PaymentDetails'
+    type: array
+    description: A list of payment details
+    items:
+      $ref: '#/definitions/PaymentDetails'

@@ -45,4 +45,7 @@ properties:
     type: string
     description: ID of the product that was ordered.
   payment_details:
-    $ref: '#/definitions/PaymentDetails'
+    type: array
+    description: A list of payment details
+    items:
+      $ref: '#/definitions/PaymentDetails'
