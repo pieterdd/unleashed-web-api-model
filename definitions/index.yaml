@@ -44,8 +44,8 @@ OrderRequest:
   $ref: ./orders/create_order.yaml
 Order:
   $ref: ./orders/order.yaml
-ShippingAddress:
-  $ref: ./orders/shipping_address.yaml
+ContactInformation:
+  $ref: ./general/contact_information.yaml
 ShippingInfo:
   $ref: ./orders/shipping_info.yaml
 Subscription:

@@ -15,7 +15,7 @@ properties:
     type: string
     description: "Password required to request new sim"
   shipping_address:
-    $ref: '#/definitions/ShippingAddress'
+    $ref: '#/definitions/ContactInformation'
   redirect_url:
     type: string
     description: URL to redirect to after payment is complete.  If no payment is required, this property is ignored.

@@ -11,7 +11,7 @@ properties:
     items:
       $ref: '#/definitions/ProductId'
   billing_address:
-    $ref: '#/definitions/Address'
+    $ref: '#/definitions/ContactInformation'
   billing_channel:
     type: string
     description: how you want to receive billings
@@ -19,7 +19,7 @@ properties:
       - paper
       - digital
   shipping_address:
-    $ref: '#/definitions/ShippingAddress'
+    $ref: '#/definitions/ContactInformation'
   sim_info:
     type: object
     description: info needed when creating mobile subscription

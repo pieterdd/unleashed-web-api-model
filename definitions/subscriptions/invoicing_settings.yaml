@@ -9,4 +9,4 @@ properties:
       - paper
       - digital
   invoicing_address:
-    $ref: '#/definitions/Address'
+    $ref: '#/definitions/ContactInformation'

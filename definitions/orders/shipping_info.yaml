@@ -4,7 +4,7 @@ required:
   - address
 properties:
   address:
-    $ref: '#/definitions/ShippingAddress'
+    $ref: '#/definitions/ContactInformation'
   state:
     type: string
     enum:

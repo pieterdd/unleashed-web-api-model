@@ -1,13 +1,17 @@
 type: object
-title: Shipping address
+title: Contact
 required:
+  - first_name
+  - last_name
   - address
 properties:
+  email:
+    type: string
   first_name:
     type: string
   last_name:
     type: string
-  company:
-    type: string
+  company_name:
+     type: string
   address:
     $ref: '#/definitions/Address'
