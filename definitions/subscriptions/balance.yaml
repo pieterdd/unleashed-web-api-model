@@ -2,40 +2,28 @@ type: object
 title: Balance
 required:
   - product
-  - credit
   - bundles
-  - billing_rates
-  - valid_from
-  - valid_until
 properties:
   product:
-    $ref: '#/definitions/ProductLight'
+    $ref: '#/definitions/Product'
   credit:
     description: >
       Credit user has to make calls, order extra bundles, ...
+      For postpaid, this value will be 0.
     type: number
     format: double
-  billing_rates:
-    $ref: '#/definitions/Rates'
+  out_of_bundle_cost:
     description: >
-      The rates for usage out of bundle. For unlimited items this will contain a rate of 0 Euro.
-      You won't find a bundle of that type within the bundles array.
-  total_out_of_bundle_cost:
+      Only used on postpaid, the costs outside of bundles for the current billing period.
+      For prepaid, this value will be 0.
     type: number
     format: float
-  valid_from:
+  out_of_bundle_cost_threshold:
     description: >
-      For prepaid, this value contains the purchased timestamp of the last topup.
-      Purchased implies when it was added to the OCS, and not necessarily when it was paid.
-      For postpaid, this is the start of the current billing cycle.
-    type: string
-    format: date-time
-  valid_until:
-    description: >
-      For prepaid, this value contains the expiration timestamp of the last topup.
-      For postpaid, this is the end of the current billing cycle.
-    type: string
-    format: date-time
+      Only used on postpaid, the current threshold for outside of bundle costs.
+      For prepaid, this value will be 0.
+    type: number
+    format: float
   bundles:
     description: >
       List of all active bundles of the customer's subscription.
@@ -87,15 +75,4 @@ properties:
             - data_roaming
             - value
             - out_of_bundle
-        rates:
-          $ref: '#/definitions/Rates'
-        flags:
-          description: |
-            Indicates special properties of this bundle e.g. 'promo' for a promo
-            bundle. Multiple flags can be used.
-          type: array
-          items:
-            type: string
-            enum:
-              - promo
 
