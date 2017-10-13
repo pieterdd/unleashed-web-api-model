@@ -68,11 +68,8 @@ properties:
         type:
           type: string
           enum:
-            - voice_on_net
-            - voice_off_net
             - sms
             - data
-            - data_roaming
+            - voice
             - value
-            - out_of_bundle
 
