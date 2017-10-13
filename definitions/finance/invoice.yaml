@@ -16,7 +16,7 @@ properties:
     format: date
   amount:
     type: number
-    format: double
+    format: float
   status:
     type: string
     enum:

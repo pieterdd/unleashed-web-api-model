@@ -10,7 +10,7 @@ properties:
     description: whether to trigger auto-topup when credit is below a given amount
   amount_threshold:
     type: number
-    format: double
+    format: float
     description: amount to be below to trigger an auto-topup (if on_amount_threshold is true)
   on_bundle_expiry:
     type: boolean

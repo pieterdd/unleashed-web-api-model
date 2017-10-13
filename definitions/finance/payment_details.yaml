@@ -9,5 +9,5 @@ properties:
     $ref: '#/definitions/PaymentMethod'
   amount:
     type: number
-    format: double
+    format: float
     description: The amount that was payed.

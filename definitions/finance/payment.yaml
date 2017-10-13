@@ -16,7 +16,7 @@ properties:
     description: datetime that the customer, manually or automatic initiated, created this payment
   amount:
     type: number
-    format: double
+    format: float
   provider:
     type: string
     description: Provider used for paying

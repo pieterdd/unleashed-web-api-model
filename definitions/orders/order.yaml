@@ -11,7 +11,7 @@ properties:
     type: string
   amount:
     type: number
-    format: double
+    format: float
   allowed_payment_methods:
     type: array
     description: Allowed methods to use
