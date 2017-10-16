@@ -58,8 +58,6 @@ SubscriptionBalance:
   $ref: ./subscriptions/balance.yaml
 SimState:
   $ref: ./telco/sim_state.yaml
-SimStatus:
-  $ref: ./telco/sim_status.yaml
 SimDetails:
   $ref: ./telco/sim_details.yaml
 SimDetailsUpdate:

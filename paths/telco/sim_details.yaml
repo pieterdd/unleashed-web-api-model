@@ -1,24 +1,3 @@
-get:
-  tags:
-    - Telco
-  summary: Get SIM
-  produces:
-    - application/json
-  parameters:
-    - name: msisdn
-      in: path
-      description: MSISDN of the sim to retrieve info about.
-      required: true
-      type: string
-  responses:
-    200:
-      description: Sim info
-      schema:
-        $ref: '#/definitions/SimStatus'
-    403:
-      description: unauthorized
-      schema:
-        $ref: '#/definitions/Status'
 put:
   tags:
     - Telco
