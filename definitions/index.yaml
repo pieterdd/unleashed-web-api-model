@@ -78,8 +78,8 @@ PaymentSettingsUpdate:
   $ref: ./subscriptions/update_payment_settings.yaml
 VoicemailSettings:
   $ref: ./subscriptions/voicemail_settings.yaml
-UsageRecord:
-  $ref: ./subscriptions/usage_record.yaml
+Usage:
+  $ref: ./subscriptions/usage.yaml
 Invoice:
   $ref: ./finance/invoice.yaml
 Mandate:

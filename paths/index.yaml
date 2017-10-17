@@ -45,8 +45,8 @@
   $ref: ./subscriptions/subscriptions.yaml
 /subscriptions/{id}/balance:
   $ref: ./subscriptions/balance.yaml
-/subscriptions/{id}/records:
-  $ref: ./subscriptions/usage_records.yaml
+/subscriptions/{id}/usage:
+  $ref: ./subscriptions/usage.yaml
 /subscriptions/{id}/topups:
   $ref: ./subscriptions/topups.yaml
 /subscriptions/{id}/voicemail-settings:

@@ -1,0 +1,50 @@
+type: object
+title: Usage
+required:
+  - traffic_type
+  - origin
+  - start_timestamp
+  - duration
+  - quantity
+  - price
+  - in_bundle
+  - is_incoming
+properties:
+  traffic_type:
+    type: string
+    enum:
+      - sms
+      - voice
+      - data
+  origin:
+    description: the initiator of the call, sms or data session
+    type: string
+  destination:
+    description: the destination of the call, sms or data session
+    type: string
+  start_timestamp:
+    description: when the call or data session begins. Or when the SMS was sent.
+    type: string
+    format: date-time
+  end_timestamp:
+    description: when the call or data session ends.
+    type: string
+    format: date-time
+  duration:
+    description: the duration of the call or data session in seconds. For sms this will be 0.
+    type: integer
+    format: int64
+  quantity:
+    description: the amount of bytes that are used during a data sessions. For calls and sms this will be 0.
+    type: number
+  price:
+    description: the cost of the data session, call or sms
+    type: number
+    format: float
+  in_bundle:
+    description: indicates if the call, data session or sms was in or out bundle
+    type: boolean
+  is_incoming:
+    description: indicates if the call, data session or sms was incoming or not.
+    type: boolean
+

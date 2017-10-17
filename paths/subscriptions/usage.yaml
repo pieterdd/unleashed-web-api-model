@@ -8,7 +8,7 @@ get:
     - $ref: "#/parameters/authorization"
     - name: id
       in: path
-      description: id of subscription to fetch the balance for
+      description: id of subscription to fetch the history usage for
       required: true
       type: string
     - name: type
@@ -26,7 +26,7 @@ get:
         schema:
           type: array
           items:
-            $ref: '#/definitions/UsageRecord'
+            $ref: '#/definitions/Usage'
       403:
         description: unauthorized
         schema:
