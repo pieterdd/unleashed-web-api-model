@@ -6,11 +6,11 @@ properties:
   redirect_url:
     type: string
     description: url to redirect to after paying
-  reference_number:
+  invoice_id:
     type: string
-    description: reference number of the payment or invoice to pay.  Pass either this or order_id.
+    description: ID of the invoice to pay.  Pass either this or order_id.
   order_id:
     type: string
-    description: ID of the order to pay.  Pass either this or reference_number.
+    description: ID of the order to pay.  Pass either this or invoice_id.
   payment_method:
     $ref: '#/definitions/PaymentMethod'
