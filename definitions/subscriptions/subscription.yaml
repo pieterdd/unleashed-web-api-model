@@ -23,7 +23,7 @@ properties:
     - POSTPAID
     - PREPAID
   product:
-    $ref: '#/definitions/ProductLight'
+    $ref: '#/definitions/Product'
   state:
     type: string
     enum:
