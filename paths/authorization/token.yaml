@@ -19,7 +19,7 @@ post:
       description: access info
       schema:
         $ref: '#/definitions/Token'
-    403:
+    401:
       description: unauthorized
       schema:
         $ref: '#/definitions/Status'

@@ -20,7 +20,7 @@ put:
   responses:
     204:
       description: Sim updated
-    403:
+    401:
       description: unauthorized
       schema:
         $ref: '#/definitions/Status'

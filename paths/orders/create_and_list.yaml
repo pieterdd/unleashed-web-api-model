@@ -18,7 +18,7 @@ post:
       description: Successfully created order
       schema:
         $ref: '#/definitions/Order'
-    403:
+    401:
       description: Unauthorized
       schema:
         $ref: '#/definitions/Status'
@@ -40,7 +40,7 @@ get:
         type: array
         items:
           $ref: '#/definitions/Order'
-    403:
+    401:
       description: Unauthorized
       schema:
         $ref: '#/definitions/Status'

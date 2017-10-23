@@ -22,7 +22,7 @@ post:
       description: Created customer
       schema:
         $ref: '#/definitions/Customer'
-    403:
+    401:
       description: Unauthorized
       schema:
         $ref: '#/definitions/Status'

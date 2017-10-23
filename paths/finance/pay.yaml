@@ -23,7 +23,7 @@ post:
           payment_url:
             type: string
             description: url to go to to finalize the payment
-    403:
+    401:
       description: unauthorized
       schema:
         $ref: '#/definitions/Status'

@@ -17,7 +17,7 @@ get:
       description: Returns invoicing settings
       schema:
         $ref: '#/definitions/InvoicingSettings'
-    403:
+    401:
       description: unauthorized
       schema:
         $ref: '#/definitions/Status'
@@ -37,13 +37,13 @@ put:
       type: string
     - name: settings
       in: body
-      description: settings to use. 
+      description: settings to use.
       schema:
         $ref: '#/definitions/InvoicingSettings'
   responses:
     204:
       description: Invoicing settings updated
-    403:
+    401:
       description: unauthorized
       schema:
         $ref: '#/definitions/Status'

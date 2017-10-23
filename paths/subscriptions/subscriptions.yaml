@@ -16,7 +16,7 @@ get:
       examples:
         application/json:
           $ref: ./../../examples/subscriptions/subscription_stievie.json
-    403:
+    401:
       description: unauthorized
       schema:
         $ref: '#/definitions/Status'
@@ -44,7 +44,7 @@ post:
       description: Successfully created a subscription
       schema:
         $ref: '#/definitions/CreateSubscriptionResponse'
-    403:
+    401:
       description: Unauthorized
       schema:
         $ref: '#/definitions/Status'

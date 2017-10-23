@@ -18,7 +18,7 @@ get:
       description: Returns details of the requested subscription
       schema:
         $ref: '#/definitions/Subscription'
-    403:
+    401:
       description: unauthorized
       schema:
         $ref: '#/definitions/Status'
@@ -40,7 +40,7 @@ delete:
       description: Doesn't return anything except a 204 to indicate no content.
       schema:
         $ref: '#/definitions/Status'
-    403:
+    401:
       description: unauthorized
       schema:
         $ref: '#/definitions/Status'

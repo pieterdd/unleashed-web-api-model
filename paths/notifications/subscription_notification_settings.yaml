@@ -21,7 +21,7 @@ get:
         type: array
         items:
           $ref: '#/definitions/Notification'
-    403:
+    401:
       description: unauthorized
       schema:
         $ref: '#/definitions/Status'
@@ -54,7 +54,7 @@ put:
   responses:
     204:
       description: "Setting notifications successful"
-    403:
+    401:
       description: unauthorized
       schema:
         $ref: '#/definitions/Status'

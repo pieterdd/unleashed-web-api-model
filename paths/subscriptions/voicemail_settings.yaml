@@ -16,7 +16,7 @@ get:
       description: Returns voicemail settings
       schema:
         $ref: '#/definitions/VoicemailSettings'
-    403:
+    401:
       description: unauthorized
       schema:
         $ref: '#/definitions/Status'
@@ -44,7 +44,7 @@ put:
   responses:
       204:
         description: Voicemail settings has been changed successfully.
-      403:
+      401:
         description: unauthorized
         schema:
           $ref: '#/definitions/Status'

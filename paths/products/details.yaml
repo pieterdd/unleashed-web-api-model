@@ -16,7 +16,7 @@ get:
       description: OK
       schema:
         $ref: '#/definitions/Product'
-    403:
+    401:
       description: Unauthorized
       schema:
         $ref: '#/definitions/Status'

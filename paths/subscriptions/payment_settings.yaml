@@ -17,7 +17,7 @@ get:
       description: Returns payment settings
       schema:
         $ref: '#/definitions/PaymentSettings'
-    403:
+    401:
       description: unauthorized
       schema:
         $ref: '#/definitions/Status'
@@ -44,7 +44,7 @@ put:
   responses:
     204:
       description: Payment settings updated
-    403:
+    401:
       description: unauthorized
       schema:
         $ref: '#/definitions/Status'

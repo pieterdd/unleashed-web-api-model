@@ -18,7 +18,7 @@ post:
   responses:
     204:
       description: Reset code sent
-    403:
+    401:
       description: unauthorized
       schema:
         $ref: '#/definitions/Status'

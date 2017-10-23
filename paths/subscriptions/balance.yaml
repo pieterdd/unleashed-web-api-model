@@ -16,7 +16,7 @@ get:
       description: Returns the subscription's balance
       schema:
         $ref: '#/definitions/SubscriptionBalance'
-    403:
+    401:
       description: unauthorized
       schema:
         $ref: '#/definitions/Status'

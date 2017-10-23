@@ -19,7 +19,7 @@ post:
       description: "Mandate creation response"
       schema:
         $ref: '#/definitions/RequestMandateResponse'
-    403:
+    401:
       description: unauthorized
       schema:
         $ref: '#/definitions/Status'

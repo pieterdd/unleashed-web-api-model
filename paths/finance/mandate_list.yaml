@@ -16,7 +16,7 @@ get:
       examples:
         application/json:
           $ref: ./../../examples/finance/mandates.json
-    403:
+    401:
       description: unauthorized
       schema:
         $ref: '#/definitions/Status'

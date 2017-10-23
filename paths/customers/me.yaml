@@ -19,7 +19,7 @@ get:
       description: Customer information
       schema:
         $ref: '#/definitions/Customer'
-    403:
+    401:
       description: unauthorized
       schema:
         $ref: '#/definitions/Status'
@@ -39,7 +39,7 @@ put:
       description: Customer information
       schema:
         $ref: '#/definitions/Customer'
-    403:
+    401:
       description: unauthorized
       schema:
         $ref: '#/definitions/Status'

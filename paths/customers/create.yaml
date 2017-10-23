@@ -25,7 +25,7 @@ post:
       description: Bad request
       schema:
         $ref: '#/definitions/Status'
-    403:
+    401:
       description: Unauthorized
       schema:
         $ref: '#/definitions/Status'

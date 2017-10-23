@@ -18,7 +18,7 @@ get:
       description: Swap request created
       schema:
         $ref: '#/definitions/SimSwap'
-    403:
+    401:
       description: unauthorized
       schema:
         $ref: '#/definitions/Status'
@@ -50,7 +50,7 @@ post:
       description: Swap request created
       schema:
         $ref: '#/definitions/SimSwap'
-    403:
+    401:
       description: unauthorized
       schema:
         $ref: '#/definitions/Status'

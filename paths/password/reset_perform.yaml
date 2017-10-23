@@ -20,7 +20,7 @@ post:
         $ref: '#/definitions/PasswordUpdate'
     401:
       description: Authentication required (reset code invalid)
-    403:
+    401:
       description: Unauthorized
       schema:
         $ref: '#/definitions/Status'

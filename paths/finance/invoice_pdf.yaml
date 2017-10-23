@@ -19,7 +19,7 @@ get:
   responses:
     200:
       description: The invoice as pdf
-    403:
+    401:
       description: unauthorized
       schema:
         $ref: '#/definitions/Status'
