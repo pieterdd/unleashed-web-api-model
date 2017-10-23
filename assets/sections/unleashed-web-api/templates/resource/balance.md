@@ -9,6 +9,6 @@ To go live with JIM Mobile we had to take some shortcuts on the Balance output c
 
 ## Additions
 
-We do have a live entry for **out of bundle cost** on postpaid including the threshold. Every postpaid account can spend more than it's pre-configured monthly subscription fee, limited to a certain threshold. Per Customer request, this can be adjusted (raised or lowered) and will be shown in the balance response.
+We do have a live entry for **out of bundle cost** on postpaid including the threshold. Every postpaid account can spend more than its pre-configured monthly subscription fee, limited to a certain threshold. Per Customer request, this can be adjusted (raised or lowered) and will be shown in the balance response.
 
-The notion of a **value** bundle is new. When encountering a bundle of this `type`, the `value`, `assigned` and `used` fields will contain EURO content. The **Binge** product for JIM Mobile is configured this way. You can use the value on any other type of choice as long as you've got credit left in this bundle. In the future, we will add the national rates so you could offer a view containing max `sms` or `voice` or `data` volumes you can use given the balance in the bundle.
+The notion of a **value** bundle is new. When encountering a bundle of this `type`, the `remaining`, `total` and `used` fields will contain EURO content. The **Binge** product for JIM Mobile is configured this way. You can use the value on any other type of choice as long as you've got credit left in this bundle. In the future, we will add the national rates so you could offer a view containing max `sms` or `voice` or `data` volumes you can use given the balance in the bundle.
