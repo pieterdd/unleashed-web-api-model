@@ -3,7 +3,7 @@ title: Order
 required:
   - id
   - amount
-  - product_id
+  - product_ids
   - status
   - date_created
 properties:
