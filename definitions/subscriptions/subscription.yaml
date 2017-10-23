@@ -33,3 +33,8 @@ properties:
       - locked
   sim:
     $ref: '#/definitions/SimDetails'
+  is_owner:
+    type: boolean
+    description:  |
+      Is this subscription owned by the customer who requested it?
+      So this can only be false when this is an authorized subscription.
