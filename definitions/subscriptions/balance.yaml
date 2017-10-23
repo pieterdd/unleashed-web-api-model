@@ -55,6 +55,9 @@ properties:
         total:
           type: number
           format: float
+          description: >
+             total amount usable in this bundle.  If this value is zero, the bundle can be considered unlimited in its
+             timeframe.
         remaining:
           description: >
             This is the amount left in your bundle.
