@@ -5,8 +5,14 @@ required:
   - subscription_id
 properties:
   product_id:
-    type: string
-    description: ID of the product to order
+    $ref: '#/definitions/ProductId'
+  child_product_ids:
+    type: array
+    description: >
+      E.g. when ordering a prepaid product on your postpaid subscription,
+      you need to add a topup just like when creating a prepaid subscription.
+    items:
+      $ref: '#/definitions/ProductId'
   subscription_id:
     type: string
     description: ID of the subscription that this order is for
