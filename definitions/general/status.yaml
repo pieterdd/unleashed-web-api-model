@@ -23,6 +23,7 @@ properties:
       - mandate_cannot_be_set
       - not_payable
       - customer_identifier_not_unique
+      - action_not_authorized
   message:
     type: string
   incorrect_fields:
