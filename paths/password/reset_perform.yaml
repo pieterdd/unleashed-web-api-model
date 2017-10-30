@@ -24,3 +24,5 @@ post:
       description: Unauthorized
       schema:
         $ref: '#/definitions/Status'
+    409:
+      description: Conflict

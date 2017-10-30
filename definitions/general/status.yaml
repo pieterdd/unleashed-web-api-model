@@ -24,6 +24,8 @@ properties:
       - not_payable
       - customer_identifier_not_unique
       - action_not_authorized
+      - package_already_active
+      - duplicate_request
   message:
     type: string
   incorrect_fields:
