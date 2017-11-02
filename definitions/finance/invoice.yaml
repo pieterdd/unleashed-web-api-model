@@ -20,7 +20,14 @@ properties:
   status:
     type: string
     enum:
-    - PAID
-    - UNPAID
+    - accepted
+    - bad_dept
+    - cancelled
+    - created
+    - issued
+    - paid
+    - partially_paid
+    - pending_payment
+    - review
   reference_number:
     type: string
