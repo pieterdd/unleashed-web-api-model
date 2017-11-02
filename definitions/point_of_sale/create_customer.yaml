@@ -1,5 +1,8 @@
 type: object
 title: Create customer for point of sale
+description: >
+  The required parameters are string that consist out of digits only. So do not add the separating chars.
+  Don't forget to give the agent as a http header.
 required:
   - id_card_number
   - national_security_number
@@ -8,10 +11,13 @@ required:
 properties:
   id_card_number:
     type: string
+    description: "The digits of the id card. Note: this is missing the last 3 digits when read from eid so length must be 9"
   national_security_number:
     type: string
+    description: The digits of the national security number, length is 11
   iccid:
     type: string
+    description: The digits of the iccid, length is 19
   language:
     type: string
     enum:

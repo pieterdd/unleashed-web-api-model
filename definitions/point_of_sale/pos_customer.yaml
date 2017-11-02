@@ -1,0 +1,8 @@
+type: object
+title: Customer id
+description: If a customer is created via a point of sale the customer_code of the newly created customer is returned
+required:
+  - customer_code
+properties:
+  customer_code:
+    type: string

@@ -102,6 +102,8 @@ AutoTopup:
   $ref: ./subscriptions/auto_topup.yaml
 CreatePosCustomer:
   $ref: ./point_of_sale/create_customer.yaml
+PosCustomer:
+  $ref: ./point_of_sale/pos_customer.yaml
 Event:
   $ref: ./events/event.yaml
 Operator:

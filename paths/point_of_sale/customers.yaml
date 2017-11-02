@@ -3,7 +3,8 @@ post:
     - Point of sale
   summary: Create customer
   description: >
-    This endpoint will be used by our friend in a point of sale to validate and create a customer in SBSS. If the call succeeds, a customer is created without any data apart from its identity entity.
+    This endpoint will be used by an agent in a point of sale to create a customer in the backend systems. If the call
+    succeeds, a customer is created without any data apart from its identity data.
   consumes:
   - application/json
   produces:
@@ -21,7 +22,7 @@ post:
     201:
       description: Created customer
       schema:
-        $ref: '#/definitions/Customer'
+        $ref: '#/definitions/PosCustomer'
     401:
       description: Unauthorized
       schema:
