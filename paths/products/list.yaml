@@ -12,6 +12,12 @@ get:
         Pass an optional filter on type. E.g. `type=prepaid` would give all the products that are for
         a prepaid subscription, `type=prepaid/topup` would give all products that are prepaid top-ups.
       required: false
+    - name: product_id
+      in: query
+      type: string
+      description: >
+        With this optional filter, we only return products that can be bought with this `product_id`.
+        E.g. only return the packages you can buy with a subscription with a certain product_id.
     - $ref: "#/parameters/language"
   responses:
     200:
