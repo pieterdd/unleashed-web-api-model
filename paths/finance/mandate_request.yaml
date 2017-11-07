@@ -15,7 +15,7 @@ post:
       schema:
         $ref: '#/definitions/RequestMandate'
   responses:
-    200:
+    201:
       description: "Mandate creation response"
       schema:
         $ref: '#/definitions/RequestMandateResponse'
