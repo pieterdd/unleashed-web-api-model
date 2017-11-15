@@ -16,6 +16,7 @@ properties:
     description: "Password required to request new sim"
   shipping_address:
     $ref: '#/definitions/ContactInformation'
-  redirect_url:
-    type: string
-    description: URL to redirect to after payment is complete.  If no payment is required, this property is ignored.
+  block_sim:
+    type: boolean
+    default: true
+    description: "Defaults to true if omitted. False is only valid when the swap reason is not theft or loss."

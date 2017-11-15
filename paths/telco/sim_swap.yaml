@@ -46,10 +46,8 @@ post:
       schema:
         $ref: '#/definitions/SimSwapRequest'
   responses:
-    201:
+    204:
       description: Swap request created
-      schema:
-        $ref: '#/definitions/SimSwap'
     401:
       description: unauthorized
       schema:
