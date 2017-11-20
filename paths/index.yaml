@@ -71,7 +71,7 @@
   $ref: ./finance/pay.yaml
 /sims/{msisdn}:
   $ref: ./telco/sim_details.yaml
-/sims/{msisdn}/activate:
+/sims/activate:
   $ref: ./telco/sim_activate.yaml
 /pos/customers/:
   $ref: ./point_of_sale/customers.yaml

@@ -4,4 +4,4 @@ properties:
   iccid:
     type: string
     description: >
-      The full ICC-ID of the SIM to activate
+      The short ICC-ID of the SIM to activate

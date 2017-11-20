@@ -8,11 +8,6 @@ post:
     - application/json
   parameters:
     - $ref: "#/parameters/authorization"
-    - name: msisdn
-      in: path
-      description: MSISDN of the sim to activate.
-      required: true
-      type: string
     - name: Activation request
       in: body
       description: Activate SIM
