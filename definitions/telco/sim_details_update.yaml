@@ -4,8 +4,8 @@ properties:
   state:
     type: string
     enum:
-      - user_blocked
-      - active
+      - enabled
+      - suspended
   alias:
     type: string
     description: >
