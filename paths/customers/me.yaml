@@ -6,14 +6,6 @@ get:
     - application/json
   parameters:
     - $ref: "#/parameters/authorization"
-    - name: social
-      in: query
-      description: >
-        NOT YET IMPLEMENTED
-        Shows the social info if true.
-      required: false
-      type: boolean
-      default: false
   responses:
     200:
       description: Customer information
