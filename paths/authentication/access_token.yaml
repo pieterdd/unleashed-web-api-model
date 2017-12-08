@@ -72,7 +72,7 @@ post:
       description: access info
       schema:
         $ref: '#/definitions/AccessToken'
+    400:
+      description: invalid grant_type
     401:
       description: unauthorized
-      schema:
-        $ref: '#/definitions/Status'

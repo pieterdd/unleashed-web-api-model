@@ -20,5 +20,3 @@ post:
       description: no data is returned
     401:
       description: unauthorized
-      schema:
-        $ref: '#/definitions/Status'
