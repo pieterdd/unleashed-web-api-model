@@ -1,7 +1,6 @@
 type: object
 title: Balance
 required:
-  - product
   - bundles
 properties:
   product:
