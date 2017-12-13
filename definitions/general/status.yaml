@@ -18,6 +18,7 @@ properties:
       - invalid_fields
       - not_enough_balance
       - email_already_in_use
+      - iccid_already_in_use
       - invalid_customer
       - invalid_token
       - mandate_cannot_be_set
