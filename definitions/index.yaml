@@ -48,6 +48,8 @@ OrderRequest:
   $ref: ./orders/create_order.yaml
 Order:
   $ref: ./orders/order.yaml
+OrderReduction:
+  $ref: ./orders/reduction.yaml
 ContactInformation:
   $ref: ./general/contact_information.yaml
 ShippingInfo:

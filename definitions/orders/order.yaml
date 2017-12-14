@@ -51,3 +51,8 @@ properties:
     description: A list of payment details
     items:
       $ref: '#/definitions/PaymentDetails'
+  reductions:
+    type: array
+    description: A list of reductions
+    items:
+      $ref: '#/definitions/OrderReduction'

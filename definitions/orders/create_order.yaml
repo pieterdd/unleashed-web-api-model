@@ -19,3 +19,9 @@ properties:
   password:
     type: string
     description: password required for performing migrations
+  reductions:
+    type: array
+    description: >
+      Things you want to use as reductions and/or extra benefits for your order.
+    items:
+      $ref: '#/definitions/OrderReduction'
