@@ -7,14 +7,16 @@ language:
 page:
       name: page
       in: query
-      description: result set page
+      description: Result set page, starting at 1.
+      default: 1
       required: false
       type: integer
       format: int32
 per_page:
       name: per_page
       in: query
-      description: amount of results per page
+      description: Number of results per page.
+      default: 20
       required: false
       type: integer
       format: int32
