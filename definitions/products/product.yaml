@@ -4,6 +4,7 @@ required:
   - id
   - price
   - type
+  - variant
   - descriptions
 properties:
   id:
@@ -45,3 +46,7 @@ properties:
     - postpaid/package
     - sim/swap/free
     - sim/swap/paid
+  variant:
+    type: string
+    description: >
+      Can give more details about the product type, e.g `data-only`, `voice` or `variant_1`.
