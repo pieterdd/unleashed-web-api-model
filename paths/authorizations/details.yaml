@@ -1,0 +1,22 @@
+get:
+  tags:
+    - Authorizations
+  summary: Get authorization details
+  produces:
+  - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+    - name: id
+      in: path
+      type: string
+      description: Authorization to get the information about
+      required: true
+  responses:
+    200:
+      description: The requested authorisation
+      schema:
+        $ref: '#/definitions/Authorization'
+    401:
+      description: Unauthorized
+      schema:
+        $ref: '#/definitions/Status'
