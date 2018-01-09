@@ -80,6 +80,6 @@
 /operators:
   $ref: ./telco/list_operators.yaml
 /authorization:
-  $ref: ./authorizations/list.yaml
+  $ref: ./authorizations/create_and_list.yaml
 /authorization/{id}:
   $ref: ./authorizations/details.yaml

@@ -116,3 +116,5 @@ AuthorizationState:
   $ref: ./authorizations/authorization_state.yaml
 Authorization:
   $ref: ./authorizations/authorization.yaml
+AuthorizationRequest:
+  $ref: ./authorizations/authorization_request.yaml

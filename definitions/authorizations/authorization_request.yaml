@@ -1,0 +1,15 @@
+type: object
+title: Authorization request
+description: Add an authorization
+required:
+  - authorised_customer_email
+  - subscription_id
+properties:
+  authorised_customer_email:
+    type: string
+    description: The email of the customer who will get authorisation to the subscription.
+  subscription_id:
+    type: string
+    description: >
+      ID of the subscription that the owner wants to give authorisation to.
+      This can be only a subscription the owner actually owns himself.

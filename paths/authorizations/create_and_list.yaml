@@ -21,3 +21,26 @@ get:
       description: Unauthorized
       schema:
         $ref: '#/definitions/Status'
+
+post:
+  tags:
+    - Authorizations
+  summary: Create authorization request
+  produces:
+  - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+    - name: Authorization request
+      in: body
+      required: true
+      schema:
+        $ref: '#/definitions/AuthorizationRequest'
+  responses:
+    201:
+      description: Succesfull created authorization
+      schema:
+        $ref: '#/definitions/Authorization'
+    401:
+      description: Unauthorized
+      schema:
+        $ref: '#/definitions/Status'
