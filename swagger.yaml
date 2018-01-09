@@ -9,6 +9,8 @@ basePath: /stievie
 tags:
   - name: Authentication
     description: Authentication
+  - name: Authorizations
+    description: Authorizations
   - name: Customers
     description: Customers
   - name: Password

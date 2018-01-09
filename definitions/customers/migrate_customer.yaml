@@ -16,11 +16,7 @@ properties:
   last_name:
     type: string
   gender:
-    type: string
-    enum:
-    - M
-    - F
-    - X
+    $ref: '#/definitions/Gender'
   language:
     type: string
     enum:

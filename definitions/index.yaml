@@ -14,6 +14,8 @@ Address:
   $ref: ./customers/address.yaml
 Company:
   $ref: ./customers/company.yaml
+Gender:
+  $ref: ./customers/gender.yaml
 CreateCustomer:
   $ref: ./customers/create_customer.yaml
 Customer:
@@ -110,3 +112,7 @@ Event:
   $ref: ./events/event.yaml
 Operator:
   $ref: ./telco/operator.yaml
+AuthorizationState:
+  $ref: ./authorizations/authorization_state.yaml
+Authorization:
+  $ref: ./authorizations/authorization.yaml

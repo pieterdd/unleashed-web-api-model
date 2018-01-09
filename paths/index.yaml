@@ -79,3 +79,5 @@
   $ref: ./events/details.yaml
 /operators:
   $ref: ./telco/list_operators.yaml
+/authorization:
+  $ref: ./authorizations/list.yaml

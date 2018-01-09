@@ -1,0 +1,13 @@
+type: string
+description: |
+  * requested: owner sended authorisation request
+  * cancelled: owner cancels the request before it is confirmed
+  * confirmed: authorisation request is approved by authorised
+  * denied: authorisation request is denied by authorised
+  * removed: owner or authorised removed the confirmed authorisation
+enum:
+  - requested
+  - cancelled
+  - confirmed
+  - denied
+  - removed

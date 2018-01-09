@@ -1,0 +1,23 @@
+get:
+  tags:
+    - Authorizations
+  summary: List authorizations
+  produces:
+  - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+    - name: status
+      in: query
+      description: Only show authorizations with this status
+      type: string
+  responses:
+    200:
+      description: All the authorisations a customer has or has given.
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/Authorization'
+    401:
+      description: Unauthorized
+      schema:
+        $ref: '#/definitions/Status'

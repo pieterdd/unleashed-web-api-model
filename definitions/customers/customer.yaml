@@ -18,10 +18,7 @@ properties:
     - fr
     - en
   gender:
-    type: string
-    enum:
-    - M
-    - F
+    $ref: '#/definitions/Gender'
   email:
     type: string
   first_name:

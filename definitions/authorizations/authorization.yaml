@@ -1,0 +1,25 @@
+type: object
+title: Authorization details
+required:
+  - id
+  - state
+  - owner_email
+  - authorized_email
+  - subscription
+properties:
+  id:
+    description: Id of the authorization
+    type: string
+  state:
+    $ref: '#/definitions/AuthorizationState'
+  owner_email:
+    description: Email of the customer who owns the subscription. We limit to email considering GDPR.
+    type: string
+  authorized_email:
+    description: |
+      Email of the customer that got authorisation to the subscription.
+      This is the email the owner used to send authorization.
+    type: string
+  subscription:
+   description: Complete subscription details to which the owner authorizes another user.
+   $ref: '#/definitions/Subscription'

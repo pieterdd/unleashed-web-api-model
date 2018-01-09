@@ -8,11 +8,7 @@ properties:
     - fr
     - en
   gender:
-    type: string
-    enum:
-    - M
-    - F
-    - X
+    $ref: '#/definitions/Gender'
   first_name:
     type: string
   last_name:
