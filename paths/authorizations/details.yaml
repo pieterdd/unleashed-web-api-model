@@ -20,3 +20,30 @@ get:
       description: Unauthorized
       schema:
         $ref: '#/definitions/Status'
+
+put:
+  tags:
+    - Authorizations
+  summary: Update state of the authorization
+  description: See description on the state to see wich transitions are possible by who.
+  produces:
+  - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+    - name: id
+      in: path
+      type: string
+      description: Authorization to get the information about
+      required: true
+    - name: state
+      in: body
+      required: true
+      schema:
+        $ref: '#/definitions/AuthorizationStateUpdate'
+  responses:
+    204:
+      description: Authorization updated
+    401:
+      description: Unauthorized
+      schema:
+        $ref: '#/definitions/Status'
