@@ -108,6 +108,8 @@ CreatePosCustomer:
   $ref: ./point_of_sale/create_customer.yaml
 PosCustomer:
   $ref: ./point_of_sale/pos_customer.yaml
+CancelPosCustomer:
+  $ref: ./point_of_sale/cancel_order.yaml
 Event:
   $ref: ./events/event.yaml
 Operator:

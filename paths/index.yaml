@@ -73,6 +73,8 @@
   $ref: ./telco/sim_activate.yaml
 /pos/customers/:
   $ref: ./point_of_sale/customers.yaml
+/pos/customers/{id}:
+  $ref: ./point_of_sale/cancel_order.yaml
 /events:
   $ref: ./events/list.yaml
 /events/{id}:

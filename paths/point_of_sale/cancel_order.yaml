@@ -1,0 +1,32 @@
+delete:
+  tags:
+    - Point of sale
+  summary: Cancel order
+  description: >
+    This endpoint will be used by an agent in a point of sale to cancel customer creation in the backend systems.
+    If the call succeeds, the SIM request is canceled.
+  consumes:
+  - application/json
+  produces:
+  - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+    - $ref: "#/parameters/X-Pos-Agent"
+    - name: id
+      in: path
+      description: customer id to cancel order for
+      required: true
+      type: string
+    - name: SIM identifier
+      in: body
+      description: Full ICCID of the SIM to cancel
+      required: true
+      schema:
+        $ref: '#/definitions/CancelPosCustomer'
+  responses:
+    204:
+      description: Canceled SIM request
+    401:
+      description: Unauthorized
+      schema:
+        $ref: '#/definitions/Status'

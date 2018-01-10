@@ -1,0 +1,11 @@
+type: object
+title: SIM identifier
+description: >
+  This endpoint allows a Point of Sale to cancel a create call.
+  The agent should be included as a header.
+required:
+  - iccid
+properties:
+  iccid:
+    type: string
+    description: The digits of the iccid, length is 19
