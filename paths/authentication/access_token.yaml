@@ -23,7 +23,7 @@ post:
     You can indicate which method of authentication you will use by specifing the grant type. Depending on the grant type the parameters you must give differ.
 
     For password grants, you must give a valid `username` and `password`
-    For refresh token grants, you must give specify `refresh_token`
+    For refresh token grants, you must specify `refresh_token`
 
     Please note that in both case the data should be posted as `application/x-www-form-urlencoded` and you should give the client_id and optionally client_secret
 

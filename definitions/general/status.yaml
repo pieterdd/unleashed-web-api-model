@@ -14,6 +14,7 @@ properties:
       - invalid_recaptcha_response
       - invalid_grant
       - invalid_phone_verification_code
+      - invalid_user
       - login_by_email_impossible
       - invalid_fields
       - not_enough_balance
