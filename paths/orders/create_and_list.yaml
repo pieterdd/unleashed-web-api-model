@@ -2,6 +2,16 @@ post:
   tags:
     - Orders
   summary: Create order
+  description: |
+    This end point is used to order the products in the catalog.
+
+    For our mobile brands:
+
+    To migrate a subscription from postpaid to prepaid you need to specify a product, which corresponds with
+    that subscription, and a topup. The topup can be specified using a child product.
+
+
+    A migration from prepaid to postpaid just requires you to specify the product id of the chosen postpaid subscription.
   consumes:
   - application/json
   produces:

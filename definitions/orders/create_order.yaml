@@ -9,19 +9,18 @@ properties:
   child_product_ids:
     type: array
     description: >
-      E.g. when ordering a prepaid product on your postpaid subscription,
-      you need to add a topup just like when creating a prepaid subscription.
+      E.g. when you migrate between subscription types like going from postpaid subscription to prepaid product.
+      You order a prepaid subscription and additionally you can add a topup just like if you were creating a prepaid subscription.
     items:
       $ref: '#/definitions/ProductId'
   subscription_id:
     type: string
-    description: ID of the subscription that this order is for
+    description: The ID of the subscription that this order is for
   password:
     type: string
-    description: password required for performing migrations
+    description: A password is required for performing migrations from prepaid to postpaid.
   reductions:
     type: array
-    description: >
-      Things you want to use as reductions and/or extra benefits for your order.
+    description: Things you want to use as reductions and/or extra benefits for your order.
     items:
       $ref: '#/definitions/OrderReduction'

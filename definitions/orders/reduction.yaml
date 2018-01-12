@@ -6,7 +6,7 @@ required:
 properties:
   type:
     type: string
-    description: the type of reduction you want to use. Currently only 'viking_points' is supported.
+    description: The reduction type you want to use. Currently only 'viking_points' is supported.
   value:
     type: string
-    description: the specific value of the reduction. In case of 'viking_points', this is the amount of points you want to use.
+    description: The specific value of the reduction. In case of 'viking_points', this is the amount of points you want to use.
