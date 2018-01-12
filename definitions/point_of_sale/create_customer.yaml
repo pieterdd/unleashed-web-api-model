@@ -7,7 +7,6 @@ required:
   - id_card_number
   - national_security_number
   - iccid
-  - language
 properties:
   id_card_number:
     type: string
