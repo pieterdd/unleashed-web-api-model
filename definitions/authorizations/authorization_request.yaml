@@ -2,10 +2,10 @@ type: object
 title: Authorization request
 description: Add an authorization
 required:
-  - authorised_customer_email
+  - authorized_email
   - subscription_id
 properties:
-  authorised_customer_email:
+  authorized_email:
     type: string
     description: The email of the customer who will get authorisation to the subscription.
   subscription_id:
