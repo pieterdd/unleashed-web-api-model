@@ -1,0 +1,75 @@
+get:
+  tags:
+    - Subscriptions
+  summary: List auto-topup settings
+  description: |
+    The auto-topup settings have two parts:
+    1) the triggers
+    2) the product and payment.
+
+    The first part is a list of trigger properties. Each trigger is a specific value that can cause an auto-topup, if
+    the specified threshold is reached and if it's enabled. It also has a description to display a human readable string
+    in the frontend.
+
+    The second part you speficy the product that will be used during the auto-topup and which mandate can be used to
+    do the payment.
+  produces:
+    - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+    - name: id
+      in: path
+      description: The id of subscription the auto-topup settings are applicable for
+      required: true
+      type: string
+  responses:
+    200:
+      description: Returns the auto-topup settings
+      schema:
+        $ref: '#/definitions/AutoTopupSettings'
+    401:
+      description: unauthorized
+      schema:
+        $ref: '#/definitions/Status'
+put:
+  tags:
+    - Subscriptions
+  summary: Update auto-topup settings
+  description: |
+    The auto-topup settings have two parts:
+    1) the triggers
+    2) the product and payment.
+
+    The first part is a list of trigger properties. Each trigger is a specific value that can cause an auto-topup, if
+    the specified threshold is reached and if it's enabled. It also has a description to display a human readable string
+    in the frontend.
+
+    The second part you speficy the product that will be used during the auto-topup and which mandate can be used to
+    do the payment.
+
+    You should always give the entire list of triggers when you do an update. If the mandate_id and/or product_id is
+    an empty string, no triggers will be active.
+  consumes:
+    - application/json
+  produces:
+    - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+    - name: id
+      in: path
+      description: The id of subscription the auto-topup settings are applicable for
+      required: true
+      type: string
+    - name: Auto-topup settings object
+      in: body
+      description: The changed auto-topup settings.
+      required: true
+      schema:
+        $ref: '#/definitions/AutoTopupSettings'
+  responses:
+      204:
+        description: Auto-topup settings have been changed successfully.
+      401:
+        description: unauthorized
+        schema:
+          $ref: '#/definitions/Status'

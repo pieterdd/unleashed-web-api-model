@@ -1,0 +1,19 @@
+type: object
+title: Auto topup settings
+description: Auto-topup settings
+required:
+  - triggers
+  - mandate_id
+  - product_id
+properties:
+  triggers:
+    description: A list of trigger properties that might trigger a topup
+    type: array
+    items:
+      $ref: '#/definitions/AutoTopupTrigger'
+  mandate_id:
+    type: string
+    description: The id of the mandate that will be used to pay the automatic topup when it takes place.
+  product_id:
+    type: string
+    description: The if of the product that will be used to topup when an automatic topup takes place.

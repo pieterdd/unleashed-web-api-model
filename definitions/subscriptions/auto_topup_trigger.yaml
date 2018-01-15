@@ -1,0 +1,23 @@
+type: object
+title: Auto topup trigger
+description: Properties for an auto-topup trigger. This is only relevant for prepaid subscriptions.
+properties:
+  description:
+    type: string
+    description: A meaningfull name for the trigger that can be displayed in he UI
+  trigger:
+    type: string
+    description: What kind unit might the trigger an auto-topup.
+    enum:
+      - data_low
+      - bundle_expiry
+      - credit_low
+  threshold:
+    type: number
+    description: If the trigger value goes below this threshold an auto-topup is triggered.
+  state:
+    type: string
+    description: Is this trigger turned on or off. To be future proof a state has been chosen in favor of a boolean
+    enum:
+      - "on"
+      - "off"

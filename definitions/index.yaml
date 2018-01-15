@@ -108,8 +108,10 @@ Version:
   $ref: ./apps/version.yaml
 Topup:
   $ref: ./finance/topup.yaml
-AutoTopup:
-  $ref: ./subscriptions/auto_topup.yaml
+AutoTopupSettings:
+  $ref: ./subscriptions/auto_topup_settings.yaml
+AutoTopupTrigger:
+  $ref: ./subscriptions/auto_topup_trigger.yaml
 CreatePosCustomer:
   $ref: ./point_of_sale/create_customer.yaml
 PosCustomer:
