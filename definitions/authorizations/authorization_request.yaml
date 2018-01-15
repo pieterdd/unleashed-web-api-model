@@ -4,6 +4,7 @@ description: Add an authorization
 required:
   - authorized_email
   - subscription_id
+  - password
 properties:
   authorized_email:
     type: string
@@ -13,3 +14,6 @@ properties:
     description: >
       ID of the subscription that the owner wants to give authorisation to.
       This can be only a subscription the owner actually owns himself.
+  password:
+    type: string
+    description: A password is required for creating an authorization.
