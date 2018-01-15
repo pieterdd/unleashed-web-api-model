@@ -28,6 +28,10 @@ EmailUpdate:
   $ref: ./customers/email.yaml
 EmailUpdatePerform:
   $ref: ./customers/email_perform.yaml
+DeleteMandate:
+  $ref: ./finance/delete_mandate.yaml
+LinkMandate:
+  $ref: ./finance/mandate_link.yaml
 Notification:
   $ref: ./notifications/notification.yaml
 MgmInformation:

@@ -1,0 +1,52 @@
+post:
+  tags:
+    - Finance
+  summary: Link mandates
+  consumes:
+  - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+    - name: id
+      description: The id of the mandate that needs to be linked to a subscription.
+      type: string
+      in: path
+      required: true
+    - name: Link object
+      in: body
+      required: true
+      schema:
+        $ref: '#/definitions/LinkMandate'
+  responses:
+    204:
+      description: The mandate has been linked
+    401:
+      description: unauthorized
+      schema:
+        $ref: '#/definitions/Status'
+delete:
+  tags:
+    - Finance
+  summary: Unlink mandate
+  consumes:
+  - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+    - name: id
+      description: The id of the mandate that needs to be unlinked from a subscription.
+      type: string
+      in: path
+      required: true
+    - name: Link object
+      in: body
+      required: true
+      schema:
+        $ref: '#/definitions/LinkMandate'
+  responses:
+    204:
+      description: The mandate has been unlinked
+    401:
+      description: unauthorized
+      schema:
+        $ref: '#/definitions/Status'
+    404:
+      description: The requested mandate was not found

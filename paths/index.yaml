@@ -26,6 +26,8 @@
   $ref: ./finance/mandate_list.yaml
 /mandates/{id}:
   $ref: ./finance/mandate_delete.yaml
+/mandates/{id}/link:
+  $ref: ./finance/mandate_linking.yaml
 /mandates/request:
   $ref: ./finance/mandate_request.yaml
 /password/reset/request:

@@ -1,0 +1,8 @@
+type: object
+title: Delete mandate
+required:
+  - password
+properties:
+  password:
+    type: string
+    description: A password is required to delete a mandate. (Not enforced untill all brands can cope with this)
