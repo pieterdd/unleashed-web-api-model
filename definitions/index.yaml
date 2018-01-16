@@ -30,6 +30,8 @@ EmailUpdatePerform:
   $ref: ./customers/email_perform.yaml
 Notification:
   $ref: ./notifications/notification.yaml
+MgmInformation:
+  $ref: ./subscriptions/mgm.yaml
 PasswordUpdate:
   $ref: ./password/update.yaml
 PasswordResetRequest:

@@ -1,0 +1,12 @@
+type: object
+title: Member get Member information
+description: |
+  This information allows us to refer to another customer who brought in this new subscription. You can either specify
+  the msisdn or the customer code (exactly one of both).
+properties:
+  msisdn:
+    type: string
+    description: The msisdn of the customer that should receive an mgm bonus
+  customer_id:
+    type: string
+    description: The customer code of the customer that should receive an mgm bonus

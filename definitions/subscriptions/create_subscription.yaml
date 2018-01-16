@@ -54,3 +54,5 @@ properties:
               - prepaid
               - private_postpaid
               - business_postpaid
+  mgm:
+    $ref: '#/definitions/MgmInformation'
