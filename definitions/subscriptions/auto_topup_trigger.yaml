@@ -4,14 +4,12 @@ description: Properties for an auto-topup trigger. This is only relevant for pre
 properties:
   description:
     type: string
-    description: A meaningfull name for the trigger that can be displayed in he UI
+    description: A localized, meaningfull name for the trigger that can be displayed in he UI.
   trigger:
     type: string
-    description: What kind unit might the trigger an auto-topup.
-    enum:
-      - data_low
-      - bundle_expiry
-      - credit_low
+    description: |
+      What kind unit might the trigger an auto-topup. Currently these are the three possible triggers: data_low, bundle_expiry and credit_low
+      (we are not using an enum as this list can be dynamic, that's also why a localized description is used)
   threshold:
     type: number
     description: If the trigger value goes below this threshold an auto-topup is triggered.
