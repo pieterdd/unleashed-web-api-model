@@ -41,6 +41,7 @@ properties:
             description: name of donor operator
           msisdn:
             type: string
+            format: msisdn
             description: Number of the subscription if applicable
           iccid:
             type: string

@@ -6,6 +6,7 @@ description: |
 properties:
   msisdn:
     type: string
+    format: msisdn
     description: The msisdn of the customer that should receive an mgm bonus
   customer_id:
     type: string

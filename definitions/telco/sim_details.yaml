@@ -11,7 +11,7 @@ required:
 properties:
   msisdn:
     type: string
-    pattern: 324\d{8}
+    format: msisdn
   alias:
     type: string
     description: >

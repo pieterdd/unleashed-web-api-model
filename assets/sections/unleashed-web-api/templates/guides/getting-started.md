@@ -31,6 +31,15 @@ To be able to talk to UWA, you need to specify which brand you want to communica
 | Stievie | stievie |
 
 
+## UWA specific types
+We have some specific UWA types, below you find some details of them.
+
+### Msisdn
+If a field is of type `msisdn` we expect a Belgian formatted mobile number, so it has pattern `^(?:0|0032|\+32)4[0-9]{8}$`.
+
+### ProductId
+If a field is of type `product_id` we expect it is a compound key of `offeringId-offeringVersion-offeringVariant`.
+
 ## Issues
 
 In case you encounter an issue with our API, or when you've got a feature request, please create a ticket on our [GitHub repository][repo].
