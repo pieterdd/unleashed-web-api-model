@@ -1,0 +1,21 @@
+post:
+  tags:
+    - Loyalty Points
+  summary: 'Transfer loyalty points'
+  produces:
+    - application/json
+  parameters:
+    - $ref: '#/parameters/authorization'
+    - name: Transfer request
+      in: body
+      schema:
+        $ref: '#/definitions/LoyaltyTransferRequest'
+  responses:
+    200:
+      description: Loyalty Points Transfer
+      schema:
+        $ref: '#/definitions/LoyaltyTransfer'
+    401:
+      description: unauthorized
+      schema:
+        $ref: '#/definitions/Status'

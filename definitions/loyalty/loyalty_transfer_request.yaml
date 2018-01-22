@@ -1,0 +1,15 @@
+type: object
+title: Request loyalty transfer
+required:
+- to
+- amount
+properties:
+  to:
+    type: string
+    format: msisdn
+    description: 'Msisdn of the receiving customer'
+  amount:
+    type: number
+    description: 'How many loyalty points are transfered'
+    format: float
+    example: '12.34'

@@ -91,3 +91,5 @@
   $ref: ./authorizations/details.yaml
 /loyalty_points/balance:
   $ref: ./loyalty/loyalty_balance.yaml
+/loyalty_points/transfer:
+  $ref: ./loyalty/loyalty_transfer.yaml
