@@ -1,0 +1,14 @@
+type: object
+title: Request loyalty transactions
+properties:
+  state:
+    type: string
+    enum:
+      - completed
+      - cancelled
+      - pending
+      - blocked
+    description: 'State of the transactions to filter on'
+  type:
+    type: string
+    description: 'filter on a specific type'

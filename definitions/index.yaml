@@ -136,3 +136,5 @@ LoyaltyTransfer:
   $ref: ./loyalty/loyalty_transfer.yaml
 LoyaltyTransferRequest:
   $ref: ./loyalty/loyalty_transfer_request.yaml
+LoyaltyTransactionsRequest:
+  $ref: ./loyalty/loyalty_transactions_request.yaml

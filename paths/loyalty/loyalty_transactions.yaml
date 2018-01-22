@@ -1,0 +1,28 @@
+get:
+  tags:
+    - Loyalty Points
+  summary: 'List of loyalty transactions'
+  produces:
+    - application/json
+  parameters:
+    - $ref: '#/parameters/authorization'
+    - name: state
+      type: string
+      enum:
+          - completed
+          - reserved
+          - cancelled
+      in: query
+      required: false
+      description: Only transactions in this state will be returned. If no state is given it will list all transactions.
+  responses:
+    200:
+      description: Loyalty Point Transactions
+      schema:
+        type: array
+        items:
+            $ref: '#/definitions/LoyaltyTransaction'
+    401:
+      description: unauthorized
+      schema:
+        $ref: '#/definitions/Status'
