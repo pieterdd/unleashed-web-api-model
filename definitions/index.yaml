@@ -130,5 +130,5 @@ AuthorizationRequest:
   $ref: ./authorizations/authorization_request.yaml
 AuthorizationStateUpdate:
   $ref: ./authorizations/authorization_state_update.yaml
-
-
+LoyaltyBalance:
+  $ref: ./loyalty/loyalty_balance.yaml

@@ -89,3 +89,5 @@
   $ref: ./authorizations/create_and_list.yaml
 /authorizations/{id}:
   $ref: ./authorizations/details.yaml
+/loyalty_points/balance:
+  $ref: ./loyalty/loyalty_balance.yaml

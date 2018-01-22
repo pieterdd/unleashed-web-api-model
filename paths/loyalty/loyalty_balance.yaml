@@ -1,0 +1,17 @@
+get:
+  tags:
+    - Loyalty Points
+  summary: "Loyalty points balance"
+  produces:
+    - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+  responses:
+    200:
+      description: Loyalty points balance
+      schema:
+        $ref: '#/definitions/LoyaltyBalance'
+    401:
+      description: unauthorized
+      schema:
+        $ref: '#/definitions/Status'

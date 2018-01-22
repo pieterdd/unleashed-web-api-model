@@ -1,0 +1,17 @@
+type: object
+title: LoyaltyBalance
+required:
+  - balance
+properties:
+  total:
+    description: The total available amount of loyalty points
+    type: number
+    format: float
+  blocked:
+    description: The amount of blocked loyalty points
+    type: number
+    format: float
+  pending:
+    description: The amount of loyalty points that have not yet been comfirmed
+    type: number
+    format: float
