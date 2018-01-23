@@ -2,6 +2,7 @@ post:
   tags:
     - Loyalty Points
   summary: 'Transfer loyalty points'
+  description: Transfer loyalty points from one customer to another customer. The sending customer needs to have enough loyalty points available.
   produces:
     - application/json
   parameters:
@@ -12,9 +13,9 @@ post:
         $ref: '#/definitions/LoyaltyTransferRequest'
   responses:
     200:
-      description: Loyalty Points Transfer
+      description: Loyalty Points Transaction
       schema:
-        $ref: '#/definitions/LoyaltyTransfer'
+        $ref: '#/definitions/LoyaltyTransaction'
     401:
       description: unauthorized
       schema:

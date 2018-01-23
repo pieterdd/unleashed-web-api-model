@@ -3,7 +3,7 @@ title: LoyaltyBalance
 required:
   - balance
 properties:
-  total:
+  available:
     description: The total available amount of loyalty points
     type: number
     format: float
@@ -12,6 +12,6 @@ properties:
     type: number
     format: float
   pending:
-    description: The amount of loyalty points that have not yet been comfirmed
+    description: The amount of loyalty points that have not yet been confirmed
     type: number
     format: float

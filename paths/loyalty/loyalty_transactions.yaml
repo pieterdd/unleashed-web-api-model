@@ -2,6 +2,7 @@ get:
   tags:
     - Loyalty Points
   summary: 'List of loyalty transactions'
+  description: List all the customer's loyalty transactions ordered by `last_updated`.
   produces:
     - application/json
   parameters:

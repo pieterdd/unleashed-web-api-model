@@ -132,9 +132,7 @@ AuthorizationStateUpdate:
   $ref: ./authorizations/authorization_state_update.yaml
 LoyaltyBalance:
   $ref: ./loyalty/loyalty_balance.yaml
-LoyaltyTransfer:
-  $ref: ./loyalty/loyalty_transfer.yaml
+LoyaltyTransaction:
+  $ref: ./loyalty/loyalty_transaction.yaml
 LoyaltyTransferRequest:
   $ref: ./loyalty/loyalty_transfer_request.yaml
-LoyaltyTransactionsRequest:
-  $ref: ./loyalty/loyalty_transactions_request.yaml
