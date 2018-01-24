@@ -5,7 +5,7 @@ required:
   - state
   - last_updated
 properties:
-  id:
+  transaction_id:
     type: string
     description: The ID of the transaction
   from_misdn:
