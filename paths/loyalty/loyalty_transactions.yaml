@@ -16,6 +16,8 @@ get:
       in: query
       required: false
       description: Only transactions in this state will be returned. If no state is given it will list all transactions.
+    - $ref: "#/parameters/page"
+    - $ref: "#/parameters/per_page"
   responses:
     200:
       description: Loyalty Point Transactions
