@@ -4,10 +4,8 @@ required:
 - to_msisdn
 - amount
 properties:
-  to_msisdn:
-    type: string
-    format: msisdn
-    description: 'Msisdn of the receiving customer'
+  referred_customer:
+    $ref: '#/definitions/ReferredCustomer'
   amount:
     type: number
     description: 'How many loyalty points are transferred'

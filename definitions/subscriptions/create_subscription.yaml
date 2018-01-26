@@ -56,4 +56,4 @@ properties:
               - private_postpaid
               - business_postpaid
   mgm:
-    $ref: '#/definitions/MgmInformation'
+    $ref: '#/definitions/ReferredCustomer'

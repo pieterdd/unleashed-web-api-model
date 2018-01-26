@@ -4,7 +4,7 @@ required:
   - id
   - state
   - owner
-  - authorized_email
+  - authorized_customer
   - subscription
 properties:
   id:
@@ -26,11 +26,8 @@ properties:
         type: string
       last_name:
         type: string
-  authorized_email:
-    description: |
-      Email of the customer that got authorisation to the subscription.
-      This is the email the owner used to send authorization.
-    type: string
+  authorized_customer:
+    $ref: '#/definitions/ReferredCustomer'
   subscription:
    description: Complete subscription details to which the owner authorizes another user.
    $ref: '#/definitions/Subscription'

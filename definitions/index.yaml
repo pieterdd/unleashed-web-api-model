@@ -34,8 +34,8 @@ LinkMandate:
   $ref: ./finance/mandate_link.yaml
 Notification:
   $ref: ./notifications/notification.yaml
-MgmInformation:
-  $ref: ./subscriptions/mgm.yaml
+ReferredCustomer:
+  $ref: ./general/referred_customer.yaml
 PasswordUpdate:
   $ref: ./password/update.yaml
 PasswordResetRequest:

@@ -2,13 +2,12 @@ type: object
 title: Authorization request
 description: Add an authorization
 required:
-  - authorized_email
+  - authorized_customer
   - subscription_id
   - password
 properties:
-  authorized_email:
-    type: string
-    description: The email of the customer who will get authorisation to the subscription.
+  authorized_customer:
+    $ref: '#/definitions/ReferredCustomer'
   subscription_id:
     type: string
     description: >
