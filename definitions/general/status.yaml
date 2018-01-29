@@ -29,6 +29,7 @@ properties:
       - package_already_active
       - duplicate_request
       - invalid_referred_mgm_customer
+      - unable_to_process
   message:
     type: string
   incorrect_fields:
