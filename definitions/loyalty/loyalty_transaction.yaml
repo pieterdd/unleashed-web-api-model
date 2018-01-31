@@ -17,6 +17,7 @@ properties:
       enum:
           - completed
           - reserved
+          - pending
           - cancelled
       description: >
           * __Completed__: This is the state for a completed transaction. Once the state moves to Completed, updates are
@@ -25,6 +26,9 @@ properties:
           * __Reserved__: When a payment is done using loyatly points they will be placed in the Reserved state untill the
           payment is complete. When the payment is cancelled the points will be moved back to Completed so they can be
           reused.
+
+          * __Pending__: This is the state for a transaction that has no yet been confirmed. These points will eventually
+          reach the Completed state if everything goes well. These points can not be used by the customer.
 
           * __Cancelled__: When a deal is cancelled or the customer is no longer eligible for the loyalty points they will
           be moved to the Cancelled state. These points can not be used by the customer.
