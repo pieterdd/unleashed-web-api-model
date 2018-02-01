@@ -41,11 +41,11 @@ properties:
     type: string
     format: date
     description: latest datetime that the customer updated this order
-  product_ids:
+  products:
     type: array
     items:
-      $ref: '#/definitions/ProductId'
-    description: ID's of the products that are ordered.
+      $ref: '#/definitions/Product'
+    description: The products that are ordered.
   payment_details:
     type: array
     description: A list of payment details
