@@ -1,10 +1,10 @@
 type: object
 title: Request loyalty transfer
 required:
-- to_msisdn
+- receiving_customer
 - amount
 properties:
-  referred_customer:
+  receiving_customer:
     $ref: '#/definitions/ReferredCustomer'
   amount:
     type: number
