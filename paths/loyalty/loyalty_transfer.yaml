@@ -12,7 +12,7 @@ post:
       schema:
         $ref: '#/definitions/LoyaltyTransferRequest'
   responses:
-    200:
+    201:
       description: Loyalty Points Transaction
       schema:
         $ref: '#/definitions/LoyaltyTransaction'
