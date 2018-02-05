@@ -1,7 +1,9 @@
 type: object
 title: LoyaltyBalance
 required:
-  - balance
+  - available
+  - blocked
+  - pending
 properties:
   available:
     description: The total available amount of loyalty points
