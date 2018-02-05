@@ -41,6 +41,11 @@ properties:
     type: string
     format: date
     description: latest datetime that the customer updated this order
+  product_ids:
+    type: array
+    items:
+      $ref: '#/definitions/ProductId'
+    description: ID's of the products that are ordered. This is deprecated in favor of products.
   products:
     type: array
     items:
