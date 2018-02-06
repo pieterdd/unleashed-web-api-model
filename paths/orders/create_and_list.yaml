@@ -43,6 +43,10 @@ get:
       in: query
       description: Only show orders with this status
       type: string
+    - name: subscription_id
+      in: query
+      description: Only show orders for this subscription
+      type: string
   responses:
     200:
       description: Order listing

@@ -61,3 +61,6 @@ properties:
     description: A list of reductions
     items:
       $ref: '#/definitions/OrderReduction'
+  subscription_id:
+    type: string
+    description: The subscription id this order belongs to
