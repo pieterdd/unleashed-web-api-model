@@ -32,6 +32,7 @@ properties:
       - review_needed
       - cancelled
       - enabled
+      - failed
       - unknown
   date_created:
     type: string
