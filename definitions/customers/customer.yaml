@@ -42,3 +42,8 @@ properties:
   prepaid_registration:
     description: This information will only be available for the mobile brands where applicable.
     $ref: '#/definitions/PrepaidRegistration'
+  contact_info_verified:
+    description: >
+     Whether or not the customer has a verified primary means of communication,
+     The effect of `is_verified==False` is brand specific.
+    type: boolean
