@@ -10,6 +10,7 @@ post:
   produces:
     - application/json
   parameters:
+    - $ref: "#/parameters/authorization_or_recaptcha"
     - name: verification data
       in: body
       description: "Data to be verified"

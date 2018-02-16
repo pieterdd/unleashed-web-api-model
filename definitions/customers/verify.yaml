@@ -1,9 +1,8 @@
 type: object
-title: Verify customer
+title: Send a verification token to a contact medium of a customer.
 required:
   - type
   - value
-  - recaptcha
 properties:
   type:
     type: string
@@ -17,3 +16,4 @@ properties:
       If a phone number, it should be expressed in prefixed international format (e.g. +321234567)
   recaptcha:
     type: string
+    description: required if not authenticated.

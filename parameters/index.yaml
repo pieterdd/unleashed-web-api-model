@@ -26,6 +26,12 @@ authorization:
       description: "Contains the authentication data"
       required: true
       type: string
+authorization_or_recaptcha:
+      name: Authorization
+      in: header
+      description: "Contains the authentication data if known, otherwise recaptcha should be given in body"
+      required: false
+      type: string
 expand_products:
       name: expand_products
       in: query
