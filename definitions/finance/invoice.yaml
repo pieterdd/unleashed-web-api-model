@@ -6,7 +6,7 @@ required:
   - date
   - amount
   - status
-  - due_amount
+  - amount_due
 properties:
   id:
     type: string
@@ -32,6 +32,6 @@ properties:
     - review
   reference_number:
     type: string
-  due_amount:
+  amount_due:
     type: number
     format: float
