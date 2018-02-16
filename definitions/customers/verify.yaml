@@ -1,5 +1,5 @@
 type: object
-title: Send a verification token to a contact medium of a customer.
+title: (Re-)send a verification token to a contact medium of a customer.
 required:
   - type
   - value

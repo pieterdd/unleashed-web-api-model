@@ -1,0 +1,44 @@
+post:
+  tags:
+    - Customers
+  summary: Confirm verification token
+  description: >
+    When e.g. a customer is created or primary contact channel (e-mail/phone) is updated,
+    a token is sent to that channel for validation. You can use this end point to validate the token.
+  consumes:
+    - application/json
+  produces:
+    - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+    - name: Validate token
+      in: body
+      description: "Token to be verified"
+      required: true
+      schema:
+        type: object
+        title: token
+        required:
+          - token
+          - channel
+        properties:
+          token:
+            type: string
+          channel:
+            type: string
+            enum:
+             - email
+             - sms
+  responses:
+    204:
+      description: Successfully validated customer
+    401:
+      description: Unauthorized
+    400:
+      description: Invalid request
+      schema:
+        $ref: '#/definitions/Status'
+    429:
+      description: throttled
+      schema:
+        $ref: '#/definitions/Status'

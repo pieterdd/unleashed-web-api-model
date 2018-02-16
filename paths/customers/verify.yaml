@@ -1,10 +1,10 @@
 post:
   tags:
     - Customers
-  summary: Request verification
+  summary: Request verification token
   description: >
-    Some brands require some form of verification before being able to create or update a customer.
-    This endpoint will allow you to trigger that and complete the request containing a `verification_code`
+    Some brands require verification of contact information before being able to create or update a customer.
+    This endpoint will allow you to (re-)send a verification token to that phone or e-mail.
   consumes:
     - application/json
   produces:
@@ -13,7 +13,7 @@ post:
     - $ref: "#/parameters/authorization_or_recaptcha"
     - name: verification data
       in: body
-      description: "Data to be verified"
+      description: "Contact data to send verification token to."
       required: true
       schema:
         $ref: '#/definitions/VerifyCustomer'

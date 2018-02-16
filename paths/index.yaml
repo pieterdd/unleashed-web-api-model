@@ -6,6 +6,8 @@
   $ref: ./customers/create.yaml
 /customers/verify:
   $ref: ./customers/verify.yaml
+/customers/verify/perform:
+  $ref: ./customers/verify_perform.yaml
 /customers/me:
   $ref: ./customers/me.yaml
 /migrate:
