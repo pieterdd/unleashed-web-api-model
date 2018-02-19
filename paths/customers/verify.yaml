@@ -18,10 +18,8 @@ post:
       schema:
         $ref: '#/definitions/VerifyCustomer'
   responses:
-    200:
-      description: Returns the status
-      schema:
-        $ref: '#/definitions/Status'
+    204:
+      description: Verification sent (if valid value)
     429:
       description: throttled
       schema:
