@@ -1,0 +1,36 @@
+type: object
+title: PaginationBodyDetails
+required:
+  - page
+  - per_page
+  - total_pages
+  - total_items
+properties:
+  page:
+    description: The page you are on
+    type: number
+  per_page:
+    description: Number of items per page
+    type: number
+  total_pages:
+    description: Total number of pages
+    type: number
+  total_items:
+    description: Total number of items
+    type: number
+  links:
+    type: object
+    description: links to first, last, previous and next pages if applicable
+    properties:
+      first_url:
+        type: string
+        format: url
+      last_url:
+        type: string
+        format: url
+      next_url:
+        type: string
+        format: url
+      previous_url:
+        type: string
+        format: url
