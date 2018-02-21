@@ -9,9 +9,9 @@ properties:
   id:
     type: string
     description: provider-agnostic identifier of the mandate
-  account_id:
+  subscription_id:
     type: string
-    description: the id of the linked account
+    description: the id of the linked subscription if applicable
   label:
     type: string
     description: human-readable representation of this mandate
