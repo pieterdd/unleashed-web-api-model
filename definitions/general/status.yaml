@@ -30,6 +30,7 @@ properties:
       - duplicate_request
       - invalid_referred_mgm_customer
       - unable_to_process
+      - invalid_mnp_msisdn_in_use
   message:
     type: string
   incorrect_fields:
