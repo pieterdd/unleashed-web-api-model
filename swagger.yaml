@@ -25,6 +25,8 @@ tags:
     description: Telco
   - name: Finance
     description: Finance
+  - name: Mandates
+    description: Mandates
   - name: Orders
     description: Orders
   - name: Apps

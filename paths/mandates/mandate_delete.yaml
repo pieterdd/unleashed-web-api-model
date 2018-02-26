@@ -1,6 +1,6 @@
 delete:
   tags:
-    - Finance
+    - Mandates
   summary: Delete mandate
   produces:
     - application/json

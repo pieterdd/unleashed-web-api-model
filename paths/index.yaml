@@ -25,13 +25,13 @@
 /payments:
   $ref: ./finance/payments.yaml
 /mandates:
-  $ref: ./finance/mandate_list.yaml
+  $ref: ./mandates/mandate_list.yaml
 /mandates/{id}:
-  $ref: ./finance/mandate_delete.yaml
+  $ref: ./mandates/mandate_delete.yaml
 /mandates/{id}/link:
-  $ref: ./finance/mandate_linking.yaml
+  $ref: ./mandates/mandate_linking.yaml
 /mandates/request:
-  $ref: ./finance/mandate_request.yaml
+  $ref: ./mandates/mandate_request.yaml
 /password/reset/request:
   $ref: ./password/reset_request.yaml
 /password/reset/perform:

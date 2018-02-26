@@ -29,9 +29,9 @@ EmailUpdate:
 EmailUpdatePerform:
   $ref: ./customers/email_perform.yaml
 DeleteMandate:
-  $ref: ./finance/delete_mandate.yaml
+  $ref: ./mandates/delete_mandate.yaml
 LinkMandate:
-  $ref: ./finance/mandate_link.yaml
+  $ref: ./mandates/mandate_link.yaml
 Notification:
   $ref: ./notifications/notification.yaml
 ReferredCustomer:
@@ -93,11 +93,11 @@ Usage:
 Invoice:
   $ref: ./finance/invoice.yaml
 Mandate:
-  $ref: ./finance/mandate.yaml
+  $ref: ./mandates/mandate.yaml
 RequestMandate:
-  $ref: ./finance/request_mandate.yaml
+  $ref: ./mandates/request_mandate.yaml
 RequestMandateResponse:
-  $ref: ./finance/request_mandate_response.yaml
+  $ref: ./mandates/request_mandate_response.yaml
 Payment:
   $ref: ./finance/payment.yaml
 PaymentMethod:

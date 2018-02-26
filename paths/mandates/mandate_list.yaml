@@ -1,6 +1,6 @@
 get:
   tags:
-    - Finance
+    - Mandates
   summary: List mandates
   produces:
     - application/json
