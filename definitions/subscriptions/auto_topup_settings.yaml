@@ -17,3 +17,11 @@ properties:
   product_id:
     type: string
     description: The if of the product that will be used to topup when an automatic topup takes place.
+  allow_sms_topup:
+    type: boolean
+    default: false
+    description: Whether or not to allow topup via SMS
+  use_loyalty_points_first:
+    type: boolean
+    default: false
+    description: Whether or not if possible first use loyalty points to do topup
