@@ -1,12 +1,16 @@
 type: object
 title: Request mandate
 required:
-  - subscription_id
   - method
 properties:
   subscription_id:
     type: string
-    description: ID on which to set the mandate as a payment method (if any)
+    description: |
+      The mandate will linked to this subscription on creation.
+      If no subscription is given, it remains unlinked and it won't be used for automatic payments
+      until you link it to a subscription.
+      If you choose to omit the subscription_id you can still list mandates
+      and link them to a subscription with different calls.
   method:
     type: string
     enum:
