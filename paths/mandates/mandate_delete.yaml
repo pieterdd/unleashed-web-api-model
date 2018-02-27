@@ -11,11 +11,6 @@ delete:
       description: The id of the mandate to remove
       required: true
       type: string
-    - name: password
-      in: body
-      required: false
-      schema:
-        $ref: '#/definitions/DeleteMandate'
   responses:
     204:
       description: The mandate has been deleted

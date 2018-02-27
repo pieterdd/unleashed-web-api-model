@@ -2,11 +2,7 @@ type: object
 title: Mandate link
 required:
   - subscription_id
-  - password
 properties:
   subscription_id:
     type: string
     description: provider-agnostic identifier of the mandate
-  password:
-    type: string
-    description: A password is required for linking or unlinking a mandate to a subscriptions.
