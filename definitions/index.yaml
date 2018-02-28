@@ -102,6 +102,8 @@ PaymentMethod:
   $ref: ./finance/payment_method.yaml
 PaymentDetails:
   $ref: ./finance/payment_details.yaml
+PaymentInformation:
+  $ref: ./finance/payment_information.yaml
 Version:
   $ref: ./apps/version.yaml
 Topup:

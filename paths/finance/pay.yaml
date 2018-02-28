@@ -17,12 +17,7 @@ post:
     200:
       description: The payment information
       schema:
-        type: object
-        title: Payment information
-        properties:
-          payment_url:
-            type: string
-            description: url to go to to finalize the payment
+        $ref: '#/definitions/PaymentInformation'
     401:
       description: unauthorized
       schema:
