@@ -31,6 +31,7 @@ properties:
       - disabled
       - deleted
       - locked
+      - deactivated
   sim:
     $ref: '#/definitions/SimDetails'
   is_owner:
