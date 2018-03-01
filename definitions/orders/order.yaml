@@ -34,6 +34,20 @@ properties:
       - enabled
       - failed
       - unknown
+  type:
+    type: string
+    enum:
+      - terminate_additional_contract
+      - terminate_contract
+      - modify_postpaid_tariff_plan
+      - unsuspend_sim
+      - suspend_sim
+      - swap_sim
+      - switch_between_prepaid_and_postpaid
+      - activate_bundle
+      - redeem_voucher
+      - create_contract
+      - create_additional_contract
   date_created:
     type: string
     format: date
