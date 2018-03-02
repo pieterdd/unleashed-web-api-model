@@ -2,6 +2,7 @@ type: object
 title: Customer address information
 required:
   - street
+  - number
   - postcode
   - city
   - country
