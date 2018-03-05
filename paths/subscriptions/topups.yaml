@@ -6,6 +6,10 @@ get:
   produces:
     - application/json
   parameters:
+    - name: status
+      in: query
+      description: Only show orders with this status
+      type: string
     - $ref: "#/parameters/authorization"
     - name: id
       in: path
