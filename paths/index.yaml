@@ -22,8 +22,6 @@
   $ref: ./password/update.yaml
 /invoices:
   $ref: ./finance/invoices.yaml
-/payments:
-  $ref: ./finance/payments.yaml
 /mandates:
   $ref: ./mandates/mandate_list.yaml
 /mandates/{id}:

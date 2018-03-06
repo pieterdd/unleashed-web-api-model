@@ -96,8 +96,6 @@ RequestMandate:
   $ref: ./mandates/request_mandate.yaml
 RequestMandateResponse:
   $ref: ./mandates/request_mandate_response.yaml
-Payment:
-  $ref: ./finance/payment.yaml
 PaymentMethod:
   $ref: ./finance/payment_method.yaml
 PaymentDetails:
