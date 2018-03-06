@@ -48,6 +48,7 @@ properties:
       - redeem_voucher
       - create_contract
       - create_additional_contract
+      - unknown
   date_created:
     type: string
     format: date
