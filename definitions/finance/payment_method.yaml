@@ -8,7 +8,6 @@ enum:
  - KBC/CBC Payment Button
  - Manual
  - Bitcoin
- - SEPA
  - Mandate
  - Vouchers
  - Paypal
