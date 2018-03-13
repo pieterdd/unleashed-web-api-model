@@ -3,6 +3,7 @@ title: Request loyalty transfer
 required:
 - receiving_customer
 - amount
+- password
 properties:
   receiving_customer:
     $ref: '#/definitions/ReferredCustomer'
@@ -11,3 +12,6 @@ properties:
     description: 'How many loyalty points are transferred'
     format: float
     example: '12.34'
+  password:
+    type: string
+    description: "Password required to transfer loyalty points"
