@@ -30,6 +30,7 @@ properties:
       - not_enough_balance
       - not_payable
       - package_already_active
+      - swap_already_running
       - unable_to_process
   message:
     type: string
