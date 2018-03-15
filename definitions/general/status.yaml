@@ -11,26 +11,26 @@ properties:
     items:
       type: string
       enum:
-      - invalid_recaptcha_response
-      - invalid_grant
-      - invalid_phone_verification_code
-      - invalid_user
-      - login_by_email_impossible
-      - invalid_fields
-      - not_enough_balance
+      - action_not_authorized
+      - customer_identifier_not_unique
+      - duplicate_request
       - email_already_in_use
       - iccid_already_in_use
       - invalid_customer
-      - invalid_token
-      - mandate_cannot_be_set
-      - not_payable
-      - customer_identifier_not_unique
-      - action_not_authorized
-      - package_already_active
-      - duplicate_request
-      - invalid_referred_mgm_customer
-      - unable_to_process
+      - invalid_fields
+      - invalid_grant
       - invalid_mnp_msisdn_in_use
+      - invalid_phone_verification_code
+      - invalid_recaptcha_response
+      - invalid_referred_mgm_customer
+      - invalid_token
+      - invalid_user
+      - login_by_email_impossible
+      - mandate_cannot_be_set
+      - not_enough_balance
+      - not_payable
+      - package_already_active
+      - unable_to_process
   message:
     type: string
   incorrect_fields:
@@ -50,22 +50,22 @@ properties:
               code:
                 type: string
                 enum:
-                - invalid_format
-                - invalid_value
                 - email_address_already_in_use
-                - phone_number_not_belgian
-                - invalid_phone_verification_code
                 - expired_phone_verification_code
                 - invalid_email_verification_code
-                - password_too_common
-                - password_too_similar_to_personal_details
+                - invalid_format
+                - invalid_phone_verification_code
+                - invalid_value
                 - password_entirely_numeric
-                - password_too_similar
+                - password_too_common
                 - password_too_short
-                - unknown_error
+                - password_too_similar
+                - password_too_similar_to_personal_details
+                - phone_number_not_belgian
                 - required
-                - too_short
                 - too_long
+                - too_short
+                - unknown_error
               message:
                 type: string
                 description: An english full-text message explaining the error
