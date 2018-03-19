@@ -21,3 +21,19 @@ get:
         $ref: '#/definitions/Status'
     404:
       description: No such order
+
+delete:
+  tags:
+    - Orders
+  summary: Cancel order
+  produces:
+  - application/json
+  parameters:
+    - name: id
+      in: path
+      description: id of order to cancel
+      required: true
+      type: string
+  responses:
+    204:
+      description: Successfull cancelled order
