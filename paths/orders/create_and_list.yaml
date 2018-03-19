@@ -36,6 +36,10 @@ get:
   tags:
     - Orders
   summary: List orders
+  description: |
+    Note that the response is deprecated and will change to paginated response
+    like e.g. [Loyalty Points](/unleashed-web-api/reference/loyalty-points/list-of-loyalty-transactions).
+    You can already use this new response by using `/orders-new/`.
   produces:
   - application/json
   parameters:

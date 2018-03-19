@@ -2,6 +2,10 @@ get:
   tags:
     - Subscriptions
   summary: "Usage history"
+  description: |
+    Note that the response is deprecated and will change to paginated response
+    like e.g. [Loyalty Points](/unleashed-web-api/reference/loyalty-points/list-of-loyalty-transactions).
+    You can already use this new response by using `/usage-new/`.
   produces:
     - application/json
   parameters:

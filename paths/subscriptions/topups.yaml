@@ -5,6 +5,11 @@ get:
   summary: Topup history
   produces:
     - application/json
+  description: |
+    Note that the response is deprecated and will change to paginated response
+    like e.g. [Loyalty Points](/unleashed-web-api/reference/loyalty-points/list-of-loyalty-transactions).
+    Also it will return orders and no longer specific Topup object.
+    You can already use this new response by using `/topups-new/`.
   parameters:
     - name: status
       in: query
