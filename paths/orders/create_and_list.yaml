@@ -45,7 +45,7 @@ get:
   parameters:
     - name: status
       in: query
-      description: Only show orders with this status
+      description: Only show orders with a status in the given, comma-separated list
       type: string
     - name: subscription_id
       in: query
