@@ -14,8 +14,6 @@
   $ref: ./customers/migrate.yaml
 /email/update:
   $ref: ./customers/email.yaml
-/email/update/perform:
-  $ref: ./customers/email_perform.yaml
 /notification-settings:
   $ref: ./customers/notifications.yaml
 /password/update:

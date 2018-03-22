@@ -26,8 +26,6 @@ VerifyCustomer:
   $ref: ./customers/verify.yaml
 EmailUpdate:
   $ref: ./customers/email.yaml
-EmailUpdatePerform:
-  $ref: ./customers/email_perform.yaml
 LinkMandate:
   $ref: ./mandates/mandate_link.yaml
 Notification:
