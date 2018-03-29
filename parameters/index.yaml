@@ -7,7 +7,7 @@ language:
 page:
       name: page
       in: query
-      description: Result set page, starting at 1.
+      description: Result set page, starting at 1 (default=1).
       default: 1
       required: false
       type: integer
@@ -15,7 +15,7 @@ page:
 per_page:
       name: per_page
       in: query
-      description: Number of results per page.
+      description: Number of results per page (default=20).
       default: 20
       required: false
       type: integer
@@ -50,17 +50,19 @@ recaptcha:
 from_date:
       name: from_date
       in: query
-      description: from which date to fetch the history
+      description: from which date to fetch the history (default=Today)
       required: false
       type: string
       format: date
+      default: today
 until_date:
       name: until_date
       in: query
-      description: to which date to fetch the history
+      description: to which date to fetch the history (default=Tomorrow)
       required: false
       type: string
       format: date
+      default: tomorrow
 X-Pos-Agent:
       name: X-Pos-Agent
       in: header
