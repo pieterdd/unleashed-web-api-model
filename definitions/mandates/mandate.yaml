@@ -35,3 +35,6 @@ properties:
     type: string
     format: date
     description: date that this mandate will expire if applicable (e.g. for creditcard mandate)
+  customer_id:
+    type: string
+    description: the id of the customer that owns this mandate.
