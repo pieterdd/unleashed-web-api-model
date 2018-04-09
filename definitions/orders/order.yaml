@@ -48,6 +48,7 @@ properties:
       - redeem_voucher
       - create_contract
       - create_additional_contract
+      - light_to_full_migration
       - unknown
   date_created:
     type: string
