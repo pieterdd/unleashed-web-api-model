@@ -38,7 +38,7 @@ delete:
     - name: password
       in: body
       description: Verification required to cancel subscription.
-      required: false
+      required: true
       schema:
         $ref: '#/definitions/PasswordCheck'
 
