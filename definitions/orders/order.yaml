@@ -81,3 +81,5 @@ properties:
   subscription_id:
     type: string
     description: The subscription id this order belongs to
+  donor:
+    $ref: '#/definitions/SubscriptionMnpDetails'

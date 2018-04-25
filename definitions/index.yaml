@@ -60,6 +60,8 @@ ShippingInfo:
   $ref: ./orders/shipping_info.yaml
 Subscription:
   $ref: ./subscriptions/subscription.yaml
+SubscriptionMnpDetails:
+  $ref: ./subscriptions/subscription_mnp_details.yaml
 CreateSubscription:
   $ref: ./subscriptions/create_subscription.yaml
 CreateSubscriptionResponse:
