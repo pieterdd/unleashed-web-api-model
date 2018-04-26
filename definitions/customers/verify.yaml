@@ -11,8 +11,7 @@ properties:
   value:
     type: string
     description: |
-      Either the email address or phone number to verify.
-      If a phone number, it should be expressed in prefixed international format (e.g. +321234567)
+      Either the email address or msisdn to verify.
   recaptcha:
     type: string
     description: required if not authenticated.
