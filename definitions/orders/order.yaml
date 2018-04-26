@@ -82,4 +82,4 @@ properties:
     type: string
     description: The subscription id this order belongs to
   donor:
-    $ref: '#/definitions/SubscriptionMnpDetails'
+    $ref: '#/definitions/OrderDonor'

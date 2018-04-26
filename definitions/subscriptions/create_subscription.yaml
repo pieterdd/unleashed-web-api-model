@@ -30,6 +30,6 @@ properties:
           The ICCID coupled with this subscription, e.g. when the customer has the physical SIM from a store.
           In case of online sale, this will be coupled later with the subscription
       donor:
-        $ref: '#/definitions/SubscriptionMnpDetails'
+        $ref: '#/definitions/OrderDonor'
   mgm:
     $ref: '#/definitions/ReferredCustomer'
