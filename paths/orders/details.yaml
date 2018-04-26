@@ -45,37 +45,3 @@ delete:
         $ref: '#/definitions/Status'
     404:
       description: No such order
-
-patch:
-  tags:
-    - Orders
-  summary: Update donor details in case of failed MNP
-  consumes:
-    - application/json
-  parameters:
-    - $ref: "#/parameters/authorization"
-    - name: id
-      in: path
-      description: id of order to update donor details for
-      required: true
-      type: string
-    - name: Order
-      in: body
-      required: true
-      schema:
-        type: object
-        title: Donor details to update
-        required:
-          - donor
-        properties:
-          donor:
-            $ref: '#/definitions/SubscriptionMnpDetails'
-  responses:
-    204:
-      description: OK
-    401:
-      description: Unauthorized
-      schema:
-        $ref: '#/definitions/Status'
-    404:
-      description: No such order

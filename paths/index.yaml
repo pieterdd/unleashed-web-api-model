@@ -40,6 +40,8 @@
   $ref: ./orders/create_and_list.yaml
 /orders/{id}:
   $ref: ./orders/details.yaml
+/orders/{id}/donor:
+  $ref: ./orders/donor_details.yaml
 # Subscriptions
 /subscriptions/{id}:
   $ref: ./subscriptions/subscription.yaml
