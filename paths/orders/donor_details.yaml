@@ -15,13 +15,7 @@ put:
       in: body
       required: true
       schema:
-        type: object
-        title: Donor details to update
-        required:
-          - donor
-        properties:
-          donor:
-            $ref: '#/definitions/OrderDonor'
+        $ref: '#/definitions/OrderDonor'
   responses:
     204:
       description: OK
