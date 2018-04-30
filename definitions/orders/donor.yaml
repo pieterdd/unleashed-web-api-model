@@ -3,6 +3,7 @@ title: Info about MNP when applicable
 required:
   - operator
   - iccid
+  - request_type
 properties:
   operator:
     type: string
