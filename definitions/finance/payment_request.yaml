@@ -6,6 +6,10 @@ properties:
   redirect_url:
     type: string
     description: url to redirect to after paying
+  subscription_msisdn:
+    type: string
+    description: >
+      Msisdn of the subscription the order to be paid belongs to.  Required if the operation is invoked anonymously.
   invoice_id:
     type: string
     description: ID of the invoice to pay.  Pass either this or order_id.

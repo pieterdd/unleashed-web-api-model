@@ -3,15 +3,18 @@ post:
     - Orders
   summary: Create order
   description: |
-    This end point is used to order the products in the catalog.
+    This end point is used to order the products in the catalog.  Depending on the product chosen, this can amount to
+    a topup, a bundle activation, a product migration, ...
 
     For our mobile brands:
 
     To migrate a subscription from postpaid to prepaid you need to specify a product, which corresponds with
     that subscription, and a topup. The topup can be specified using a child product.
 
-
     A migration from prepaid to postpaid just requires you to specify the product id of the chosen postpaid subscription.
+
+    All orders require authentication, except for creating topups.  However if the latter is done anonymously, the
+    subcriber_msisdn field is required.
   consumes:
   - application/json
   produces:

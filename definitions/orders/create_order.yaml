@@ -10,12 +10,17 @@ properties:
     type: array
     description: >
       E.g. when you migrate between subscription types like going from postpaid subscription to prepaid product.
-      You order a prepaid subscription and additionally you can add a topup just like if you were creating a prepaid subscription.
+      You order a prepaid subscription and additionally you can add a topup just like if you were creating a prepaid
+      subscription.
     items:
       $ref: '#/definitions/ProductId'
   subscription_id:
     type: string
     description: The ID of the subscription that this order is for
+  subscription_msisdn:
+    type: string
+    description: >
+      The MSISDN of the subscription that this order is for.  Required if this operation is invoked anonymously.
   password:
     type: string
     description: A password is required for performing migrations from prepaid to postpaid.
