@@ -28,6 +28,7 @@ properties:
       - waiting_for_payment
       - waiting_for_customer_verification
       - waiting_for_switch_accept
+      - waiting_for_internal_processing
       - created
       - processing
       - review_needed
