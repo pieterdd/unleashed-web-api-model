@@ -51,7 +51,7 @@
   $ref: ./subscriptions/auto_topup_settings.yaml
 /subscriptions/{id}/balance:
   $ref: ./subscriptions/balance.yaml
-/suscriptions/{id}/cancel:
+/subscriptions/{id}/cancel:
   $ref: ./subscriptions/cancel.yaml
 /subscriptions/{id}/usage:
   $ref: ./subscriptions/usage.yaml
