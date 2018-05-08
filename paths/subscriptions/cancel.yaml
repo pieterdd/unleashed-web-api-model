@@ -1,6 +1,8 @@
 post:
   tags:
     - Subscriptions
+  consumes:
+    - application/json
   summary: Cancel subscription
   produces:
     - application/json
