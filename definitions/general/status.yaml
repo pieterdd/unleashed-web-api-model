@@ -27,6 +27,7 @@ properties:
       - invalid_user
       - login_by_email_impossible
       - mandate_cannot_be_set
+      - mandate_cannot_be_set_invalid_values
       - not_enough_balance
       - not_payable
       - package_already_active
