@@ -15,7 +15,9 @@ properties:
       - customer_identifier_not_unique
       - duplicate_request
       - email_already_in_use
+      - email_not_verified
       - iccid_already_in_use
+      - insufficient_loyalty_points
       - invalid_customer
       - invalid_fields
       - invalid_grant
@@ -32,6 +34,7 @@ properties:
       - not_enough_balance
       - not_payable
       - package_already_active
+      - password_mandatory
       - swap_already_running
       - unable_to_process
   message:
