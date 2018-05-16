@@ -52,6 +52,8 @@ properties:
               code:
                 type: string
                 enum:
+                - customer_not_found
+                - customer_should_not_be_self
                 - email_address_already_in_use
                 - expired_phone_verification_code
                 - invalid_email_verification_code
