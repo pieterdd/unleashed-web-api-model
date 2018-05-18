@@ -39,3 +39,15 @@ properties:
     description:  |
       Is this subscription owned by the customer who requested it?
       So this can only be false when this is an authorized subscription.
+  pending_product:
+    type: object
+    description: |
+      In case of price-plan migration that is not immediately active,
+      the new product is show here with the date from when it will be valid
+    properties:
+      valid_from:
+         type: string
+         format: date
+         description: the datetime when the new product will be activated
+      product:
+        $ref: '#/definitions/Product'
