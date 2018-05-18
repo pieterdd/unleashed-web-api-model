@@ -9,6 +9,9 @@ required:
 properties:
   id:
     type: string
+  account_id:
+    type: string
+    description: the account reference number for the subscription
   valid_from:
     type: string
     format: date
