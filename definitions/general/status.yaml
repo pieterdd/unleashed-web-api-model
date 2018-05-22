@@ -24,6 +24,7 @@ properties:
       - invalid_recaptcha_response
       - invalid_referred_mgm_customer
       - invalid_token
+      - invalid_query_parameter
       - invalid_user
       - login_by_email_impossible
       - mandate_cannot_be_set
