@@ -77,8 +77,6 @@ properties:
           type: string
           enum:
             - sms
-            - sms_super_on_net
             - data
             - voice
-            - voice_super_on_net
             - value
