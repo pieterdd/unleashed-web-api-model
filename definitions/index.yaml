@@ -104,8 +104,6 @@ PaymentInformation:
   $ref: ./finance/payment_information.yaml
 Version:
   $ref: ./apps/version.yaml
-Topup:
-  $ref: ./finance/topup.yaml
 AutoTopupSettings:
   $ref: ./subscriptions/auto_topup_settings.yaml
 AutoTopupTrigger:
