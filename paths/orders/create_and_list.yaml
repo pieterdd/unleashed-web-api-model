@@ -47,6 +47,10 @@ get:
       in: query
       description: Only show orders with a status in the given, comma-separated list
       type: string
+    - name: type
+      in: query
+      description: Only show orders with an order type in the given, comma-separated list
+      type: string
     - name: subscription_id
       in: query
       description: Only show orders for this subscription
