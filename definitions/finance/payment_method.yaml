@@ -11,4 +11,5 @@ enum:
  - Mandate
  - Vouchers
  - Paypal
+ - Loyalty Points
  - Unknown
