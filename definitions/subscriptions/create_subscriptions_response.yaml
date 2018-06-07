@@ -13,4 +13,4 @@ properties:
       Allowed methods to use.
       This field will only be correctly filled if the order is in the 'waiting_for_payment' state.
     items:
-      $ref: '#/definitions/PaymentMethod'
+      $ref: '#/definitions/PaymentMethodAllowed'
