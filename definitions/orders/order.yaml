@@ -13,6 +13,10 @@ properties:
     type: number
     description: the total cost (without possible reductions applied)
     format: float
+  amount_due:
+    type: number
+    description: the amount the customer still needs to pay
+    format: float
   allowed_payment_methods:
     type: array
     description: |
