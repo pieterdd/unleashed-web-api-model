@@ -30,6 +30,7 @@ properties:
     - partially_paid
     - pending_payment
     - review
+    - unknown
   reference_number:
     type: string
   amount_due:
