@@ -14,11 +14,11 @@ properties:
     description: the account reference number for the subscription
   valid_from:
     type: string
-    format: date
+    format: date-time
     description: the datetime when this subscription was activated
   valid_until:
     type: string
-    format: date
+    format: date-time
     description: the datetime till when this subscription is active
   type:
     type: string

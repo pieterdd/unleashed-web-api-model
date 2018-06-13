@@ -33,7 +33,7 @@ properties:
      Information on the payment method. This is method-specific. e.g. for visa, it could be the last four card digits
   expiration_date:
     type: string
-    format: date
+    format: date-time
     description: date that this mandate will expire if applicable (e.g. for creditcard mandate)
   customer_id:
     type: string

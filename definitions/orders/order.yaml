@@ -60,11 +60,11 @@ properties:
       - unknown
   date_created:
     type: string
-    format: date
+    format: date-time
     description: datetime that the customer created this order
   date_updated:
     type: string
-    format: date
+    format: date-time
     description: latest datetime that the customer updated this order
   product_ids:
     type: array

@@ -14,7 +14,7 @@ properties:
     type: string
   date:
     type: string
-    format: date
+    format: date-time
   amount:
     type: number
     format: float
