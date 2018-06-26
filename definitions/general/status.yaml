@@ -33,6 +33,7 @@ properties:
       - mandate_cannot_be_set_invalid_values
       - not_enough_balance
       - not_payable
+      - other_pending_language_change
       - package_already_active
       - password_mandatory
       - swap_already_running
