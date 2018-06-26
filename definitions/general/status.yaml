@@ -16,6 +16,7 @@ properties:
       - duplicate_request
       - email_already_in_use
       - email_not_verified
+      - expired_token
       - iccid_already_in_use
       - insufficient_loyalty_points
       - invalid_customer
