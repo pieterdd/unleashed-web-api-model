@@ -47,6 +47,10 @@ properties:
     description: |
       In case of price-plan migration that is not immediately active,
       the new product is show here with the date from when it will be valid
+    required:
+     - valid_from
+     - product
+     - subscription_id
     properties:
       valid_from:
          type: string
@@ -54,3 +58,6 @@ properties:
          description: the datetime when the new product will be activated
       product:
         $ref: '#/definitions/Product'
+      subscription_id:
+        type: string
+        description: subscription id belonging to pending product (e.g subscription that needs topup)
