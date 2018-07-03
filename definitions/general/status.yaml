@@ -37,6 +37,7 @@ properties:
       - other_pending_language_change
       - package_already_active
       - password_mandatory
+      - subscription_deactivated
       - swap_already_running
       - unable_to_process
   message:
