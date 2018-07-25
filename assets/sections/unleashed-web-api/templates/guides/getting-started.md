@@ -7,6 +7,17 @@ SortOrder: 200
 
 This API documentation contains all endpoint information available for the Unleashed brands [Mobile Vikings][mv], [Jim Mobile][jim] and [Stievie][stievie]. You are advised to read this guide before creating awesome applications.
 
+## Versions
+
+In order to reduce friction when pushing out changes to our API, we have recently introduced versioning. Versions are date-based, extended with extra tags `latest` and `stable`. When no version is provided, the API automatically falls back to `stable`. The following paths are all valid:
+
+- `https://api.unleashed.be/mv/customers/me`
+- `https://api.unleashed.be/stable/mv/customers/me`
+- `https://api.unleashed.be/20180725/mv/customers/me`
+- `https://api.unleashed.be/latest/mv/customers/me`
+
+Currently, this documentation describes the `stable` API, which is recommended for most applications. We are working on providing documentation for newer API changes too, to allow API users to prepare up front when we bump the `stable` tag to a newer version.
+
 ## Requesting access
 
 Start by sending us an email at [api@unleashed.be][mail] with the following information:
@@ -22,7 +33,7 @@ We will respond asap to provide you with a client id and secret.
 
 ## Brands
 
-To be able to talk to UWA, you need to specify which brand you want to communicate with. You can do so by adding it to the endpoint's path `https://uwa.unleashed.be/<slug>/<endpoint>`, where `<slug>` is one of the following:
+To be able to talk to UWA, you need to specify which brand you want to communicate with. You can do so by adding it to the endpoint's path `https://uwa.unleashed.be/<version>/<slug>/<endpoint>`, where `<slug>` is one of the following:
 
 | Brand | Slug |
 | ---------- | ---------- |
