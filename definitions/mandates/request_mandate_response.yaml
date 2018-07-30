@@ -1,9 +1,9 @@
 type: object
 title: Mandate request response
 properties:
-  payment_url:
-    type: string
-    description: DEPRECATED URL to go to setup your mandate
   mandate_request_url:
     type: string
     description: URL to configure your mandate. This is only returned for creditcard mandates.
+  mandate_id:
+    type: string
+    description: Identifier of the mandate, this is only returned for sepa mandates.
