@@ -58,6 +58,7 @@ properties:
       - create_contract
       - create_additional_contract
       - light_to_full_migration
+      - activation_sim
       - unknown
   date_created:
     type: string
