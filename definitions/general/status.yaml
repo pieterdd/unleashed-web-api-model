@@ -37,6 +37,7 @@ properties:
       - not_enough_balance
       - not_payable
       - other_pending_language_change
+      - other_process_pending
       - package_already_active
       - password_mandatory
       - subscription_deactivated
