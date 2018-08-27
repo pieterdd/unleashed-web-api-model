@@ -33,6 +33,7 @@ properties:
       - mandate_cannot_be_set
       - mandate_cannot_be_set_invalid_values
       - migration_already_running
+      - no_process_linked_to_iccid
       - not_enough_balance
       - not_payable
       - other_pending_language_change
