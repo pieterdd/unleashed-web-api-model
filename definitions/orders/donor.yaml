@@ -2,6 +2,7 @@ type: object
 title: Info about MNP when applicable
 required:
   - operator
+  - msisdn
   - iccid
   - request_type
 properties:
