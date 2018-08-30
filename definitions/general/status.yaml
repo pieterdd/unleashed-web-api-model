@@ -43,6 +43,7 @@ properties:
       - subscription_deactivated
       - swap_already_running
       - unable_to_process
+      - unconfirmed_sepa_mandate_pending
   message:
     type: string
   incorrect_fields:
