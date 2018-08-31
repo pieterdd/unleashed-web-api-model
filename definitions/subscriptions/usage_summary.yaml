@@ -1,0 +1,47 @@
+type: object
+title: Usage Summary
+required:
+  - incoming
+  - outgoing
+properties:
+  incoming:
+    description: A summary of the incoming trafic during a given period
+    type: object
+    required:
+     - voice
+     - data
+     - sms
+     - mms
+     - unknown
+    properties:
+      voice:
+         $ref: '#/definitions/UsageSummaryDetails'
+      data:
+         $ref: '#/definitions/UsageSummaryDetails'
+      sms:
+         $ref: '#/definitions/UsageSummaryDetails'
+      mms:
+         $ref: '#/definitions/UsageSummaryDetails'
+      unknown:
+         $ref: '#/definitions/UsageSummaryDetails'
+
+  outgoing:
+    description: A summary of the outgoing trafic during a given period
+    type: object
+    required:
+     - voice
+     - data
+     - sms
+     - mms
+     - unknown
+    properties:
+      voice:
+         $ref: '#/definitions/UsageSummaryDetails'
+      data:
+         $ref: '#/definitions/UsageSummaryDetails'
+      sms:
+         $ref: '#/definitions/UsageSummaryDetails'
+      mms:
+         $ref: '#/definitions/UsageSummaryDetails'
+      unknown:
+         $ref: '#/definitions/UsageSummaryDetails'

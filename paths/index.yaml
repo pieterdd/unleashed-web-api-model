@@ -55,6 +55,8 @@
   $ref: ./subscriptions/cancel.yaml
 /subscriptions/{id}/usage:
   $ref: ./subscriptions/usage.yaml
+/subscriptions/{id}/usage-summary:
+  $ref: ./subscriptions/usage_summary.yaml
 /subscriptions/{id}/topups:
   $ref: ./subscriptions/topups.yaml
 /subscriptions/{id}/voicemail-settings:

@@ -90,6 +90,10 @@ VoicemailSettings:
   $ref: ./subscriptions/voicemail_settings.yaml
 Usage:
   $ref: ./subscriptions/usage.yaml
+UsageSummary:
+  $ref: ./subscriptions/usage_summary.yaml
+UsageSummaryDetails:
+  $ref: ./subscriptions/usage_summary_details.yaml
 Invoice:
   $ref: ./finance/invoice.yaml
 Mandate:

@@ -1,0 +1,22 @@
+type: object
+title: Usage Summary details
+required:
+  - number_of_records
+  - total_duration
+  - total_quantity
+  - total_price
+type: object
+description: Some more details about the traffic in a given period of time.
+properties:
+  number_of_records:
+    description: The number of CDRs to be found for this traffic type in the request period or time.
+    type: integer
+  total_duration:
+    description: The total duration of this traffic type in the request period or time.
+    type: number
+  total_quantity:
+    description: The total quantity of this traffic type in the request period or time.
+    type: integer
+  total_price:
+    description: The total price for this traffic type in the request period or time.
+    type: number
