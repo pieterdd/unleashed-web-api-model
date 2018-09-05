@@ -61,3 +61,11 @@ properties:
       subscription_id:
         type: string
         description: subscription id belonging to pending product (e.g subscription that needs topup)
+  ocs:
+    type: string
+    description:  |
+        Which OCS the subscription is provisioned on.
+    enum:
+      - arta
+      - transatel
+      - unknown
