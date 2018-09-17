@@ -7,3 +7,8 @@ properties:
   donor:
     type: string
     description: the name of the MNO that the operator belongs to
+  iins:
+    type: array
+    description: List of Issuer Identification Numbers
+    items:
+      type: string
