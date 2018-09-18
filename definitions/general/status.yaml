@@ -13,6 +13,7 @@ properties:
       enum:
       - action_not_authorized
       - customer_identifier_not_unique
+      - customer_not_verified_by_checkdoc
       - duplicate_request
       - email_already_in_use
       - email_not_verified
