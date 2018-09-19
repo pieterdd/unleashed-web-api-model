@@ -1,8 +1,8 @@
 get:
   tags:
     - Subscriptions
-    - Finance
-  summary: Get invoicing settings
+    - Telco
+  summary: Get service settings
   produces:
     - application/json
   parameters:
@@ -14,9 +14,9 @@ get:
       type: string
   responses:
     200:
-      description: Returns invoicing settings
+      description: Returns service settings
       schema:
-        $ref: '#/definitions/InvoicingSettings'
+        $ref: '#/definitions/SubscriptionServiceSettings'
     401:
       description: unauthorized
       schema:
@@ -24,9 +24,9 @@ get:
 put:
   tags:
     - Subscriptions
-    - Finance
-  summary: Update invoicing settings
-  description: If no invoicing_address given, it will be deleted.
+    - Telco
+  summary: Update service settings
+  description: Unspecified services will not be changed
   consumes:
     - application/json
   parameters:
@@ -38,9 +38,11 @@ put:
       type: string
     - name: settings
       in: body
-      description: settings to use.
+      description: settings to write
       schema:
-        $ref: '#/definitions/InvoicingSettings'
+        type: array
+        items:
+          $ref: '#/definitions/SubscriptionServiceSettingsChangeRequest'
   responses:
     204:
       description: Invoicing settings updated

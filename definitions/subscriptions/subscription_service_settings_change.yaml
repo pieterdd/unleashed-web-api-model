@@ -1,0 +1,21 @@
+type: object
+title: Subscription service change
+description: This keeps track of when and why a service was enabled/disabled.
+required:
+  - name
+properties:
+  state:
+    description: This reflects the value the setting was changed to.
+    type: boolean
+  timestamp:
+    description: This reflects the time when the setting was changed
+    type: string
+    format: date-time
+  reason:
+    type: string
+    enum:
+      - customer
+      - dunning
+      - fraud
+      - lost and stolen
+      - non-payment

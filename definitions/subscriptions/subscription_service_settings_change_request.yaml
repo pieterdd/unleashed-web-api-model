@@ -1,0 +1,33 @@
+type: object
+title: Subscription service change request
+required:
+  - name
+  - reason
+  - state
+properties:
+  name:
+    description: The service you are trying to change. We have not yet received the list of possible service names. These are just placeholders
+    type: string
+    enum:
+    - web
+    - voice_originating
+    - voice_terminating
+    - voice_forwarding
+    - voice_roaming_terminating
+    - voice_roaming_originating
+    - voice_roaming_forwarding
+    - sms_originating
+    - sms_terminating
+    - sms_roaming_terminating
+    - sms_roaming_originating
+    - data_roaming
+    - data
+    - voicemail
+    - roaming
+    - premium
+    - lte
+    - international_traffic
+    - block_all
+  state:
+    description: This reflects the value the setting will be changed to.
+    type: boolean

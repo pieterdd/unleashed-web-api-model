@@ -142,4 +142,9 @@ LoyaltyTransferRequest:
   $ref: ./loyalty/loyalty_transfer_request.yaml
 PaginationBodyDetails:
   $ref: ./general/pagination_body_details.yaml
-
+SubscriptionServiceSettings:
+  $ref: ./subscriptions/subscription_service_settings.yaml
+SubscriptionServiceChange:
+  $ref: ./subscriptions/subscription_service_settings_change.yaml
+SubscriptionServiceSettingsChangeRequest:
+  $ref: ./subscriptions/subscription_service_settings_change_request.yaml

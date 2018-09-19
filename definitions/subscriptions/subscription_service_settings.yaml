@@ -1,0 +1,49 @@
+type: object
+title: Subscription service settings
+description: This setting determines if certain services are enabled for a subscription
+required:
+  - name
+  - editable
+  - state
+properties:
+  name:
+    description: We have not yet received the list of possible service names. These are just placeholders
+    type: string
+    enum:
+    - web
+    - voice_originating
+    - voice_terminating
+    - voice_forwarding
+    - voice_roaming_terminating
+    - voice_roaming_originating
+    - voice_roaming_forwarding
+    - sms_originating
+    - sms_terminating
+    - sms_roaming_terminating
+    - sms_roaming_originating
+    - data_roaming
+    - data
+    - voicemail
+    - roaming
+    - premium
+    - lte
+    - international_traffic
+    - block_all
+  state:
+    type: boolean
+  editable:
+    description: |
+      "yes" means the customer can edit the value.
+
+      "no" means he cannot edit the value at the moment, but he might be able to edit it in the future.
+
+      "never" means he will never be able to edit this service, ever.
+    type: string
+    enum:
+      - "yes"
+      - "no"
+      - "never"
+  history:
+    type: array
+    items:
+      $ref: '#/definitions/SubscriptionServiceChange'

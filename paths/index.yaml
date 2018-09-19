@@ -69,6 +69,8 @@
   $ref: ./subscriptions/invoicing_settings.yaml
 /subscriptions/{id}/invoices:
   $ref: ./finance/subscription_invoices.yaml
+/subscriptions/{id}/service-settings:
+  $ref: ./subscriptions/service_settings.yaml
 /apps/versions:
   $ref: ./apps/versions.yaml
 /invoices/{id}/pdf:
