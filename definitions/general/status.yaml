@@ -69,6 +69,7 @@ properties:
                 - customer_should_not_be_self
                 - email_address_already_in_use
                 - expired_phone_verification_code
+                - iccid_does_not_exists
                 - invalid_email_verification_code
                 - invalid_format
                 - invalid_phone_verification_code
