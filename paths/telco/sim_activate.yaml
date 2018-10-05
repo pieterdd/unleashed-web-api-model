@@ -15,8 +15,10 @@ post:
       schema:
         $ref: '#/definitions/SimActivate'
   responses:
-    204:
+    201:
       description: Sim activating
+      schema:
+        $ref: '#/definitions/Order'
     401:
       description: unauthorized
       schema:
