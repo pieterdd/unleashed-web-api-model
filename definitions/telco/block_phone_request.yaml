@@ -1,0 +1,32 @@
+type: object
+title: Phone block request
+required:
+  - IMEI_numbers
+  - phone_model
+  - location_lost
+  - when_lost
+  - suspend_sim
+properties:
+  IMEI_numbers:
+    type: array
+    description: |
+      The International Mobile Equipment Identities of the lost/stolen phone.
+      E.g. a dual-sim can have two IMEI number.
+    items:
+      type: string
+  phone_model:
+    type: string
+    description: Defines the phone model with as much detail as possible
+  location_lost:
+    type: string
+    description: Where the phone is lost or stolen
+  when_lost:
+    type: string
+    format: date-time
+    description: When the phone is lost or stolen
+  suspend_sim:
+    type: boolean
+    description: |
+      Also suspend sim of this subscription.
+      Note that if the phone contained more that one sim (e.g. dual-sim),
+      you should do a seperate call to `/sims/{msisdn}` to also suspend the second SIM.

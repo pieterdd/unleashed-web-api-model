@@ -65,6 +65,8 @@
   $ref: ./notifications/subscription_notification_settings.yaml
 /subscriptions/{id}/sim/swap:
   $ref: ./telco/sim_swap.yaml
+/subscriptions/{id}/block-phone:
+  $ref: ./telco/block_phone.yaml
 /subscriptions/{id}/invoicing-settings:
   $ref: ./subscriptions/invoicing_settings.yaml
 /subscriptions/{id}/invoices:
