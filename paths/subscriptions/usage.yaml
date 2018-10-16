@@ -28,9 +28,14 @@ get:
       200:
         description: Returns the subscription's history
         schema:
-          type: array
-          items:
-            $ref: '#/definitions/Usage'
+          title: Paginated Usage
+          allOf:
+            - $ref: '#/definitions/PaginationBodyDetails'
+            - properties:
+                results:
+                  type: array
+                  items:
+                      $ref: '#/definitions/Usage'
       401:
         description: unauthorized
         schema:
