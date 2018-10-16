@@ -19,9 +19,7 @@ get:
       200:
         description: Returns the subscription's usage summary
         schema:
-          type: array
-          items:
-            $ref: '#/definitions/UsageSummary'
+          $ref: '#/definitions/UsageSummary'
       401:
         description: unauthorized
         schema:
