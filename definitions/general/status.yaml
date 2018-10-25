@@ -34,6 +34,7 @@ properties:
       - mandate_cannot_be_set
       - mandate_cannot_be_set_invalid_values
       - migration_already_running
+      - migration_pending
       - no_authorization_on_subscription
       - no_process_linked_to_iccid
       - not_enough_balance
