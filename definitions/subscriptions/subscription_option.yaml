@@ -1,0 +1,28 @@
+type: object
+title: Subscription option
+required:
+  - id
+  - valid_from
+  - product
+  - state
+properties:
+  id:
+    type: string
+  valid_from:
+    type: string
+    format: date-time
+    description: the datetime when this subscription option was activated
+  valid_until:
+    type: string
+    format: date-time
+    description: the datetime till when this subscription option is active
+  product:
+    $ref: '#/definitions/Product'
+  state:
+    type: string
+    enum:
+    - enabled
+    - disabled
+    - deleted
+    - locked
+    - deactivated

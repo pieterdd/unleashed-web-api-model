@@ -70,6 +70,8 @@ CreateSubscriptionResponse:
   $ref: ./subscriptions/create_subscriptions_response.yaml
 SubscriptionBalance:
   $ref: ./subscriptions/balance.yaml
+SubscriptionOption:
+  $ref: ./subscriptions/subscription_option.yaml
 BlockPhoneRequest:
   $ref: ./telco/block_phone_request.yaml
 SimState:
