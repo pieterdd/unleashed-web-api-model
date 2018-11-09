@@ -6,6 +6,7 @@ required:
   - location_lost
   - when_lost
   - suspend_sim
+  - password
 properties:
   IMEI_numbers:
     type: array
@@ -30,3 +31,6 @@ properties:
       Also suspend sim of this subscription.
       Note that if the phone contained more that one sim (e.g. dual-sim),
       you should do a seperate call to `/sims/{msisdn}` to also suspend the second SIM.
+  password:
+    type: string
+    description: "Password required to block phone"
