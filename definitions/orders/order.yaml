@@ -43,6 +43,7 @@ properties:
       - cancelled
       - enabled
       - failed
+      - mnp_rejected
       - unknown
   type:
     type: string
