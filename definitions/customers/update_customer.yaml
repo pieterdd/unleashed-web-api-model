@@ -1,5 +1,11 @@
 type: object
 title: Update customer
+required:
+  - language
+  - gender
+  - first_name
+  - last_name
+  - address
 properties:
   language:
     type: string
