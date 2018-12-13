@@ -3,7 +3,6 @@ title: Auto topup settings
 description: Auto-topup settings
 required:
   - triggers
-  - product_id
 properties:
   triggers:
     description: A list of trigger properties that might trigger a topup
@@ -15,7 +14,7 @@ properties:
     description: The id of the mandate that will be used to pay the automatic topup when it takes place.
   product_id:
     type: string
-    description: The if of the product that will be used to topup when an automatic topup takes place.
+    description: The if of the product that will be used to topup when an automatic topup takes place. Optional if and only if every type of auto topup is completely disabled.
   allow_sms_topup:
     type: boolean
     default: false
