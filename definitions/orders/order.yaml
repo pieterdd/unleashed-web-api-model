@@ -96,3 +96,8 @@ properties:
     description: The subscription id this order belongs to
   donor:
     $ref: '#/definitions/OrderDonor'
+  parent_order_id:
+    type: string
+    description: |
+      The (optional) id of the Order that caused this Order to be created.
+      For example, a sim activation might have a contract creation as a parent
