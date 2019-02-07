@@ -6,6 +6,10 @@ get:
     - application/json
   parameters:
     - $ref: "#/parameters/authorization"
+    - name: state
+      in: query
+      description: Only show mandates with this state
+      type: string
   responses:
     200:
       description: "Returns the customer's mandates"
