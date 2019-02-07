@@ -6,9 +6,9 @@ get:
   - application/json
   parameters:
     - $ref: "#/parameters/authorization"
-    - name: status
+    - name: state
       in: query
-      description: Only show authorizations with this status
+      description: Only show authorizations with this state
       type: string
   responses:
     200:
@@ -41,7 +41,7 @@ post:
         $ref: '#/definitions/AuthorizationRequest'
   responses:
     201:
-      description: Succesfull created authorization
+      description: Succesfully created authorization
       schema:
         $ref: '#/definitions/Authorization'
     401:
