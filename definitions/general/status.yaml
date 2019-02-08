@@ -45,6 +45,7 @@ properties:
       - password_mandatory
       - subscription_deactivated
       - swap_already_running
+      - switching_plans_too_frequently
       - unable_to_process
       - unconfirmed_sepa_mandate_pending
       - action_not_authorized_due_to_dunning
