@@ -6,6 +6,7 @@ required:
   - payment_provider
   - label
   - is_owner
+  - state
 properties:
   id:
     type: string
@@ -42,3 +43,14 @@ properties:
   is_owner:
     type: boolean
     description: indicates if the customer is the owner of this mandate. Only applicable when you have the sim authorization feature active on your BSS otherwise it always will be true.
+  state:
+    type: string
+    description: the state of this mandate.
+    enum:
+      - active
+      - confirmed
+      - created
+      - deleted
+      - disabled
+      - signed
+      - waiting_for_first_payment
