@@ -27,6 +27,8 @@ tags:
     description: Finance
   - name: Mandates
     description: Mandates
+  - name: Msisdn
+    description: Msisdn
   - name: Orders
     description: Orders
   - name: Apps

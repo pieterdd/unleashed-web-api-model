@@ -1,0 +1,11 @@
+get:
+  tags:
+    - Msisdn
+  summary: Get customer status of an msisdn
+  produces:
+    - application/json
+  responses:
+    204:
+      description: "This msisdn belongs to a customer"
+    404:
+      description: "This msisdn does not belong to a customer"

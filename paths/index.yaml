@@ -103,3 +103,5 @@
   $ref: ./loyalty/loyalty_transfer.yaml
 /loyalty-points/transactions:
   $ref: ./loyalty/loyalty_transactions.yaml
+/check-msisdn:
+  $ref: ./msisdn/check-msisdn.yaml
