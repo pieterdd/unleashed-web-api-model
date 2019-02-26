@@ -1,0 +1,10 @@
+type: object
+title: Update Ownership transfer process
+required:
+  - state
+properties:
+  state:
+    $ref: '#/definitions/TransferState'
+    description: |
+      Only 'cancelled' (if you have initiated the process), 'confirmed' and
+      'denied' (if you are receiving the ownership) are allowed

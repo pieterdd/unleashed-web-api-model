@@ -37,6 +37,8 @@ tags:
     description: Partners
   - name: Loyalty Points
     description: Loyalty Points
+  - name: "Ownership Transfers"
+    description: Ownership transfers
 schemes:
   - https
 paths:

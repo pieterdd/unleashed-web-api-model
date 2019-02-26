@@ -152,3 +152,12 @@ SubscriptionServiceChange:
   $ref: ./subscriptions/subscription_service_settings_change.yaml
 SubscriptionServiceSettingsChangeRequest:
   $ref: ./subscriptions/subscription_service_settings_change_request.yaml
+OwnershipTransferResponse:
+  $ref: ./ownership_transfers/transfer_details.yaml
+CreateOwnershipTransfer:
+  $ref: ./ownership_transfers/create_transfer.yaml
+UpdateTransfer:
+  $ref: ./ownership_transfers/update_transfer.yaml
+TransferState:
+  $ref: ./ownership_transfers/transfer_state.yaml
+

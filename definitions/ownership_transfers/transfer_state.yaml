@@ -1,0 +1,7 @@
+description: Current state of the ownership transfer process
+type: string
+enum:
+  - created
+  - cancelled
+  - declined
+  - confirmed

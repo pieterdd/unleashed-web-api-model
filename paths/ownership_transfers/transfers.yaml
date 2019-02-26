@@ -1,0 +1,82 @@
+get:
+  tags:
+    - Ownership Transfers
+  summary: List ownership transfer processes
+  produces:
+    - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+    - name: state
+      in: query
+      type: string
+      description: |
+        Only show processes in the given state, comma-separated list
+  responses:
+    200:
+      description: Returns the customer's ownership transfer processes.
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/OwnershipTransferResponse'
+    401:
+      description: unauthorized
+      schema:
+        $ref: '#/definitions/Status'
+post:
+  tags:
+    - Ownership Transfers
+  consumes:
+    - application/json
+  summary: Create ownership transfer process
+  produces:
+    - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+    - name: create an ownership transfer process
+      in: body
+      description: Contains the ownership transfer data
+      required: true
+      schema:
+        $ref: '#/definitions/CreateOwnershipTransfer'
+  responses:
+    201:
+      description: Successfully created an ownership transfer process
+      schema:
+        $ref: '#/definitions/OwnershipTransferResponse'
+    400:
+      description: Bad request
+      schema:
+        $ref: '#/definitions/Status'
+    401:
+      description: Unauthorized
+      schema:
+        $ref: '#/definitions/Status'
+put:
+  tags:
+    - Ownership Transfers
+  consumes:
+    - application/json
+  summary: Updates an ownership transfer process by confirming, cancelling or declining it
+  produces:
+    - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+    - name: update an ownership transfer process
+      in: body
+      description: Contains the requested state of the ownership transfer process
+      required: true
+      schema:
+        $ref: '#/definitions/UpdateTransfer'
+  responses:
+    200:
+      description: Successfully updated an ownership transfer process
+      schema:
+        $ref: '#/definitions/OwnershipTransferResponse'
+    400:
+      description: Bad request
+      schema:
+        $ref: '#/definitions/Status'
+    401:
+      description: Unauthorized
+      schema:
+        $ref: '#/definitions/Status'

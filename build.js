@@ -24,7 +24,7 @@ function compile() {
             }
             fs.writeFileSync('output/swagger.json', JSON.stringify(results.resolved, null, 2), null, function(err) {
                 if (err) {
-                    console.error(error.message);
+                    console.error(err.message);
                     process.exit(42);
                 }
             });

@@ -1,0 +1,25 @@
+type: object
+title: Ownership transfer process
+required:
+  - process_id
+  - state
+  - transfer_to
+  - subscription_id
+properties:
+  process_id:
+    type: string
+    description: The id of the ownership transfer process
+  state:
+    $ref: '#/definitions/TransferState'
+  transfer_to:
+    type: string
+    description: |
+      The name of the customer the subscription is transferred to. Pay attention although this field has the same name
+      as in the create call, this isn't the email. It's to avoid privacy leaking if someone changes email address.
+  subscription_id:
+    type: string
+    description: The id of the subscription that is being transfer
+  msisdn:
+    type: string
+    format: msisdn
+    description: The msisdn that is being transfered to another customer.

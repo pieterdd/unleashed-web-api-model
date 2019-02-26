@@ -105,3 +105,5 @@
   $ref: ./loyalty/loyalty_transactions.yaml
 /check-msisdn:
   $ref: ./msisdn/check-msisdn.yaml
+/owner-transfers:
+  $ref: ./ownership_transfers/transfers.yaml
