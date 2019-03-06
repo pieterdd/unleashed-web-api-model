@@ -107,3 +107,5 @@
   $ref: ./msisdn/check-msisdn.yaml
 /owner-transfers:
   $ref: ./ownership_transfers/transfers.yaml
+/owner-transfers/{id}:
+  $ref: ./ownership_transfers/update-transfer.yaml

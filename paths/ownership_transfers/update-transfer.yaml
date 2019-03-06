@@ -1,0 +1,34 @@
+put:
+  tags:
+    - Ownership Transfers
+  consumes:
+    - application/json
+  summary: Updates an ownership transfer process by confirming, cancelling or declining it
+  produces:
+    - application/json
+  parameters:
+    - $ref: "#/parameters/authorization"
+    - name: id
+      in: path
+      description: id of the ownership transfer process
+      required: true
+      type: string
+    - name: update an ownership transfer process
+      in: body
+      description: Contains the requested state of the ownership transfer process
+      required: true
+      schema:
+        $ref: '#/definitions/UpdateTransfer'
+  responses:
+    200:
+      description: Successfully updated an ownership transfer process
+      schema:
+        $ref: '#/definitions/OwnershipTransferResponse'
+    400:
+      description: Bad request
+      schema:
+        $ref: '#/definitions/Status'
+    401:
+      description: Unauthorized
+      schema:
+        $ref: '#/definitions/Status'
