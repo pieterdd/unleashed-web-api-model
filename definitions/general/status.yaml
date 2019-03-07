@@ -12,8 +12,10 @@ properties:
       type: string
       enum:
       - action_not_authorized
+      - bic_not_reachable
       - customer_identifier_not_unique
       - customer_not_verified_by_checkdoc
+      - debtor_bic_iban_mismatch
       - duplicate_request
       - email_already_in_use
       - email_not_verified
