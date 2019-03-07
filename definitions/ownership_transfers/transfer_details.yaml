@@ -1,7 +1,7 @@
 type: object
 title: Ownership transfer process
 required:
-  - process_id
+  - id
   - state
   - other_party
   - subscription_id
