@@ -5,6 +5,7 @@ required:
   - state
   - other_party
   - subscription_id
+  - outgoing
 properties:
   id:
     type: string
@@ -22,3 +23,6 @@ properties:
     type: string
     format: msisdn
     description: The msisdn that is being transfered to another customer.
+  outgoing:
+    type: boolean
+    description: Whether the ownership transfer is to (true) or from (false) another customer
