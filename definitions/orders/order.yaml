@@ -37,6 +37,7 @@ properties:
       - waiting_for_switch_accept
       - waiting_for_internal_processing
       - waiting_for_sms
+      - waiting_for_end_date
       - created
       - processing
       - review_needed
