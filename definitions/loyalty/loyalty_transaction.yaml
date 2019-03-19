@@ -19,6 +19,7 @@ properties:
           - reserved
           - pending
           - cancelled
+          - expired
       description: >
           * __Completed__: This is the state for a completed transaction. Once the state moves to Completed, updates are
           no longer allowed. The customer can use the loyalty points only after they have been moved to Completed.

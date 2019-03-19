@@ -30,6 +30,8 @@ EmailUpdate:
   $ref: ./customers/email.yaml
 LinkMandate:
   $ref: ./mandates/mandate_link.yaml
+LoyaltyStateValidity:
+  $ref: ./customers/loyalty_state_validity.yaml
 Notification:
   $ref: ./notifications/notification.yaml
 ReferredCustomer:

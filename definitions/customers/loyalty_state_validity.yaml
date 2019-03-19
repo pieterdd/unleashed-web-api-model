@@ -1,0 +1,26 @@
+type: object
+title: Loyalty State Validity
+description: |
+  Information about a customer's status in relation to the loyalty points program.
+  When applicable this is the place where you can see if loyalty points are about to expire and when
+required:
+  - status
+properties:
+  status:
+    type: string
+    enum:
+        - enabled
+        - customer_only
+        - sleep
+    description: >
+        * __Enabled__: This is the state for a customer with at least one active subscription
+
+        * __Customer only__: This is the state for a customer with no active subscriptions
+
+        * __Sleep__: This is the state after 31 days of being in the 'customer_only' state.
+        The customer is not allowed to create new loyalty points transactions
+
+  expiration_date:
+    type: string
+    format: date
+    description: Date when the loyalty points for this customer will expire.

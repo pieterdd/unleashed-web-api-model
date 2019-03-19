@@ -13,6 +13,7 @@ get:
           - completed
           - reserved
           - cancelled
+          - expired
       in: query
       required: false
       description: Only transactions in this state will be returned. If no state is given it will list all transactions.

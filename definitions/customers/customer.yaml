@@ -46,3 +46,6 @@ properties:
      Whether or not the customer has a verified primary means of communication,
      The effect of `is_verified==False` is brand specific.
     type: boolean
+  loyalty_state_validity:
+    description: This information will only be available for brand where loyalty points are available
+    $ref: '#/definitions/LoyaltyStateValidity'
