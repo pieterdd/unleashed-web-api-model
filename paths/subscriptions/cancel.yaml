@@ -29,4 +29,7 @@ post:
       description: unauthorized
       schema:
         $ref: '#/definitions/Status'
-
+    409:
+      description: Can happen when an ongoing backend process prevents this action.
+      schema:
+        $ref: '#/definitions/Status'
